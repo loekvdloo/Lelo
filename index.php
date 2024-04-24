@@ -40,7 +40,7 @@ include ('signup.php');
                 </div>
                 <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformulier">
                 <input type="text" name="reisduur" placeholder="reisduur" id="vakantieformulier">
-                <input type="submit" name="zoeken" value="zoeken" id="zoekenhome">
+                <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
         </div>
     </section>

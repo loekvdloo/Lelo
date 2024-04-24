@@ -348,11 +348,7 @@ main {
 
 #zoekenhome {
     width: 97px;
-    background-color: #3E4550;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 17px;
+    height: 44px;
 }
 
 .formulierhome {
