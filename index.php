@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Love Niek</title>
+    <title>Lelo</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -19,26 +23,25 @@ include('signup.php');
         <div class="reiszoeken">
             <form class="formulierhome">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input type="date" name="vertrekdatum" placeholder="vertrekdatum" class="vertrekdatum"
-                       id="vakantieformulier">
-                <div class="drop">
-                    <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantieformulier">
-                    <div class="personenetoevoegen">
+                <input type="text" name="daterange"  />
+                    <div class="drop">
+                        <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
+                        <div class="personenetoevoegen">
 
-                        <div class="keuzepers">
-                            <label for="adults">Volwassenen:</label>
-                            <input type="number" id="volwassenen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="children">Kinderen:</label>
-                            <input type="number" id="kinderen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="babies">Baby's:</label>
-                            <input type="number" id="baby" class="pers" min="0" value="0">
+                            <div class="keuzepers">
+                                <label for="adults">Volwassenen:</label>
+                                <input type="number" id="volwassenen" class="pers" min="0" value="0">
+                            </div>
+                            <div class="keuzepers">
+                                <label for="children">Kinderen:</label>
+                                <input type="number" id="kinderen" class="pers" min="0" value="0">
+                            </div>
+                            <div class="keuzepers">
+                                <label for="babies">Baby's:</label>
+                                <input type="number" id="baby" class="pers" min="0" value="0">
+                            </div>
                         </div>
                     </div>
-                </div>
                 <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformulier">
 
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
@@ -105,6 +108,18 @@ include('signup.php');
             </div>
         </div>
     </section>
+    <script>
+        $(function() {
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    ssingleDatePicker: 'true',
+                    showShortcuts: 'false',
+                    showTopbar: 'false'
+                }
+            );
+        });
+
+    </script>
 
 </main>
 <?php
