@@ -7,6 +7,10 @@ h1 {
     font-size: 64px;
     color: white;
 }
+h2{
+    font-size: 40px;
+    color: black;
+}
 
 /*header*/
 .topheader {
@@ -126,23 +130,29 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 7px;
 }
 
 /* Set a style for all buttons */
 button {
-    background-color: #04AA6D;
+    background-color: #3E4550;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
+    border-radius: 6px;
 }
 
 button:hover {
     opacity: 0.8;
 }
-
+#inloggenknop{
+    width: 20%;
+    position: relative;
+    left: 53%;
+}
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
@@ -211,8 +221,7 @@ span.psw {
 
 .close1 {
     position: absolute;
-    right: 11vw;
-    top: 0;
+    right: 34.5vw;
     color: #000;
     font-size: 35px;
     font-weight: bold;
@@ -283,8 +292,7 @@ span.psw {
     align-items: center;
     color: white;
     position: relative;
-    top: -24px;
-    left: 26vw;
+    left: 25.8vw;
 }
 
 /*einde dropdownmenu*/
@@ -330,14 +338,17 @@ main {
     align-items: center;
     flex-direction: column;
 }
-
+.vertrekdatum{
+    display: flex;
+    align-self: center;
+}
 .reizoekenhomepagina h1 {
     padding-bottom: 21px;
     color: black;
 }
 
 .reiszoeken {
-    width: 1126px;
+    width: 875px;
     height: 74px;
     background-color: #E8E7E7;
     border-radius: 10px;
@@ -468,8 +479,75 @@ main {
     left: 4px;
     top: 1px;
 }
-
 /*einde seizoenen*/
+/*contactpagina*/
+.contactgrotefoto{
+    height: 30vw;
+    background-repeat: no-repeat;
+}
+#naamgrotefoto{
+    display: flex;
+    align-items: end;
+    height: 27vw;
+    position: relative;
+    left: 169px;
+    color: black;
+}
+.tekstklachten{
+    display: flex;
+    padding-top: 50px;
+}
+.contacttekst{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+.kleinlijntje{
+    height: 1.5px;
+    width: 370px;
+    background: black;
+}
+#tekstcontact{
+    position: relative;
+    top: 5px;
+    width: 14vw;
+}
+#verticaalcontact{
+    width: 24vw;
+    position: relative;
+    top: 20px;
+}
+.klachtenformulier{
+    width: 30vw;
+    height: 39vw;
+    background: #E8E7E7;
+    border-radius: 10px;
+    position: relative;
+    left: 19vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#klechtentekst{
+    padding-top: 12px;
+}
+.klachtenform{
+    width: 75%;
+    padding-top: 23px;
+}
+.formklachtentekst{
+    display: flex;
+    padding-top: 19px;
+}
+#send{
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 17.5vw;
+}
+/*einde contactpagina*/
 /*einde homepagina*/
 /*footer*/
 footer {

@@ -10,7 +10,7 @@
 <body>
 <?php
 include('header.php');
-include ('signup.php');
+include('signup.php');
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
@@ -18,8 +18,9 @@ include ('signup.php');
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
             <form class="formulierhome">
-                <input type="text"  name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input type="text" name="vertrekdatum" placeholder="vertrekdatum" id="vakantieformulier">
+                <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
+                <input type="date" name="vertrekdatum" placeholder="vertrekdatum" class="vertrekdatum"
+                       id="vakantieformulier">
                 <div class="drop">
                     <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantieformulier">
                     <div class="personenetoevoegen">
@@ -39,7 +40,7 @@ include ('signup.php');
                     </div>
                 </div>
                 <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformulier">
-                <input type="text" name="reisduur" placeholder="reisduur" id="vakantieformulier">
+
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
         </div>
@@ -47,10 +48,10 @@ include ('signup.php');
     <section class="reizenhome">
         <div class="imgreizenhome" style="background-image: url('assets/img/japan_homepagina.png');">
             <div class="blokachtertekst">
-            <h1>Japan</h1>
+                <h1>Japan</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-            <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
