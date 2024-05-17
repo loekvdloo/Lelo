@@ -518,6 +518,10 @@ main {
     position: relative;
     top: 20px;
 }
+#verticaalcontact2{
+    position: relative;
+    left: 24vw;
+}
 .klachtenformulier{
     width: 30vw;
     height: 39vw;
@@ -546,6 +550,20 @@ main {
     justify-content: center;
     position: relative;
     left: 17.5vw;
+    background-color: #9F252D;
+}
+.contactomrulier{
+    display: flex;
+;
+    padding-top: 100px;
+}
+.formkvraag{
+    height: 10vw;
+}
+#contactpagina{
+    position: relative;
+    left: 7vw;
+    height: 50vw;
 }
 /*einde contactpagina*/
 /*einde homepagina*/

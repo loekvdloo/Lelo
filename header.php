@@ -11,7 +11,7 @@
     <div class="topheader"></div>
     <div class="buttomheader" style="background-image: url('assets/img/header_img.png');">
         <div class="logoheader">
-            <img src="assets/img/logo.png">
+            <a href="index.php"><img src="assets/img/logo.png"></a>
         </div>
         <nav>
             <div class="knopheader" id="tripinfoknop">
