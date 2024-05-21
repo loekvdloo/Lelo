@@ -2,9 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
-
+body {
+    font-family: "Playfair Display", serif;
+}
 h1 {
-    font-size: 64px;
+    font-size: 60px;
     color: white;
 }
 h2{
@@ -68,9 +70,7 @@ nav {
 
 
 /*login/signup*/
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -101,7 +101,7 @@ button:hover {
 #inloggenknop{
     width: 20%;
     position: relative;
-    left: 53%;
+    left: 80%;
 }
 /* Extra styles for the cancel button */
 .cancelbtn {
@@ -545,6 +545,16 @@ label {
 }
 /*einde contactpagina*/
 /*einde homepagina*/
+/*privacy pagina*/
+.privacypage{
+    width: 80%;
+}
+.privacypage h2{
+    color: #B32E37;
+    padding-bottom: 1.5vw;
+    padding-top: 2vw;
+}
+/*einde privacy pagina*/
 /*footer*/
 footer {
     display: flex;
@@ -566,7 +576,7 @@ footer {
     flex-direction: column;
     justify-content: end;
     padding-bottom: 12px;
-    width: 50%;
+    width: 61%;
 }
 
 .formulierfooter a {

@@ -23,8 +23,7 @@
     </form>
 </section>
     <section class="voorwaardefooter">
-        <a href="#">Algemene voorwaarde</a>
-        <a href="#">Privacy policy</a>
+        <a href="privacy.php">Privacy policy</a>
     </section>
 </footer>
 </body>

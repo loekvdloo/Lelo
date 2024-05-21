@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Love Niek</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <!DOCTYPE html>
 <html lang="nl">
@@ -14,7 +15,15 @@
     <title>Privacyverklaring</title>
 </head>
 <body>
-<h1>Jouw gegevens zijn bij ons veilig. Beloofd.</h1>
+<?php
+include('header.php');
+include('signup.php');
+?>
+<main style="background-image: url('assets/img/background.png');">
+<section class="privacypage">
+
+
+<h2>Jouw gegevens zijn bij ons veilig. Beloofd.</h2>
 <p>
     Je deelt veel gegevens met ons. Misschien wel veel meer dan je denkt. Je laat cookies bij ons achter als je onze website bezoekt en als je een reis bij ons boekt, dan vragen we om meerdere persoonsgegevens. Moet je je daar nou zorgen over maken? Nou, nee hoor! We willen zelf ook niet dat er gerommeld wordt met onze gegevens, dus gaan we ook zorgvuldig met die van jou om.
 </p>
@@ -131,6 +140,12 @@
 <p>
     We vinden het natuurlijk het allerbelangrijkst dat onze reizigers tevreden zijn. Als jij dat bent, dan zijn wij dat ook en daar doen we dan ook alles voor. Daarom sturen we je vaak na je reis een korte enquête en het verzoek of je een review wilt plaatsen op een reviewsite. Dit gebeurt in enkele gevallen via het nieuwsbriefsysteem van de reviewsite, maar je e-mailadres wordt enkel en alleen gebruikt om je deze mail te kunnen versturen. Met jouw feedback kunnen we onze reizen en service verbeteren. Wil je deze mails niet ontvangen? Geen probleem: stuur een mail naar info.lelobusiness@gmail.com en we halen je van de e-maillijst af. Je mag je feedback natuurlijk ook altijd naar de bestemmingsexpert mailen, als je dat fijner vindt.
 </p>
+</section>
+</main>
+<?php
+include('footer.php');
+
+?>
 </body>
 </html>
 
