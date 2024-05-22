@@ -20,7 +20,7 @@ include('signup.php');
 
 <main style="background-image: url('assets/img/background.png');">
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
-        <h1>Plan je reis hier</h1>
+        <h1>Plan je reis hier bij dante</h1>
         <div class="reiszoeken">
             <form class="formulierhome">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
