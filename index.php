@@ -16,6 +16,8 @@
 <?php
 include('header.php');
 include('signup.php');
+include('dbcalls/connect.php');
+include ('dbcalls/signup.php');
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
