@@ -555,6 +555,52 @@ label {
     padding-top: 2vw;
 }
 /*einde privacy pagina*/
+/*admin page*/
+
+.bekijkreizenadmin{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw;
+}
+.bekijkreizenblok{
+    height: 259px;
+    width: 1000px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+.namenresveren{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 9px;
+}
+.horizontalestreep{
+    width: 0.1vw;
+    height: 5vw;
+    background: black;
+}
+.vakantieverwijderen{
+    padding-top: 7vw;
+}
+.vakantieverwijderen h1{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.formvakantievw{
+    display: flex;
+    justify-content: center;
+}
+.vakantievwknop{
+    width: 5vw;
+    margin-left: 10px;
+}
+#inputvakantievw{
+    width: 26%;
+}
+/*einde admin page*/
+
+
 /*footer*/
 footer {
     display: flex;
@@ -619,3 +665,7 @@ footer {
 }
 
 /*einde footer*/
+/*responive*/
+@media screen and (max-width: 450px) {
+
+}
