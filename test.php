@@ -17,7 +17,6 @@
 <body>
 <?php
 include('header.php');
-include('signup.php');
 ?>
 <main style="background-image: url('assets/img/background.png');">
 <section class="privacypage">

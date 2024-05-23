@@ -8,6 +8,7 @@
 <body>
 
 <footer>
+    <div class="footernormaal">
 <section class="socials">
     <a href="#"><img src="assets/img/twitter_footer.png"></a>
     <a href="#"><img src="assets/img/insta_footer.png"></a>
@@ -25,6 +26,28 @@
     <section class="voorwaardefooter">
         <a href="privacy.php">Privacy policy</a>
     </section>
+    </div>
+    <div class="footerresponsive">
+        <section class="formulierfooter">
+            <a>Laat heir je e-mail achter om op de hoogte te blijven.</a>
+
+            <form class="invulfooter">
+                <input type="text" name="e-mail" placeholder="e-mail" id="emailfooter">
+                <input type="submit" name="versturen" value="versturen" id="versturenfooter">
+            </form>
+        </section>
+        <div class="footersocialprivesy">
+            <section class="socials">
+                <a href="#"><img src="assets/img/twitter_footer.png"></a>
+                <a href="#"><img src="assets/img/insta_footer.png"></a>
+                <a href="#"><img src="assets/img/youtube_footer.png"></a>
+                <a href="#"><img src="assets/img/tiktok_footer.png"></a>
+            </section>
+            <section class="voorwaardefooter">
+                <a href="privacy.php">Privacy policy</a>
+            </section>
+        </div>
+    </div>
 </footer>
 </body>
 </html>

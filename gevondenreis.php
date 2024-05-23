@@ -15,7 +15,7 @@
 <body>
 <?php
 include('header.php');
-include('signup.php');
+
 include('dbcalls/connect.php');
 include ('dbcalls/signup.php');
 ?>

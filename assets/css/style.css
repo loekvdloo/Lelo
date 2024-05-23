@@ -2,19 +2,28 @@
     margin: 0px;
     padding: 0px;
 }
+
 body {
     font-family: "Playfair Display", serif;
 }
+
 h1 {
     font-size: 60px;
     color: white;
 }
-h2{
+
+h2 {
     font-size: 40px;
     color: black;
 }
 
 /*header*/
+.buttomheaderresponsive{
+    display: none;
+}
+#bar{
+    display: none;
+}
 .topheader {
     height: 47px;
     width: 100vw;
@@ -43,6 +52,8 @@ nav {
     position: relative;
     left: 43px;
     width: 66vw;
+    display: flex;
+    align-self: center;
 }
 
 .knopheader {
@@ -76,7 +87,6 @@ nav {
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -98,11 +108,13 @@ button {
 button:hover {
     opacity: 0.8;
 }
-#inloggenknop{
+
+#inloggenknop {
     width: 20%;
     position: relative;
     left: 80%;
 }
+
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
@@ -254,12 +266,10 @@ main {
 /*homepagina*/
 
 /*vakantei zoeken*/
-.drop {
-    position: relative;
-    top: 0.5vw;
-}
+
 
 .hoeveelpers {
+    height: 1.5vw;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -301,10 +311,6 @@ label {
 }
 
 
-
-
-
-
 .reizoekenhomepagina {
     display: flex;
     justify-content: center;
@@ -313,10 +319,12 @@ label {
     align-items: center;
     flex-direction: column;
 }
-.vertrekdatum{
+
+.vertrekdatum {
     display: flex;
     align-self: center;
 }
+
 .reizoekenhomepagina h1 {
     padding-bottom: 21px;
     color: black;
@@ -457,13 +465,15 @@ label {
     left: 4px;
     top: 1px;
 }
+
 /*einde seizoenen*/
 /*contactpagina*/
-.contactgrotefoto{
+.contactgrotefoto {
     height: 30vw;
     background-repeat: no-repeat;
 }
-#naamgrotefoto{
+
+#naamgrotefoto {
     display: flex;
     align-items: end;
     height: 27vw;
@@ -471,36 +481,43 @@ label {
     left: 169px;
     color: black;
 }
-.tekstklachten{
+
+.tekstklachten {
     display: flex;
     padding-top: 50px;
 }
-.contacttekst{
+
+.contacttekst {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40%;
 }
-.kleinlijntje{
+
+.kleinlijntje {
     height: 1.5px;
     width: 370px;
     background: black;
 }
-#tekstcontact{
+
+#tekstcontact {
     position: relative;
     top: 5px;
     width: 14vw;
 }
-#verticaalcontact{
+
+#verticaalcontact {
     width: 24vw;
     position: relative;
     top: 20px;
 }
-#verticaalcontact2{
+
+#verticaalcontact2 {
     position: relative;
     left: 24vw;
 }
-.klachtenformulier{
+
+.klachtenformulier {
     width: 30vw;
     height: 39vw;
     background: #E8E7E7;
@@ -511,18 +528,22 @@ label {
     flex-direction: column;
     align-items: center;
 }
-#klechtentekst{
+
+#klechtentekst {
     padding-top: 12px;
 }
-.klachtenform{
+
+.klachtenform {
     width: 75%;
     padding-top: 23px;
 }
-.formklachtentekst{
+
+.formklachtentekst {
     display: flex;
     padding-top: 19px;
 }
-#send{
+
+#send {
     width: 5vw;
     display: flex;
     justify-content: center;
@@ -530,85 +551,101 @@ label {
     left: 17.5vw;
     background-color: #9F252D;
 }
-.contactomrulier{
-    display: flex;
-;
+
+.contactomrulier {
+    display: flex;;
     padding-top: 100px;
 }
-.formkvraag{
+
+.formkvraag {
     height: 10vw;
 }
-#contactpagina{
+
+#contactpagina {
     position: relative;
     left: 7vw;
     height: 50vw;
 }
+
 /*einde contactpagina*/
 /*einde homepagina*/
 /*privacy pagina*/
-.privacypage{
+.privacypage {
     width: 80%;
 }
-.privacypage h2{
+
+.privacypage h2 {
     color: #B32E37;
     padding-bottom: 1.5vw;
     padding-top: 2vw;
 }
+
 /*einde privacy pagina*/
 /*admin page*/
 
-.bekijkreizenadmin{
+.bekijkreizenadmin {
     display: flex;
     justify-content: center;
     padding-top: 5vw;
 }
-.bekijkreizenblok{
+
+.bekijkreizenblok {
     height: 259px;
     width: 1000px;
     background-color: #D9D9D9;
     border-radius: 5px;
 }
-.namenresveren{
+
+.namenresveren {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 9px;
 }
-.horizontalestreep{
+
+.horizontalestreep {
     width: 0.1vw;
     height: 5vw;
     background: black;
 }
-.vakantieverwijderen{
+
+.vakantieverwijderen {
     padding-top: 7vw;
 }
-.vakantieverwijderen h1{
+
+.vakantieverwijderen h1 {
     color: black;
     display: flex;
     justify-content: center;
 }
-.formvakantievw{
+
+.formvakantievw {
     display: flex;
     justify-content: center;
 }
-.vakantievwknop{
+
+.vakantievwknop {
     width: 5vw;
     margin-left: 10px;
 }
-#inputvakantievw{
+
+#inputvakantievw {
     width: 26%;
 }
+
 /*einde admin page*/
 
 
 /*footer*/
-footer {
+.footerresponsive{
+    display: none;
+}
+.footernormaal{
     display: flex;
     height: 104px;
     width: 100vw;
     background-color: #9F252D;
 }
-
 .socials {
     display: flex;
     gap: 10px;
@@ -634,7 +671,7 @@ footer {
     border-radius: 5px;
     padding: 5px;
     width: 160px;
-    height: 22px;
+    height: 32px;
     border: 0px;
 }
 
@@ -667,5 +704,115 @@ footer {
 /*einde footer*/
 /*responive*/
 @media screen and (max-width: 450px) {
+/*    headerresp*/
+.buttomheader{
+    display: none;
+}
+    .buttomheaderresponsive{
+        display: flex;
+        height: 108px;
+    }
 
+    #logoheader {
+        position: relative;
+        left: -10px;
+        width: 40vw;
+        display: flex;
+        align-self: center;
+
+    }
+
+    .overlay {
+        display: flex;
+    }
+
+    #bar {
+        display: flex;
+        align-self: center;
+        padding-right: 10px;
+        position: relative;
+        left: 22vw;
+    }
+
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+/* einde headerresp*/
+/* footerresp*/
+    .footernormaal{
+        display: none;
+    }
+    .footerresponsive{
+        display: flex;
+        height: 228px;
+        width: 100vw;
+        background-color: #9F252D;
+        flex-direction: column;
+    }
+    .formulierfooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 61%;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .formulierfooter a{
+        width: 76%;
+    }
+    .voorwaardefooter{
+        position: relative;
+        left: 40vw;
+    }
+    .footersocialprivesy{
+        display: flex;
+    }
 }

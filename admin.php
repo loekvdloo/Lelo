@@ -16,7 +16,7 @@
 <body>
 <?php
 include('header.php');
-include('signup.php');
+
 ?>
 <main class="mainadmin" style="background-image: url('assets/img/background.png');">
     <section class="bekijkreizenadmin">
