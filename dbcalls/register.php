@@ -1,21 +1,21 @@
 <?php
-include('dbcalls/connect.php');
+include('connect.php');
 
 if (isset($_POST['register'])) {
     // Gebruikersnaam, emailadres en wachtwoord van het formulier ophalen
-    $firstname = $_POST['username'];
+    $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     try {
         // Controleer eerst of de gebruikersnaam en email al bestaat
-        $stmt = $conn->prepare("SELECT id FROM users WHERE username = :username");
-        $stmt->bindParam(':username', $username);
+        $stmt = $conn->prepare("SELECT user_id FROM users WHERE user_name = :username");
+        $stmt->bindParam(':username', $firstname);
         $stmt->execute();
         $usernameExists = $stmt->fetch();
 
-        $stmt = $conn->prepare("SELECT id FROM users WHERE email = :email");
+        $stmt = $conn->prepare("SELECT user_id FROM users WHERE user_email = :email");
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         $emailExists = $stmt->fetch();
@@ -30,7 +30,7 @@ if (isset($_POST['register'])) {
             //header
         } else {
             // Voer de registratie uit als zowel de gebruikersnaam als het e-mailadres uniek zijn
-            $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+            $stmt = $conn->prepare("INSERT INTO users (user_name, user_lastname, user_email, user_pass) VALUES (:firstname, :lastname,  :email, :password)");
             $stmt->bindParam(':firstname', $firstname);
             $stmt->bindParam(':lastname', $lastname);
             $stmt->bindParam(':email', $email);

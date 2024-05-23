@@ -6,27 +6,31 @@
     <title>Lelo</title>
 </head>
 <body>
-<?php
-include('dbcalls/connect.php');
-?>
+    <?php
+    include('dbcalls/connect.php');
+    include('dbcalls/register.php');
+    ?>
 <main>
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form class="modal-content animate" action="dbcalls/login.php" method="post">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <img src="assets/img/logo.png" alt="Avatar" class="avatar">
             </div>
 
             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" >
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" >
+                <label for="firstname"><b>First name</b></label>
+                <input type="text" placeholder="Enter First name" name="firstname" required>
 
-                <button type="submit">Login</button>
+                <label for="password"><b>Password</b></label>
+                <input type="text" placeholder="Enter Password" name="password" required>
+
+                <button type="submit" name="login">Login</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
@@ -58,10 +62,10 @@ include('dbcalls/connect.php');
                 <input type="text" placeholder="Enter Last name" name="lastname" required>
 
                 <label for="email"><b>Email</b></label>
-                <input type="email" placeholder="Enter Email" name="email" required>
+                <input type="text" placeholder="Enter Email" name="email" required>
 
                 <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="text" placeholder="Enter Password" name="password" required>
 
                 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
