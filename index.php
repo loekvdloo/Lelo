@@ -37,9 +37,14 @@ include ('signup.php');
                             <input type="number" id="baby" class="pers" min="0" value="0">
                         </div>
                     </div>
+<<<<<<< homepage
                 </div>
                 <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformulier">
                 <input type="text" name="reisduur" placeholder="reisduur" id="vakantieformulier">
+=======
+                <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformulierluchthaven">
+
+>>>>>>> local
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
         </div>
@@ -71,7 +76,7 @@ include ('signup.php');
         </div>
     </section>
     <section class="reizenhome">
-        <div class="imgreizenhome" style="background-image: url('assets/img/lente_homepagina.png');">
+        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/lente_homepagina.png');">
             <div class="blokseizoenen">
                 <h1>lente</h1>
             </div>
@@ -79,7 +84,7 @@ include ('signup.php');
                 <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/zomer_homepagina.png');">
+        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/zomer_homepagina.png');">
             <div class="blokseizoenen">
                 <h1>zomer</h1>
             </div>
@@ -87,7 +92,7 @@ include ('signup.php');
                 <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/herfst_homepagina.png');">
+        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/herfst_homepagina.png');">
             <div class="blokseizoenen">
                 <h1>herfst</h1>
             </div>
@@ -95,7 +100,7 @@ include ('signup.php');
                 <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/winter_homepagina.png');">
+        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/winter_homepagina.png');">
             <div class="blokseizoenen">
                 <h1>winter</h1>
             </div>

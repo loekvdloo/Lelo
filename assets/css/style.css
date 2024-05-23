@@ -299,9 +299,16 @@ main {
 .personenetoevoegen {
     display: none;
     position: absolute;
+<<<<<<< homepage
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     width: 177px;
+=======
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 11.5%;
+
+>>>>>>> local
 }
 
 .personenetoevoegen a {
@@ -534,4 +541,219 @@ footer {
     color: white;
 }
 
+<<<<<<< homepage
 /*einde footer*/
+=======
+/*einde footer*/
+/*responive*/
+@media screen and (max-width: 450px) {
+    h1{
+        font-size: 50px;
+        color: white;
+    }
+/*    headerresp*/
+.buttomheader{
+    display: none;
+}
+    .buttomheaderresponsive{
+        display: flex;
+        height: 108px;
+    }
+
+    #logoheader {
+        position: relative;
+        left: -10px;
+        width: 40vw;
+        display: flex;
+        align-self: center;
+
+    }
+
+    .overlay {
+        display: flex;
+    }
+
+    #bar {
+        display: flex;
+        align-self: center;
+        padding-right: 10px;
+        position: relative;
+        left: 22vw;
+    }
+
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+/* einde headerresp*/
+/*    homepage*/
+    .reizoekenhomepagina{
+        display: flex;
+        justify-content: center;
+        height: 131vw;
+        background-repeat: no-repeat;
+        align-items: center;
+        flex-direction: column;
+    }
+    .reiszoeken{
+        width: 63vw;
+        height: 98vw;
+        background-color: #E8E7E7;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding-top: 8vw;
+    }
+    .formulierhome{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+    .hoeveelpers{
+        height: 5.5vw;
+        width: 41vw;
+    }
+    #vakantieformulier{
+        height: 10vw;
+    }
+    #vakantieformulierluchthaven{
+        height: 10vw;
+        position: relative;
+        top: 30vw;
+    }
+    #zoekenhome{
+        display: flex;
+        align-self: end;
+        width: 54px;
+        position: relative;
+        top: 26vw;
+    }
+    .hoeveelpers{
+        display: none;
+    }
+    .personenetoevoegen{
+        display: block;
+        width: 46%;
+    }
+    .imgreizenhome {
+        width: 329px;
+        background-repeat: no-repeat;
+        height: 97vw;
+    }
+    .reizenhome{
+        margin-top: 200px;
+        height: 315vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+    #seizoenblok{
+        width: 62vw;
+    }
+/*    einde homepage*/
+/*    signup/sign in*/
+    .signupknop{
+        width: 16vw;
+        background-color: #B32E37;
+        border-radius: 5px;
+        height: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+        left: 62.8vw;
+    }
+    #inloggenknop{
+        width: 23%;
+        position: relative;
+        left: 77%;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 87%;
+    }
+/*    einde signup/sign in*/
+/* footerresp*/
+    .footernormaal{
+        display: none;
+    }
+    .footerresponsive{
+        display: flex;
+        height: 228px;
+        width: 100vw;
+        background-color: #9F252D;
+        flex-direction: column;
+    }
+    .formulierfooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 61%;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .formulierfooter a{
+        width: 76%;
+    }
+    .voorwaardefooter{
+        position: relative;
+        left: 40vw;
+    }
+    .footersocialprivesy{
+        display: flex;
+    }
+/*    einde footer*/
+}
+>>>>>>> local
