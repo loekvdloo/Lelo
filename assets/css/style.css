@@ -701,6 +701,12 @@ label {
     color: white;
 }
 
+<<<<<<< main
+=======
+
+/*einde footer*/
+
+>>>>>>> local
 /*einde footer*/
 /*responive*/
 @media screen and (max-width: 450px) {
@@ -816,3 +822,7 @@ label {
         display: flex;
     }
 }
+<<<<<<< main
+=======
+
+>>>>>>> local
