@@ -15,13 +15,13 @@
         </div>
         <nav>
             <div class="knopheader" id="tripinfoknop">
-                <a href="#">trip info</a>
+                <a href="voorgesteldereizen.php">trip info</a>
             </div>
             <div class="knopheader" id="tripinfoknop">
                 <a href="contact.php">contact</a>
             </div>
             <div class="knopheader" id="aboutusknop">
-                <a href="gevondenreis.php">About us</a>
+                <a href="#  ">About us</a>
             </div>
 
             <div class="knopheader" id="tripinfoknop">
@@ -39,9 +39,9 @@
             >&times;</a
             >
             <div class="overlay-content">
-                <a href="#">trip info</a>
+                <a href="voorgesteldereizen.php">trip info</a>
                 <a href="contact.php">contact</a>
-                <a href="gevondenreis.php">About us</a>
+                <a href="#">About us</a>
                 <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a>
 
             </div>
