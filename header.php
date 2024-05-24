@@ -29,6 +29,7 @@
             </div>
         </nav>
     </div>
+
     <div class="buttomheaderresponsive" style="background-image: url('assets/img/header_img.png');">
         <div class="logoheader">
             <a href="index.php"><img src="assets/img/logo.png" alt="logo" id="logoheader"></a>
@@ -38,10 +39,11 @@
             >&times;</a
             >
             <div class="overlay-content">
-                <a href="aboutme.html">about</a>
-                <a href="work.html">work</a>
-                <a href="portfolio.html">portfolio</a>
-                <a href="contact.html">contact</a>
+                <a href="#">trip info</a>
+                <a href="contact.php">contact</a>
+                <a href="gevondenreis.php">About us</a>
+                <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a>
+
             </div>
         </div>
         <span
