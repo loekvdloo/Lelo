@@ -34,7 +34,7 @@
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
-                <button type="submit" id="inloggenknop">Login</button>
+                <button type="submit" id="inloggenknop" name="login" >Login</button>
 
                 <div class="signupknop">
                     <a onclick="document.getElementById('id02').style.display='block';  document.getElementById('id01').style.display='none'"

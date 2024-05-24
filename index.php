@@ -21,9 +21,13 @@ include ('dbcalls/signup.php');
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
+
+
+
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
+            
             <form class="formulierhome">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
                 <input type="text" name="daterange"  />
@@ -49,8 +53,12 @@ include ('dbcalls/signup.php');
 
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
+
         </div>
     </section>
+
+
+
     <section class="reizenhome">
         <div class="imgreizenhome" style="background-image: url('assets/img/japan_homepagina.png');">
             <div class="blokachtertekst">
