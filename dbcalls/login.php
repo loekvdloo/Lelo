@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
 
             if ($data['is_admin'] == 1) {
                 $_SESSION['is_admin'] = 'admin';
-                header("Location: adminpage.php");
+                header("Location: ../admin.php");
             } else {
                 header("Location: ../index.php");
             }
