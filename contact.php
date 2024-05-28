@@ -10,6 +10,7 @@
 <body>
 <?php
 include('header.php');
+include('dbcalls/signup.php');
 
 ?>
 

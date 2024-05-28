@@ -21,7 +21,7 @@
                 <a href="contact.php">contact</a>
             </div>
             <div class="knopheader" id="aboutusknop">
-                <a href="#  ">About us</a>
+                <a href="over_ons.php">About us</a>
             </div>
 
             <div class="knopheader" id="tripinfoknop">

@@ -7,6 +7,13 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<!--
+    <script type="text/javascript" src="tijdmenubestand/jquery.min.js"></script>
+    <script type="text/javascript" src="tijdmenubestand/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="tijdmenubestand/moment.min.js"></script>
+-->
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"

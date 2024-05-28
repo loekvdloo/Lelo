@@ -639,8 +639,52 @@ label {
 }
 
 /*einde admin page*/
+/*over ons page*/
+.over_ons_grotefoto {
+    height: 33vw;
+}
 
+.wrmlelo {
+    display: flex;
+}
 
+#logooverons {
+    height: 10vw;
+    position: relative;
+    top: 3vw;
+    left: 14vw;
+}
+
+#autooverons {
+    height: 13vw;
+    position: relative;
+    top: 3vw;
+    left: 10vw;
+}
+
+#contactoverons {
+    position: relative;
+    left: 16vw;
+}
+#contactlelo{
+    padding-top: 6vw;
+}
+.favooverons{
+    display: flex;
+    flex-direction: column;
+    padding-top: 12vw;
+}
+#titelfavo{
+    display: flex;
+    align-self: center;
+    color: black;
+    padding-bottom: 3vw;
+}
+.reizenoverons{
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
 /*footer*/
 .footerresponsive {
     display: none;
@@ -984,19 +1028,32 @@ label {
         left: 30.5vw;
         background-color: #9F252D;
     }
-    .contactomrulier{
+
+    .contactomrulier {
         flex-direction: column;
         padding-bottom: 30vw;
     }
-    #contactpagina{
+
+    #contactpagina {
         position: relative;
         left: 19vw;
         height: 133vw;
     }
-    #imgvak{
+
+    #imgvak {
         display: none;
     }
+
     /*einde contactpage*/
+    /*overons*/
+    .over_ons_grotefoto{
+        height: 116vw;
+        width: 332vw;
+        position: relative;
+        right: 231vw;
+    }
+    /*einde over ons*/
+
     /* footerresp*/
     .footernormaal {
         display: none;

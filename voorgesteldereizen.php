@@ -7,15 +7,22 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!--
+        <script type="text/javascript" src="tijdmenubestand/jquery.min.js"></script>
+        <script type="text/javascript" src="tijdmenubestand/daterangepicker.min.js"></script>
+        <script type="text/javascript" src="tijdmenubestand/moment.min.js"></script>
+    -->
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
 <?php
 include('header.php');
-
 include('dbcalls/connect.php');
 include ('dbcalls/signup.php');
 ?>
@@ -26,7 +33,7 @@ include ('dbcalls/signup.php');
         <div class="reiszoeken">
             <form class="formulierhome">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input type="text" name="daterange"  />
+                <input type="text" name="daterange" />
                 <div class="drop">
                     <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
                     <div class="personenetoevoegen">
@@ -51,7 +58,18 @@ include ('dbcalls/signup.php');
             </form>
         </div>
     </section>
+    <script>
+        $(function () {
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    ssingleDatePicker: 'true',
+                    showShortcuts: 'false',
+                    showTopbar: 'false'
+                }
+            );
+        });
 
+    </script>
 
 </main>
 <?php
