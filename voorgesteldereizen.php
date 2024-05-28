@@ -60,14 +60,20 @@ $flights = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </section>
 
     <?php foreach ($flights as $index => $flight): ?>
+        
         <div class="flight-item">
+        <?php var_dump( $flight['house_id']) ?>
             <div class="flight-house-id">House ID: <?php echo $flight['house_id']; ?></div>
             <div><p>huisnaam hier</p></div>
             <div class="flight-departure">Departure: <?php echo $flight['boarding_country']; ?></div>
             <div class="flight-departure">Departure: <?php echo $flight['boarding_city']; ?></div>
             <div class="flight-arrival">Arrival: <?php echo $flight['arrival_country']; ?></div>
             <div class="flight-arrival">Arrival: <?php echo $flight['arrival_city']; ?></div>
-            <a href="gevondenreis.php?house=<?php echo ($flight['house_id']); ?>">Bekijk reis</a>  
+            <form action="gevondenreis.php" method="get">
+                <input type="hidden" name="house_id" value="<?php echo $flight['house_id'] ?>" >
+                <input type="submit" value="Bekijk reis" id="">
+            </form>
+            
         </div>
     <?php endforeach; ?>
 

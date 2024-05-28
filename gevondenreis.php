@@ -20,10 +20,9 @@ include ('dbcalls/signup.php');
 
 $data = []; // Initialize $data as an empty array
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) 
-{
+
     session_start();
-    $house_id = $_POST['house_id']; // Fixed the variable name
+    $house_id = $_GET['house_id']; // Fixed the variable name
 
     try
     {
@@ -37,20 +36,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login']))
     {
         echo "Fout met Pagina laden: " . $e->getMessage();
     }
-}
+
 
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
 
 <section>
-    <h2><?php echo isset($data['name']) ? $data['name'] : ''; ?></h2>
-    <img src="<?php echo isset($data['house_image']) ? $data['house_image'] : ''; ?>" alt="House Image">
+    <h2><?php echo isset($data['name'])?></h2>
+    <img src="<?php echo isset($data['house_image'])?>" alt="House Image">
     <p>Rooms: <?php echo isset($data['rooms'])?></p>
-    <p>Pool: <?php echo isset($data['pool']) ? $data['pool'] : ''; ?></p>
-    <p>Backyard: <?php echo isset($data['backyard']) ? $data['backyard'] : ''; ?></p>
-    <p>Air Conditioning: <?php echo isset($data['airco']) ? $data['airco'] : ''; ?></p>
-    <p>Sauna: <?php echo isset($data['sauna']) ? $data['sauna'] : ''; ?></p>
+    <p>Pool: <?php echo isset($data['pool'])?></p>
+    <p>Backyard: <?php echo isset($data['backyard'])?></p>
+    <p>Air Conditioning: <?php echo isset($data['airco'])?></p>
+    <p>Sauna: <?php echo isset($data['sauna'])?></p>
 </section>
 
 
