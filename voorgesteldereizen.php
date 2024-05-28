@@ -15,9 +15,16 @@
 <body>
 <?php
 include('header.php');
-
 include('dbcalls/connect.php');
 include ('dbcalls/signup.php');
+
+
+// Prepare and execute the query
+$stmt = $conn->prepare("SELECT house_id, boarding_country, boarding_city, arrival_city, arrival_country FROM flights");
+$stmt->execute();
+
+// Fetch all the results
+$flights = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
@@ -52,8 +59,32 @@ include ('dbcalls/signup.php');
         </div>
     </section>
 
+    <?php foreach ($flights as $index => $flight): ?>
+        <div class="flight-item">
+            <div class="flight-house-id">House ID: <?php echo $flight['house_id']; ?></div>
+            <div><p>huisnaam hier</p></div>
+            <div class="flight-departure">Departure: <?php echo $flight['boarding_country']; ?></div>
+            <div class="flight-departure">Departure: <?php echo $flight['boarding_city']; ?></div>
+            <div class="flight-arrival">Arrival: <?php echo $flight['arrival_country']; ?></div>
+            <div class="flight-arrival">Arrival: <?php echo $flight['arrival_city']; ?></div>
+            <a href="gevondenreis.php?house=<?php echo ($flight['house_id']); ?>">Bekijk reis</a>  
+        </div>
+    <?php endforeach; ?>
+
 
 </main>
+<script>
+        $(function () {
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    ssingleDatePicker: 'true',
+                    showShortcuts: 'false',
+                    showTopbar: 'false'
+                }
+            );
+        });
+
+    </script>
 <?php
 include('footer.php')
 ?>
