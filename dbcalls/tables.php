@@ -15,14 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $airco = isset($_POST['airco']) ? 1 : 0;
             $sauna = isset($_POST['sauna']) ? 1 : 0;
 
-            // Handle file upload
+
             $target_dir = "assets/img/";
             $target_file = $target_dir . basename($_FILES["house_image"]["name"]);
             move_uploaded_file($_FILES["house_image"]["tmp_name"], $target_file);
-
-            // Assuming the image name should be saved in the database
             $house_image = $target_file;
 
+            
             $stmt = $conn->prepare("INSERT INTO house (name, house_image, rooms, pool, backyard, airco, sauna) VALUES (:name, :house_image, :rooms, :pool, :backyard, :airco, :sauna)");
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':house_image', $house_image);

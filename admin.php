@@ -73,7 +73,7 @@
                 <?php endif; ?>
                 <th>Actions</th>
             </tr>
-            <?php foreach ($records as $record) : ?>
+            <?php foreach ($records as $record) : //<!- records is data fetch ->// ?>
                 <tr>
                     <?php if ($table == 'house') : ?>
                         <td><?php echo $record['house_id']; ?></td>
@@ -125,6 +125,3 @@
 </body>
 
 </html>
-
-fixen dat je img kan uploaden correct
-en dan result huis fixen
