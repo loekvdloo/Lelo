@@ -16,11 +16,11 @@
 <body>
 <?php
 include('header.php');
-<<<<<<< HEAD
+
 include('dbcalls/signup.php');
-=======
+
 include('connection.php');
->>>>>>> 15ba256432242e319dc18454e74f8d35d45755c1
+
 ?>
 <main class="mainadmin" style="background-image: url('assets/img/background.png');">
     <section class="bekijkreizenadmin">
