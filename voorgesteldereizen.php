@@ -8,29 +8,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
-
-<body>
-<?php
-include('header.php');
-include('dbcalls/connect.php');
-include ('dbcalls/signup.php');
-?>
-
-<main style="background-image: url('assets/img/background.png');">
-    <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
-        <h1>Plan je reis hier</h1>
-        <div class="reiszoeken">
-            <form class="formulierhome">
-                <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input type="text" name="daterange" />
-                <div class="drop">
-                    <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
-                    <div class="personenetoevoegen">
 
 <body>
     <?php
@@ -40,6 +21,9 @@ include ('dbcalls/signup.php');
 
 
     // Prepare and execute the query
+    $stmt = $conn->prepare("SELECT house_id, boarding_country, boarding_city, arrival_city, arrival_country FROM flights");
+
+
     $stmt = $conn->prepare("SELECT f.house_id, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image 
                         FROM flights f
                         JOIN house h ON f.house_id = h.house_id");
@@ -96,7 +80,6 @@ include ('dbcalls/signup.php');
             </div>
         <?php endforeach; ?>
 
-    </script>
 
     </main>
     <script>
