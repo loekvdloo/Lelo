@@ -60,28 +60,28 @@ $flights = $stmt->fetchAll();
             </form>
         </div>
     </section>
-<section class="voorgesteldereizen">
-    <?php foreach ($flights as $flight) : ?>
-        <div class="flight-item">
-            <div class="flight-image">
-                <img src="<?php echo $flight['image']; ?>" alt="House Image" style="max-width: 100%; height: auto;">
-            </div>
-            <div class="tekstinfoblok">
-                <div class="naamkosteninfoblok">
-            <div class="flight-departure" id="nameblokinfo"><?php echo $flight['name']; ?></div>
-            <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $flight['travel_cost']; ?></div>
+    <section class="voorgesteldereizen">
+        <?php foreach ($flights as $flight) : ?>
+            <div class="flight-item">
+                <div class="flight-image">
+                    <img src="<?php echo $flight['image']; ?>" alt="House Image" style="max-width: 100%; height: auto;">
                 </div>
-                <div class="dingenbekijkeninfoblok">
-            <div class="flight-departure">Departure: <?php echo $flight['boarding_city']; ?></div>
-            <form action="gevondenreis.php" method="get">
-                <input type="hidden" name="house_id" value="<?php echo $flight['house_id'] ?>">
-                <input type="submit" value="Bekijk reis" id="">
-            </form>
+                <div class="tekstinfoblok">
+                    <div class="naamkosteninfoblok">
+                        <div class="flight-departure" id="nameblokinfo"><?php echo $flight['name']; ?></div>
+                        <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $flight['travel_cost']; ?></div>
+                    </div>
+                    <div class="dingenbekijkeninfoblok">
+                        <div class="flight-departure">Departure: <?php echo $flight['boarding_city']; ?></div>
+                        <form action="gevondenreis.php" method="get">
+                            <input type="hidden" name="house_id" value="<?php echo $flight['house_id'] ?>">
+                            <input type="submit" value="Bekijk reis" id="">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    <?php endforeach; ?>
-</section>
+        <?php endforeach; ?>
+    </section>
 
 </main>
 <script>
