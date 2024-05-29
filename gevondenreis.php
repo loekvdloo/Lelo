@@ -19,32 +19,29 @@
     include('dbcalls/connect.php');
     include('dbcalls/signup.php');
 
-    $data = [];
     $house_id = $_GET['house_id'];
+
     try {
         $stmt = $conn->prepare("SELECT * FROM house WHERE house_id = :house_id");
         $stmt->bindParam(':house_id', $house_id);
         $stmt->execute();
         $data = $stmt->fetch();
+        echo var_dump($data);
     } catch (PDOException $e) {
         echo "Fout met Pagina laden: " . $e->getMessage();
     }
     ?>
 
     <main style="background-image: url('assets/img/background.png');">
-
-
-        !! -- change boolean in db for the accomendations to yes / no ? or make if statement stating a checkmark for it? -- !!
         <section>
-            <h2><?php echo isset($data['name']) ?></h2>
-            <img src="<?php echo isset($data['house_image']) ?>" alt="House Image">
-            <p>Rooms: <?php echo isset($data['rooms']) ?></p>
-            <p>Pool: <?php echo isset($data['pool']) ?></p>
-            <p>Backyard: <?php echo isset($data['backyard']) ?></p>
-            <p>Air Conditioning: <?php echo isset($data['airco']) ?></p>
-            <p>Sauna: <?php echo isset($data['sauna']) ?></p>
+            <h2><?php echo ($data['name']) ?></h2>
+            <img src="<?php echo ($data['house_image']) ?>" alt="House Image">
+            <p>Rooms: <?php echo ($data['rooms'])        ?></p>
+            <p>Pool: <?php echo ($data['pool']) ? '<img src="assets/img/vink.png" alt="vink" width=20 height=20 >' : '<img src="assets/img/cross.png" alt="kruis" width=20 height=20 >'  ?></p>
+            <p>Backyard: <?php echo ($data['backyard'])  ? '<img src="assets/img/vink.png" alt="vink" width=20 height=20 >' : '<img src="assets/img/cross.png" alt="kruis" width=20 height=20 >' ?></p>
+            <p>Air Conditioning: <?php echo ($data['airco'])  ? '<img src="assets/img/vink.png" alt="vink" width=20 height=20 >' : '<img src="assets/img/cross.png" alt="kruis" width=20 height=20 >' ?></p>
+            <p>Sauna: <?php echo ($data['sauna'])  ? '<img src="assets/img/vink.png" alt="vink" width=20 height=20 >' : '<img src="assets/img/cross.png" alt="kruis" width=20 height=20 >' ?></p>
         </section>
-
 
     </main>
     <script>

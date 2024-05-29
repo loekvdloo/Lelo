@@ -21,10 +21,7 @@
 
 
     // Prepare and execute the query
-    $stmt = $conn->prepare("SELECT house_id, boarding_country, boarding_city, arrival_city, arrival_country FROM flights");
-
-
-    $stmt = $conn->prepare("SELECT f.house_id, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image 
+    $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.summary
                         FROM flights f
                         JOIN house h ON f.house_id = h.house_id");
     $stmt->execute();
@@ -70,6 +67,8 @@
                     <img src="<?php echo $flight['image']; ?>" alt="House Image" style="max-width: 100%; height: auto;">
                 </div>
                 <div class="flight-departure">Departure: <?php echo $flight['boarding_country']; ?></div>
+                <div class="flight-departure">Departure: <?php echo $flight['travel_cost']; ?></div>
+                <div class="flight-departure" style="text-wrap: wrap; width: 115px;" > <?php echo $flight['summary']; ?></div>
                 <div class="flight-departure">Departure: <?php echo $flight['boarding_city']; ?></div>
                 <div class="flight-arrival">Arrival: <?php echo $flight['arrival_country']; ?></div>
                 <div class="flight-arrival">Arrival: <?php echo $flight['arrival_city']; ?></div>
