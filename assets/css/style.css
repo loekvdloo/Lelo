@@ -426,7 +426,41 @@ label {
     left: 4px;
     top: 1px;
 }
-
+.flight-item{
+    width: 46%;
+    background-color: #E8E7E7;
+    display: flex;
+    margin: 4vw;
+    border-radius: 12px;
+}
+.flight-item img{
+    height: 12vw;
+    padding: 9px;
+    border-radius: 15px;
+}
+.naamkosteninfoblok{
+    display: flex;
+    gap: 5vw;
+    padding-bottom: 7.5vw;
+    padding-left: 12px;
+    padding-top: 0.5vw;
+}
+#nameblokinfo{
+    width: 10vw;
+}
+#prijsblokinfo{
+    width: 5vw;
+}
+.dingenbekijkeninfoblok{
+    display: flex;
+    gap: 5vw;
+    padding-left: 12px;
+}
+.voorgesteldereizen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*einde voorgesteldereis*/
 /*seizoenen*/
 .blokseizoenen {
@@ -685,6 +719,8 @@ label {
     display: flex;
     justify-content: space-evenly;
 }
+/*einde over ons*/
+
 /*footer*/
 .footerresponsive {
     display: none;
