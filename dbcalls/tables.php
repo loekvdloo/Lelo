@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (isset($_POST['create'])) {
             $name = $_POST['name'];
+            $summary = $_POST['summary'];
             $house_image = $_FILES['house_image']['name'];
             $rooms = $_POST['rooms'];
             $pool = isset($_POST['pool']) ? 1 : 0;
@@ -22,8 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $house_image = $target_file;
 
             
-            $stmt = $conn->prepare("INSERT INTO house (name, house_image, rooms, pool, backyard, airco, sauna) VALUES (:name, :house_image, :rooms, :pool, :backyard, :airco, :sauna)");
+            $stmt = $conn->prepare("INSERT INTO house (name, summary, house_image, rooms, pool, backyard, airco, sauna) VALUES (:name, :summary, :house_image, :rooms, :pool, :backyard, :airco, :sauna)");
             $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':summary', $summary);
             $stmt->bindParam(':house_image', $house_image);
             $stmt->bindParam(':rooms', $rooms);
             $stmt->bindParam(':pool', $pool);
@@ -34,15 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } elseif (isset($_POST['update'])) {
             $house_id = $_POST['house_id'];
             $name = $_POST['name'];
+            $summary = $_POST['summary'];
             $rooms = $_POST['rooms'];
             $pool = isset($_POST['pool']) ? 1 : 0;
             $backyard = isset($_POST['backyard']) ? 1 : 0;
             $airco = isset($_POST['airco']) ? 1 : 0;
             $sauna = isset($_POST['sauna']) ? 1 : 0;
 
-            $stmt = $conn->prepare("UPDATE house SET name = :name, rooms = :rooms, pool = :pool, backyard = :backyard, airco = :airco, sauna = :sauna WHERE house_id = :house_id");
+            $stmt = $conn->prepare("UPDATE house SET name = :name, summary = :summary, rooms = :rooms, pool = :pool, backyard = :backyard, airco = :airco, sauna = :sauna WHERE house_id = :house_id");
             $stmt->bindParam(':house_id', $house_id);
             $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':summary', $summary);
             $stmt->bindParam(':rooms', $rooms);
             $stmt->bindParam(':pool', $pool);
             $stmt->bindParam(':backyard', $backyard);

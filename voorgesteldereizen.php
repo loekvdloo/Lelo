@@ -20,8 +20,8 @@ include('dbcalls/connect.php');
 include('dbcalls/signup.php');
 
 
-// Prepare and execute the query
-$stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.name 
+    // Prepare and execute the query
+    $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.summary, h.name
                         FROM flights f
                         JOIN house h ON f.house_id = h.house_id");
 $stmt->execute();
@@ -66,20 +66,38 @@ $flights = $stmt->fetchAll();
                 <div class="flight-image">
                     <img src="<?php echo $flight['image']; ?>" alt="House Image" style="max-width: 100%; height: auto;">
                 </div>
+
+
+
                 <div class="tekstinfoblok">
                     <div class="naamkosteninfoblok">
                         <div class="flight-departure" id="nameblokinfo"><?php echo $flight['name']; ?></div>
                         <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $flight['travel_cost']; ?></div>
+                        <div class="flight-departure" style="text-wrap: wrap; width: 115px;" > <?php echo $flight['summary']; ?></div>
                     </div>
                     <div class="dingenbekijkeninfoblok">
                         <div class="flight-departure">Departure: <?php echo $flight['boarding_city']; ?></div>
+                        <div class="flight-departure">Departure: <?php echo $flight['boarding_country']; ?></div>
                         <form action="gevondenreis.php" method="get">
                             <input type="hidden" name="house_id" value="<?php echo $flight['house_id'] ?>">
                             <input type="submit" value="Bekijk reis" id="">
                         </form>
                     </div>
                 </div>
+                
+                <div class="flight-departure">Departure: <?php echo $flight['travel_cost']; ?></div>
+                
+                
+                <div class="flight-arrival">Arrival: <?php echo $flight['arrival_country']; ?></div>
+                <div class="flight-arrival">Arrival: <?php echo $flight['arrival_city']; ?></div>
+                <form action="gevondenreis.php" method="get">
+                    <input type="hidden" name="house_id" value="<?php echo $flight['house_id'] ?>">
+                    <input type="submit" value="Bekijk reis" id="">
+                </form>
             </div>
+
+
+
         <?php endforeach; ?>
     </section>
 

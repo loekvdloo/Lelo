@@ -177,6 +177,8 @@ include('dbcalls/connect.php');
             <?php if ($table == 'house') : ?>
                 <label for="name">House Name:</label>
                 <input type="text" name="name" required>
+                <label for="summary">summary</label>
+                <input type="text" name="summary" required>
                 <label for="house_image">House Image:</label>
                 <input type="file" name="house_image" required>
                 <label for="rooms">Rooms:</label>
@@ -206,6 +208,7 @@ include('dbcalls/connect.php');
                 <?php if ($table == 'house') : ?>
                     <th>House ID</th>
                     <th>House Name</th>
+                    <th>House Summary</th>
                     <th>House Image</th>
                 <?php elseif ($table == 'locations') : ?>
                     <th>City</th>
@@ -218,6 +221,7 @@ include('dbcalls/connect.php');
                     <?php if ($table == 'house') : ?>
                         <td><?php echo $record['house_id']; ?></td>
                         <td><?php echo $record['name']; ?></td>
+                        <td><?php echo $record['summary'] ?></td>
                         <td><img src="<?php echo $record['house_image']; ?>" alt="House Image" width="100"></td>
                     <?php elseif ($table == 'locations') : ?>
                         <td><?php echo $record['city']; ?></td>
@@ -229,6 +233,8 @@ include('dbcalls/connect.php');
                             <?php if ($table == 'house') : ?>
                                 <label for="name">House Name:</label>
                                 <input type="text" name="name" value="<?php echo $record['name']; ?>" required>
+                                <label for="summart">Summary:</label>
+                                <input type="text" name="summary" value="<?php echo $record['summary']; ?>" required>
                                 <label for="house_image">House Image URL:</label>
                                 <input type="text" name="house_image" value="<?php echo $record['house_image']; ?>" required>
                                 <label for="rooms">Rooms:</label>
