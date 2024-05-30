@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $house_id = $_POST['house_id'];
 
     try {
-        // Check if the user exists
         $stmt = $conn->prepare("SELECT user_id FROM users WHERE user_email = :email");
         $stmt->bindParam(':email', $email);
         $stmt->execute();
@@ -17,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($user) {
             $user_id = $user['user_id'];
 
-            // Insert the review into the reviews table
             $stmt = $conn->prepare("INSERT INTO reviews (rating, message, user_id, house_id) VALUES (:score, :message, :user_id, :house_id)");
             $stmt->bindParam(':score', $score);
             $stmt->bindParam(':message', $message);

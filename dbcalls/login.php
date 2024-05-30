@@ -2,12 +2,11 @@
 include('connect.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
-    // Start session and get form data
     session_start();
     $firstname = $_POST['firstname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    
+
     try {
         $stmt = $conn->prepare("SELECT user_id, user_name, user_pass, user_email, is_admin FROM users WHERE user_email = :email AND user_name = :firstname AND user_pass = :password");
 
@@ -16,11 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         $stmt->bindParam(':password', $password);
 
         $stmt->execute();
+        $data = $stmt->fetch();
 
-        // Fetch the user data
-        $data = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        // Check if the user data exists
         if ($data) {
             $_SESSION['logged_in'] = true;
             $_SESSION['firstname'] = $data['user_name'];
@@ -40,4 +36,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         echo "Fout bij het inloggen: " . $e->getMessage();
     }
 }
-
