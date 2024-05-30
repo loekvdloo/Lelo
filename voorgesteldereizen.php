@@ -31,9 +31,10 @@ $flights = $stmt->fetchAll();
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
-    <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
+    <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
+
             <form class="formulierhome">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
                 <input type="text" name="daterange"/>
@@ -55,17 +56,18 @@ $flights = $stmt->fetchAll();
                         </div>
                     </div>
                 </div>
-                <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformulier">
 
+                <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformuliervlucht">
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
+
         </div>
     </section>
     <section class="voorgesteldereizen">
         <?php foreach ($flights as $flight) : ?>
             <div class="flight-item">
                 <div class="flight-image">
-                    <img src="<?php echo $flight['image']; ?>" alt="House Image" style="max-width: 100%; height: auto;">
+                    <img src="<?php echo $flight['image']; ?>" alt="House Image"  >
                 </div>
 
 
@@ -81,7 +83,7 @@ $flights = $stmt->fetchAll();
                              style="text-wrap: wrap; width: 115px;"> <?php echo $flight['summary']; ?></div>
                         <form action="gevondenreis.php" method="get">
                             <input type="hidden" name="house_id" value="<?php echo $flight['house_id'] ?>">
-                            <input type="submit" value="Bekijk reis" id="">
+                            <input type="submit" value="Bekijk reis" id="bekijkvoorgesteld">
                         </form>
                     </div>
                 </div>

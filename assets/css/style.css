@@ -426,42 +426,50 @@ label {
     left: 4px;
     top: 1px;
 }
-.flight-item{
+
+.flight-item {
     width: 46%;
     background-color: #E8E7E7;
     display: flex;
     margin: 4vw;
     border-radius: 12px;
 }
-.flight-item img{
+
+.flight-item img {
     height: 12vw;
     padding: 9px;
     border-radius: 15px;
 }
-.naamkosteninfoblok{
+
+.naamkosteninfoblok {
     display: flex;
     gap: 5vw;
     padding-bottom: 4vw;
     padding-left: 12px;
     padding-top: 0.5vw;
 }
-#nameblokinfo{
+
+#nameblokinfo {
     width: 10vw;
 }
-#prijsblokinfo{
+
+#prijsblokinfo {
     width: 5vw;
 }
-.dingenbekijkeninfoblok{
+
+.dingenbekijkeninfoblok {
     display: flex;
     gap: 7vw;
     padding-left: 12px;
     align-items: end;
 }
-.voorgesteldereizen{
+
+.voorgesteldereizen {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /*einde voorgesteldereis*/
 /*seizoenen*/
 .blokseizoenen {
@@ -504,6 +512,15 @@ label {
     position: relative;
     left: 4px;
     top: 1px;
+}
+
+#bekijkvoorgesteld {
+    background-color: #B32E37;
+    border-radius: 5px;
+    border: none;
+    width: 76px;
+    height: 24px;
+    color: white;
 }
 
 /*einde seizoenen*/
@@ -701,25 +718,30 @@ label {
     position: relative;
     left: 16vw;
 }
-#contactlelo{
+
+#contactlelo {
     padding-top: 6vw;
 }
-.favooverons{
+
+.favooverons {
     display: flex;
     flex-direction: column;
     padding-top: 12vw;
 }
-#titelfavo{
+
+#titelfavo {
     display: flex;
     align-self: center;
     color: black;
     padding-bottom: 3vw;
 }
-.reizenoverons{
+
+.reizenoverons {
     height: 400px;
     display: flex;
     justify-content: space-evenly;
 }
+
 /*einde over ons*/
 
 /*footer*/
@@ -971,7 +993,47 @@ label {
     }
 
     /*    einde homepage*/
-    /*    signup/sign in*/
+    /*voorgesteldereizen page*/
+    .flight-item {
+        flex-direction: column;
+        width: 71%;
+        background-color: #E8E7E7;
+        display: flex;
+        margin: 4vw;
+        border-radius: 12px;
+    }
+
+    .flight-item img {
+        max-width: 96%;
+        height: auto;
+        padding: 6px;
+        border-radius: 15px;
+    }
+
+    .naamkosteninfoblok {
+        display: flex;
+        gap: 5vw;
+        padding-bottom: 4vw;
+        padding-left: 12px;
+        padding-top: 0.5vw;
+        flex-direction: column;
+    }
+
+    #nameblokinfo {
+        width: 68vw;
+    }
+    #prijsblokinfo {
+        width: 18vw;
+    }
+    .dingenbekijkeninfoblok {
+        display: flex;
+        gap: 19vw;
+        padding-left: 12px;
+        align-items: end;
+        margin-bottom: 5vw;
+    }
+        /*einde voorgesteldereizen*/
+        /*    signup/sign in*/
     .signupknop {
         width: 16vw;
         background-color: #B32E37;
@@ -1083,14 +1145,14 @@ label {
 
     /*einde contactpage*/
     /*overons*/
-    .over_ons_grotefoto{
+    .over_ons_grotefoto {
         height: 116vw;
         width: 332vw;
         position: relative;
         right: 231vw;
     }
-    /*einde over ons*/
 
+    /*einde over ons*/
     /* footerresp*/
     .footernormaal {
         display: none;
