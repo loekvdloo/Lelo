@@ -28,6 +28,8 @@ $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.
 $stmt->execute();
 
 $flights = $stmt->fetchAll();
+
+var_dump($_GET['daterange']);
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
@@ -35,7 +37,7 @@ $flights = $stmt->fetchAll();
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
 
-            <form class="formulierhome">
+            <form class="formulierhome" method="get" action="voorgesteldereizen.php">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
                 <input type="text" name="daterange"/>
                 <div class="drop">
@@ -58,7 +60,7 @@ $flights = $stmt->fetchAll();
                 </div>
 
                 <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformuliervlucht">
-                <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
+                <input type="Submit" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
 
         </div>
