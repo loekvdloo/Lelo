@@ -33,7 +33,7 @@ var_dump($_GET['daterange']);
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
-    <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
+    <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
 
