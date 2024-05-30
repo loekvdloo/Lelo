@@ -441,7 +441,7 @@ label {
 .naamkosteninfoblok{
     display: flex;
     gap: 5vw;
-    padding-bottom: 7.5vw;
+    padding-bottom: 4vw;
     padding-left: 12px;
     padding-top: 0.5vw;
 }
@@ -453,8 +453,9 @@ label {
 }
 .dingenbekijkeninfoblok{
     display: flex;
-    gap: 5vw;
+    gap: 7vw;
     padding-left: 12px;
+    align-items: end;
 }
 .voorgesteldereizen{
     display: flex;
