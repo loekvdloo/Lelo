@@ -18,7 +18,7 @@
                 <a href="voorgesteldereizen.php">trip info</a>
             </div>
             <div class="knopheader" id="tripinfoknop">
-                <a href="contact.php">contact</a>
+                <a href="test.php">contact</a>
             </div>
             <div class="knopheader" id="aboutusknop">
                 <a href="over_ons.php">About us</a>
@@ -41,7 +41,7 @@
             <div class="overlay-content">
                 <a href="voorgesteldereizen.php">trip info</a>
                 <a href="contact.php">contact</a>
-                <a href="#">About us</a>
+                <a href="test.php">About us</a>
                 <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a>
 
             </div>
