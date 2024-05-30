@@ -626,6 +626,49 @@ label {
 
 /*einde contactpagina*/
 /*einde homepagina*/
+/*gevondenreis*/
+.bevoegdhedenverblijf{
+    display: flex;
+}
+.logobevoegheden{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#rooms{
+    position: relative;
+    left: 1vw;
+}
+.bevoegdhedenverblijf h2{
+    color: black;
+}
+.fasaliteiten{
+    font-size: 28px;
+}
+.bevoegdheaden{
+    width: 31%;
+    position: relative;
+    left: 5vw;
+    top: 4vw;
+}
+.gevondenreisnameimg{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    right: 5vw;
+    top: 5vw;
+}
+.gevondenreisnameimg img{
+    width: 50%;
+    position: relative;
+    top: 1vw;
+    border-radius: 1vw;
+}
+.gevondenreisnameimg h2{
+    position: relative;
+    right: 22vw;
+}
+/*einde gevondenreis*/
 /*privacy pagina*/
 .privacypage {
     width: 80%;
@@ -1033,6 +1076,7 @@ label {
         margin-bottom: 5vw;
     }
         /*einde voorgesteldereizen*/
+
         /*    signup/sign in*/
     .signupknop {
         width: 16vw;
