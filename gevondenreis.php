@@ -85,10 +85,6 @@
         <form action="book.phh" method="post" >
             <button type="submit">Boek de reis</button>
         </form>
-        
-
-        
-
 
         <section>
             <h2>Submit a Review</h2>
