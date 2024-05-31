@@ -629,6 +629,7 @@ label {
 /*gevondenreis*/
 .bevoegdhedenverblijf{
     display: flex;
+    height: 35vw;
 }
 .logobevoegheden{
     padding-left: 15px;
@@ -665,8 +666,66 @@ label {
     border-radius: 1vw;
 }
 .gevondenreisnameimg h2{
+    width: 40vw;
+}
+.langestreepgevondenreis{
+    height: 2px;
+    width: 93vw;
+    background-color: black;
     position: relative;
-    right: 22vw;
+    left: 3vw;
+}
+.reviewsgevondenreizen{
+    display: flex;
+}
+.inputreview{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+#reviewtitle{
+    display: flex;
+    gap: 0.5vw;
+    position: relative;
+    left: 8vw;
+    top: 3vw;
+    padding-bottom: 4vw;
+}
+.reviewblok{
+    display: flex;
+    flex-direction: column;
+}
+.review{
+    position: relative;
+    left: 8vw;
+    top: 1vw;
+    padding-top: 1vw;
+}
+.stars{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.kleinstreepjereview{
+    height: 0.1vw;
+    width: 48vw;
+    background-color: black;
+    margin-top: 2vw;
+    position: relative;
+    left: -2vw;
+}
+.reviewgeven{
+    position: relative;
+    left: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 3vw;
+}
+#message{
+    max-width: 11vw;
+    width: 156px;
+    height: 5vw;
+    max-height: 48vw;
 }
 /*einde gevondenreis*/
 /*privacy pagina*/
@@ -1234,4 +1293,3 @@ label {
 
     /*    einde footer*/
 }
-
