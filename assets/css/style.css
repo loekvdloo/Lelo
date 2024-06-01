@@ -336,7 +336,7 @@ label {
 }
 
 .reiszoeken {
-    width: 63vw;
+    width: 51vw;
     height: 74px;
     background-color: #E8E7E7;
     border-radius: 10px;
@@ -344,14 +344,25 @@ label {
     align-items: center;
     justify-content: center;
 }
+.reseverenblok{
+    width: 99%;
+    height: 4vw;
+    background-color: #E8E7E7;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
 #zoekenhome {
     width: 97px;
     height: 44px;
-    position: relative;
-    top: 0.5vw;
 }
-
+#submitreseveren{
+    width: 8vw;
+}
 .formulierhome {
     display: flex;
     gap: 30px;
@@ -677,6 +688,7 @@ label {
 }
 .reviewsgevondenreizen{
     display: flex;
+    padding-bottom: 5vw;
 }
 .inputreview{
     padding: 5px;
