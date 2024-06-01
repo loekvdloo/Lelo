@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             move_uploaded_file($_FILES["house_image"]["tmp_name"], $target_file);
             $house_image = $target_file;
 
-            
+
             $stmt = $conn->prepare("INSERT INTO house (name, summary, house_image, rooms, pool, backyard, airco, sauna) VALUES (:name, :summary, :house_image, :rooms, :pool, :backyard, :airco, :sauna)");
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':summary', $summary);
@@ -57,6 +57,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
+$stmt = $conn->prepare("SELECT * FROM contact");
+$stmt->execute();
+$contactSubmissions = $stmt->fetchAll();
+
+$stmt = $conn->prepare("SELECT * FROM complaints");
+$stmt->execute();
+$complaints = $stmt->fetchAll();
+
 if ($table == 'house') {
     $stmt = $conn->prepare("SELECT * FROM house");
 } else {
@@ -64,4 +72,3 @@ if ($table == 'house') {
 }
 $stmt->execute();
 $records = $stmt->fetchAll();
-

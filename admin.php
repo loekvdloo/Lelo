@@ -21,6 +21,7 @@
     include('dbcalls/connect.php');
     ?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
+
         <section class="bekijkreizenadmin">
             <div class="bekijkreizenblok">
                 <div class="namenresveren">
@@ -205,6 +206,48 @@
                                     <button type="submit" name="action" value="reject">Reject</button>
                                 </form>
                             </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+
+                <!-- Display Contact Form Submissions -->
+                <h3>Contact Form Submissions</h3>
+                <table border="1">
+                    <tr>
+                        <th>Email</th>
+                        <th>Number</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Message</th>
+                    </tr>
+                    <?php foreach ($contactSubmissions as $submission) : ?>
+                        <tr>
+                            <td><?php echo $submission['email']; ?></td>
+                            <td><?php echo $submission['number']; ?></td>
+                            <td><?php echo $submission['firstname']; ?></td>
+                            <td><?php echo $submission['lastname']; ?></td>
+                            <td><?php echo $submission['message']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+
+                <!-- Display complaints in a table -->
+                <h3>Complaints</h3>
+                <table border="1">
+                    <tr>
+                        <th>Complaint ID</th>
+                        <th>Subject</th>
+                        <th>Travel</th>
+                        <th>Complaint</th>
+                        <th>User ID</th>
+                    </tr>
+                    <?php foreach ($complaints as $complaint) : ?>
+                        <tr>
+                            <td><?php echo $complaint['complaint_id']; ?></td>
+                            <td><?php echo $complaint['subject']; ?></td>
+                            <td><?php echo $complaint['travel']; ?></td>
+                            <td><?php echo $complaint['complaint']; ?></td>
+                            <td><?php echo $complaint['user_id']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

@@ -24,9 +24,24 @@
                 <a href="over_ons.php">About us</a>
             </div>
 
-            <div class="knopheader" id="tripinfoknop">
-                <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a>
-            </div>
+            <?php
+            session_start();
+            if (isset($_SESSION['user_id'])) {
+                // If logged in, don't show the login button
+            } else {
+                // If not logged in, show the login button
+                echo '<div class="knopheader" id="tripinfoknop"><a onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">login</a></div>';
+            }
+            ?>
+
+            <?php
+            if (isset($_SESSION['user_id'])) {
+                // If logged in, show the logout button
+                echo '<div class="knopheader" id="tripinfoknop"><a href="dbcalls/logout.php">Logout</a></div>';
+            } else {
+                // If not logged in, don't show the logout button
+            }
+            ?>
         </nav>
     </div>
 
@@ -42,8 +57,6 @@
                 <a href="voorgesteldereizen.php">trip info</a>
                 <a href="contact.php">contact</a>
                 <a href="test.php">About us</a>
-                <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a>
-
             </div>
         </div>
         <span
