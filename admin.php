@@ -19,7 +19,6 @@
     include('dbcalls/tables.php');
     include('dbcalls/signup.php');
     include('dbcalls/connect.php');
-    include('dbcalls/assign_admin.php');
     ?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
         <section class="bekijkreizenadmin">
@@ -36,10 +35,9 @@
                     <p>kosten</p>
                 </div>
             </div>
-
         </section>
         <section class="vakantieverwijderen">
-            < <main class="mainadmin" style="background-image: url('assets/img/background.png');">
+            <main class="mainadmin" style="background-image: url('assets/img/background.png');">
                 <h1>Admin Page</h1>
                 <form method="get">
                     <label for="table">Select Table:</label>
@@ -72,7 +70,6 @@
                         <label for="sauna">Sauna:</label>
                         <input type="checkbox" name="sauna" value="1">
 
-
                     <?php elseif ($table == 'locations') : ?>
                         <label for="city">City:</label>
                         <input type="text" name="city" required>
@@ -96,13 +93,12 @@
                         <?php endif; ?>
                         <th>Actions</th>
                     </tr>
-                    <?php foreach ($records as $record) : //<!- records is data fetch ->// 
-                    ?>
+                    <?php foreach ($records as $record) : ?>
                         <tr>
                             <?php if ($table == 'house') : ?>
                                 <td><?php echo $record['house_id']; ?></td>
                                 <td><?php echo $record['name']; ?></td>
-                                <td><?php echo $record['summary'] ?></td>
+                                <td><?php echo $record['summary']; ?></td>
                                 <td><img src="<?php echo $record['house_image']; ?>" alt="House Image" width="100"></td>
                             <?php elseif ($table == 'locations') : ?>
                                 <td><?php echo $record['city']; ?></td>
@@ -151,11 +147,71 @@
                     <button type="submit">Assign as Admin</button>
                 </form>
 
+                <!-- Review Approval Section -->
+                <?php
+                // Handle approval or rejection
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    if (isset($_POST['review_id'])) {
+                        $review_id = $_POST['review_id'];
+                        $action = $_POST['action'];
 
-    </main>
-    <?php
-    include('footer.php')
-    ?>
+                        if ($action == 'approve') {
+                            $stmt = $conn->prepare("UPDATE reviews SET is_approved = TRUE WHERE review_id = :review_id");
+                            $stmt->bindParam(':review_id', $review_id);
+                            $stmt->execute();
+                        } elseif ($action == 'reject') {
+                            $stmt = $conn->prepare("DELETE FROM reviews WHERE review_id = :review_id");
+                            $stmt->bindParam(':review_id', $review_id);
+                            $stmt->execute();
+                        }
+                    }
+                }
+
+                // Fetch reviews that need approval
+                $stmt = $conn->prepare("
+                SELECT reviews.*, users.user_email 
+                FROM reviews 
+                JOIN users 
+                ON reviews.user_id = users.user_id 
+                WHERE is_approved = FALSE");
+                $stmt->execute();
+                $reviews = $stmt->fetchAll();
+                ?>
+
+                <h3>Pending Reviews</h3>
+                <table border="1">
+                    <tr>
+                        <th>Review ID</th>
+                        <th>Email</th>
+                        <th>House ID</th>
+                        <th>Rating</th>
+                        <th>Message</th>
+                        <th>Actions</th>
+                    </tr>
+                    <?php foreach ($reviews as $review) : ?>
+                        <tr>
+                            <td><?php echo $review['review_id']; ?></td>
+                            <td><?php echo $review['user_email']; ?></td>
+                            <td><?php echo $review['house_id']; ?></td>
+                            <td><?php echo $review['rating']; ?></td>
+                            <td><?php echo $review['message']; ?></td>
+                            <td>
+                                <form method="post" style="display:inline;">
+                                    <input type="hidden" name="review_id" value="<?php echo $review['review_id']; ?>">
+                                    <button type="submit" name="action" value="approve">Approve</button>
+                                </form>
+                                <form method="post" style="display:inline;">
+                                    <input type="hidden" name="review_id" value="<?php echo $review['review_id']; ?>">
+                                    <button type="submit" name="action" value="reject">Reject</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </main>
+            <?php
+            include('footer.php');
+            ?>
 </body>
 
 </html>
