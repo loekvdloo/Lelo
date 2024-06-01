@@ -11,124 +11,130 @@
 </head>
 
 <body>
-    
+
 <?php
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');
+include('dbcalls/search.php');
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
 
 
-
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
-            
+
             <form class="formulierhome">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
 
                 <div class="drop">
                     <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
                     <div class="personenetoevoegen">
-
-                        <div class="keuzepers">
-                            <label for="adults">Volwassenen:</label>
-                            <input type="number" id="volwassenen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="children">Kinderen:</label>
-                            <input type="number" id="kinderen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="babies">Baby's:</label>
-                            <input type="number" id="baby" class="pers" min="0" value="0">
-                        </div>
-                    </div>
-                </div>
-
-                <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformuliervlucht">
-                <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
-            </form>
-
-        </div>
-    </section>
+                                 style="background-image: url('assets/img/foto_homepagina.png');">
+                            <h1>Plan je reis hier</h1>
+                            <div class="reiszoeken">
+                                <form class="formulierhome" method="GET" action="search.php">
+                                    <input type="text" name="bestemming" placeholder="bestemming"
+                                           id="vakantieformulier">
+                                    <input type="text" name="daterange"/>
+                                    <div class="drop">
+                                        <input class="hoeveelpers" type="number" name="persons" placeholder="personen"
+                                               id="vakantiepers" min="1" step="1">
+                                    </div>
+                                    <select name="luchthaven" id="vakantieformuliervlucht">
+                                        <option value="schiphol">Schiphol</option>
+                                        <option value="lelystad">Lelystad</option>
+                                    </select>
 
 
+                                    <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken"
+                                           id="zoekenhome">
+                                </form>
+                            </div>
+                        </section>
 
-    <section class="reizenhome">
-        <div class="imgreizenhome" style="background-image: url('assets/img/japan_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Japan</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>zuid-afrika</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/brazilie_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Brazilie</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-    </section>
-    <section class="reizenhome">
-        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/lente_homepagina.png');">
-            <div class="blokseizoenen">
-                <h1>lente</h1>
-            </div>
-            <div class="voorgesteldeseizoen">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/zomer_homepagina.png');">
-            <div class="blokseizoenen">
-                <h1>zomer</h1>
-            </div>
-            <div class="voorgesteldeseizoen">
-                <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/herfst_homepagina.png');">
-            <div class="blokseizoenen">
-                <h1>herfst</h1>
-            </div>
-            <div class="voorgesteldeseizoen">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/winter_homepagina.png');">
-            <div class="blokseizoenen">
-                <h1>winter</h1>
-            </div>
-            <div class="voorgesteldeseizoen">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-    </section>
-    <script>
-        $(function () {
-            $('input[name="daterange"]').daterangepicker(
-                {
-                    ssingleDatePicker: 'true',
-                    showShortcuts: 'false',
-                    showTopbar: 'false'
-                }
-            );
-        });
 
-    </script>
+                        <section class="reizenhome">
+                            <div class="imgreizenhome"
+                                 style="background-image: url('assets/img/japan_homepagina.png');">
+                                <div class="blokachtertekst">
+                                    <h1>Japan</h1>
+                                </div>
+                                <div class="voorgesteldereisbekijken">
+                                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                            <div class="imgreizenhome"
+                                 style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
+                                <div class="blokachtertekst">
+                                    <h1>zuid-afrika</h1>
+                                </div>
+                                <div class="voorgesteldereisbekijken">
+                                    <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                            <div class="imgreizenhome"
+                                 style="background-image: url('assets/img/brazilie_homepagina.png');">
+                                <div class="blokachtertekst">
+                                    <h1>Brazilie</h1>
+                                </div>
+                                <div class="voorgesteldereisbekijken">
+                                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="reizenhome">
+                            <div class="imgreizenhome" id="seizoenblok"
+                                 style="background-image: url('assets/img/lente_homepagina.png');">
+                                <div class="blokseizoenen">
+                                    <h1>lente</h1>
+                                </div>
+                                <div class="voorgesteldeseizoen">
+                                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                            <div class="imgreizenhome" id="seizoenblok"
+                                 style="background-image: url('assets/img/zomer_homepagina.png');">
+                                <div class="blokseizoenen">
+                                    <h1>zomer</h1>
+                                </div>
+                                <div class="voorgesteldeseizoen">
+                                    <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                            <div class="imgreizenhome" id="seizoenblok"
+                                 style="background-image: url('assets/img/herfst_homepagina.png');">
+                                <div class="blokseizoenen">
+                                    <h1>herfst</h1>
+                                </div>
+                                <div class="voorgesteldeseizoen">
+                                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                            <div class="imgreizenhome" id="seizoenblok"
+                                 style="background-image: url('assets/img/winter_homepagina.png');">
+                                <div class="blokseizoenen">
+                                    <h1>winter</h1>
+                                </div>
+                                <div class="voorgesteldeseizoen">
+                                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                                </div>
+                            </div>
+                        </section>
+                        <script>
+                            $(function () {
+                                $('input[name="daterange"]').daterangepicker(
+                                    {
+                                        ssingleDatePicker: 'true',
+                                        showShortcuts: 'false',
+                                        showTopbar: 'false'
+                                    }
+                                );
+                            });
+
+                        </script>
 
 </main>
 <?php

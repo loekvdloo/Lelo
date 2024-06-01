@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($user) {
             $user_id = $user['user_id'];
 
-            $stmt = $conn->prepare("INSERT INTO reviews (rating, message, user_id, house_id) VALUES (:score, :message, :user_id, :house_id)");
+            $stmt = $conn->prepare("INSERT INTO reviews (rating, message, user_id, house_id, is_approved) VALUES (:score, :message, :user_id, :house_id, FALSE)");
             $stmt->bindParam(':score', $score);
             $stmt->bindParam(':message', $message);
             $stmt->bindParam(':user_id', $user_id);
