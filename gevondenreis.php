@@ -146,7 +146,7 @@
         </section>
 
         <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['travel_cost']; ?></div>
-        <form action="book.phh" method="post">
+        <form action="book.php" method="post">
             <button type="submit">Boek de reis</button>
         </form>
 

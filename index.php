@@ -26,44 +26,32 @@
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');
+include('dbcalls/search.php');
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
 
 
 
-    <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
-        <h1>Plan je reis hier</h1>
-        <div class="reiszoeken">
-            
-            <form class="formulierhome">
-                <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input type="text" name="daterange"/>
-                <div class="drop">
-                    <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
-                    <div class="personenetoevoegen">
+<section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
+    <h1>Plan je reis hier</h1>
+    <div class="reiszoeken">
+        <form class="formulierhome" method="GET" action="search.php">
+            <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
+            <input type="text" name="daterange"/>
+            <div class="drop">
+                <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers" min="1" step="1">
+            </div>
+            <select name="luchthaven" id="vakantieformuliervlucht">
+                <option value="schiphol">Schiphol</option>
+                <option value="lelystad">Lelystad</option>
+            </select>
 
-                        <div class="keuzepers">
-                            <label for="adults">Volwassenen:</label>
-                            <input type="number" id="volwassenen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="children">Kinderen:</label>
-                            <input type="number" id="kinderen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="babies">Baby's:</label>
-                            <input type="number" id="baby" class="pers" min="0" value="0">
-                        </div>
-                    </div>
-                </div>
+            <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
+        </form>
+    </div>
+</section>
 
-                <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformuliervlucht">
-                <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
-            </form>
-
-        </div>
-    </section>
 
 
 

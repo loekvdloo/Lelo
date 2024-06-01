@@ -147,10 +147,8 @@
                     <input type="email" id="email" name="email" required>
                     <button type="submit">Assign as Admin</button>
                 </form>
-
-                <!-- Review Approval Section -->
+                
                 <?php
-                // Handle approval or rejection
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if (isset($_POST['review_id'])) {
                         $review_id = $_POST['review_id'];
@@ -168,7 +166,6 @@
                     }
                 }
 
-                // Fetch reviews that need approval
                 $stmt = $conn->prepare("
                 SELECT reviews.*, users.user_email 
                 FROM reviews 
@@ -210,7 +207,6 @@
                     <?php endforeach; ?>
                 </table>
 
-                <!-- Display Contact Form Submissions -->
                 <h3>Contact Form Submissions</h3>
                 <table border="1">
                     <tr>
@@ -231,7 +227,6 @@
                     <?php endforeach; ?>
                 </table>
 
-                <!-- Display complaints in a table -->
                 <h3>Complaints</h3>
                 <table border="1">
                     <tr>
