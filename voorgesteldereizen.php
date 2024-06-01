@@ -29,7 +29,6 @@ $stmt->execute();
 
 $flights = $stmt->fetchAll();
 
-var_dump($_GET['daterange']);
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
