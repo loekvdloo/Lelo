@@ -344,7 +344,8 @@ label {
     align-items: center;
     justify-content: center;
 }
-.reseverenblok{
+
+.reseverenblok {
     width: 99%;
     height: 4vw;
     background-color: #E8E7E7;
@@ -356,13 +357,16 @@ label {
     bottom: 0;
     left: 0;
 }
+
 #zoekenhome {
     width: 97px;
     height: 44px;
 }
-#submitreseveren{
+
+#submitreseveren {
     width: 8vw;
 }
+
 .formulierhome {
     display: flex;
     gap: 30px;
@@ -384,81 +388,81 @@ label {
 
 /*einde vakantie zoeken*/
 /*voorgestelde vakanties*/
-.reizenhome {
-    margin-top: 200px;
-    height: 400px;
-    display: flex;
-    justify-content: space-evenly;
-}
+/*.reizenhome {*/
+/*    margin-top: 200px;*/
+/*    height: 400px;*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*}*/
 
-.imgreizenhome {
-    width: 329px;
-    background-repeat: no-repeat;
-}
+/*.imgreizenhome {*/
+/*    width: 329px;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
 
-.blokachtertekst {
-    width: 329px;
-    height: 69px;
-    background-color: #383838;
-    opacity: 0.6;
-    position: relative;
-    top: 61px;
-}
+/*.blokachtertekst {*/
+/*    width: 329px;*/
+/*    height: 69px;*/
+/*    background-color: #383838;*/
+/*    opacity: 0.6;*/
+/*    position: relative;*/
+/*    top: 61px;*/
+/*}*/
 
-.blokachtertekst h1 {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    position: relative;
-    top: -8px;
-}
+/*.blokachtertekst h1 {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: start;*/
+/*    position: relative;*/
+/*    top: -8px;*/
+/*}*/
 
-.voorgesteldereisbekijken {
-    width: 121px;
-    height: 39px;
-    background-color: #B32E37;
-    border-radius: 10px;
-    position: relative;
-    left: 199px;
-    top: 286px;
-}
+/*.voorgesteldereisbekijken {*/
+/*    width: 121px;*/
+/*    height: 39px;*/
+/*    background-color: #B32E37;*/
+/*    border-radius: 10px;*/
+/*    position: relative;*/
+/*    left: 199px;*/
+/*    top: 286px;*/
+/*}*/
 
-.voorgesteldereisbekijken a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
-}
+/*.voorgesteldereisbekijken a {*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    font-size: 20px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    padding-top: 5px;*/
+/*}*/
 
-.voorgesteldereisbekijken img {
-    position: relative;
-    left: 4px;
-    top: 1px;
-}
+/*.voorgesteldereisbekijken img {*/
+/*    position: relative;*/
+/*    left: 4px;*/
+/*    top: 1px;*/
+/*}*/
 
-.flight-item {
-    width: 46%;
-    background-color: #E8E7E7;
-    display: flex;
-    margin: 4vw;
-    border-radius: 12px;
-}
+/*.flight-item {*/
+/*    width: 46%;*/
+/*    background-color: #E8E7E7;*/
+/*    display: flex;*/
+/*    margin: 4vw;*/
+/*    border-radius: 12px;*/
+/*}*/
 
-.flight-item img {
-    height: 12vw;
-    padding: 9px;
-    border-radius: 15px;
-}
+/*.flight-item img {*/
+/*    height: 12vw;*/
+/*    padding: 9px;*/
+/*    border-radius: 15px;*/
+/*}*/
 
-.naamkosteninfoblok {
-    display: flex;
-    gap: 5vw;
-    padding-bottom: 4vw;
-    padding-left: 12px;
-    padding-top: 0.5vw;
-}
+/*.naamkosteninfoblok {*/
+/*    display: flex;*/
+/*    gap: 5vw;*/
+/*    padding-bottom: 4vw;*/
+/*    padding-left: 12px;*/
+/*    padding-top: 0.5vw;*/
+/*}*/
 
 #nameblokinfo {
     width: 10vw;
@@ -638,31 +642,37 @@ label {
 /*einde contactpagina*/
 /*einde homepagina*/
 /*gevondenreis*/
-.bevoegdhedenverblijf{
+.bevoegdhedenverblijf {
     display: flex;
     height: 35vw;
 }
-.logobevoegheden{
+
+.logobevoegheden {
     padding-left: 15px;
     padding-right: 15px;
 }
-#rooms{
+
+#rooms {
     position: relative;
     left: 1vw;
 }
-.bevoegdhedenverblijf h2{
+
+.bevoegdhedenverblijf h2 {
     color: black;
 }
-.fasaliteiten{
+
+.fasaliteiten {
     font-size: 28px;
 }
-.bevoegdheaden{
+
+.bevoegdheaden {
     width: 31%;
     position: relative;
     left: 5vw;
     top: 4vw;
 }
-.gevondenreisnameimg{
+
+.gevondenreisnameimg {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -670,32 +680,38 @@ label {
     right: 5vw;
     top: 5vw;
 }
-.gevondenreisnameimg img{
+
+.gevondenreisnameimg img {
     width: 50%;
     position: relative;
     top: 1vw;
     border-radius: 1vw;
 }
-.gevondenreisnameimg h2{
+
+.gevondenreisnameimg h2 {
     width: 40vw;
 }
-.langestreepgevondenreis{
+
+.langestreepgevondenreis {
     height: 2px;
     width: 93vw;
     background-color: black;
     position: relative;
     left: 3vw;
 }
-.reviewsgevondenreizen{
+
+.reviewsgevondenreizen {
     display: flex;
     padding-bottom: 5vw;
 }
-.inputreview{
+
+.inputreview {
     padding: 5px;
     border-radius: 5px;
     border: none;
 }
-#reviewtitle{
+
+#reviewtitle {
     display: flex;
     gap: 0.5vw;
     position: relative;
@@ -703,21 +719,25 @@ label {
     top: 3vw;
     padding-bottom: 4vw;
 }
-.reviewblok{
+
+.reviewblok {
     display: flex;
     flex-direction: column;
 }
-.review{
+
+.review {
     position: relative;
     left: 8vw;
     top: 1vw;
     padding-top: 1vw;
 }
-.stars{
+
+.stars {
     margin-top: 7px;
     margin-bottom: 7px;
 }
-.kleinstreepjereview{
+
+.kleinstreepjereview {
     height: 0.1vw;
     width: 48vw;
     background-color: black;
@@ -725,7 +745,8 @@ label {
     position: relative;
     left: -2vw;
 }
-.reviewgeven{
+
+.reviewgeven {
     position: relative;
     left: 15vw;
     display: flex;
@@ -733,12 +754,14 @@ label {
     align-items: center;
     top: 3vw;
 }
-#message{
+
+#message {
     max-width: 11vw;
     width: 156px;
     height: 5vw;
     max-height: 48vw;
 }
+
 /*einde gevondenreis*/
 /*privacy pagina*/
 .privacypage {
@@ -1136,9 +1159,11 @@ label {
     #nameblokinfo {
         width: 68vw;
     }
+
     #prijsblokinfo {
         width: 18vw;
     }
+
     .dingenbekijkeninfoblok {
         display: flex;
         gap: 19vw;
@@ -1146,9 +1171,9 @@ label {
         align-items: end;
         margin-bottom: 5vw;
     }
-        /*einde voorgesteldereizen*/
 
-        /*    signup/sign in*/
+    /*einde voorgesteldereizen*/
+    /*    signup/sign in*/
     .signupknop {
         width: 16vw;
         background-color: #B32E37;
@@ -1304,4 +1329,97 @@ label {
     }
 
     /*    einde footer*/
+}
+
+/*test*/
+.mySlides {
+    display: none;
+}
+
+.w3-left, .w3-right, .w3-badge {
+    cursor: pointer;
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+}
+
+/* Stijl aanpassen */
+.reizenhome {
+    position: relative;
+    max-width: 1200px; /* Vergroot de maximale breedte */
+    margin: auto;
+    height: 450px; /* Verhoog de hoogte van de container */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgreizenhome {
+    width: 30%; /* Breder maken */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    position: relative;
+}
+
+.blokachtertekst {
+    width: 100%;
+    height: 69px;
+    background-color: #383838;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+.blokachtertekst h1 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    line-height: 69px;
+}
+
+.voorgesteldereisbekijken {
+    width: 121px;
+    height: 39px;
+    background-color: #B32E37;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 60.5px); /* Horizontaal centreren */
+}
+
+.voorgesteldereisbekijken a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.voorgesteldereisbekijken img {
+    margin-left: 5px;
+}
+
+.w3-display-bottommiddle {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.w3-left, .w3-right {
+    font-size: 24px;
+    padding: 0 10px;
 }
