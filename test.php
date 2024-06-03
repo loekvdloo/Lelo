@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Love Niek</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet">
 </head>
 <!DOCTYPE html>
 <html lang="nl">
@@ -14,9 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacyverklaring</title>
 </head>
-<style>
 
-/*</style>*/
 <body>
 <?php
 include('header.php');
@@ -24,97 +23,7 @@ include('header.php');
 <main style="background-image: url('assets/img/background.png');">
 
 
-    <section class="reizenhome">
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/japan_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Japan</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Zuid-Afrika</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/brazilie_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Brazilië</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/australie_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Australië</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/italie_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Italië</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/canada_homepagina.png');">
-            <div class="blokachtertekst">
-                <h1>Canada</h1>
-            </div>
-            <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-            </div>
-        </div>
 
-        <div class="w3-display-bottommiddle">
-            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-        </div>
-
-        <div class="w3-center w3-container w3-section w3-large w3-text-white" style="width:100%">
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-        </div>
-    </section>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > Math.ceil(x.length / 3)) {slideIndex = 1}
-            if (n < 1) {slideIndex = Math.ceil(x.length / 3)}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-white", "");
-            }
-            for (i = (slideIndex - 1) * 3; i < slideIndex * 3 && i < x.length; i++) {
-                x[i].style.display = "block";
-            }
-            dots[slideIndex-1].className += " w3-white";
-        }
-    </script>
 </main>
 <?php
 include('footer.php');
@@ -122,17 +31,6 @@ include('footer.php');
 ?>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--    <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Login</button>-->

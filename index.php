@@ -56,31 +56,99 @@ include('dbcalls/search.php');
 
 
     <section class="reizenhome">
-        <div class="imgreizenhome" style="background-image: url('assets/img/japan_homepagina.png');">
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/japan_homepagina.png');">
             <div class="blokachtertekst">
                 <h1>Japan</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
             <div class="blokachtertekst">
-                <h1>zuid-afrika</h1>
+                <h1>Zuid-Afrika</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
-        <div class="imgreizenhome" style="background-image: url('assets/img/brazilie_homepagina.png');">
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/brazilie_homepagina.png');">
             <div class="blokachtertekst">
-                <h1>Brazilie</h1>
+                <h1>Brazilië</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/australie_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Australië</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/italie_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Italië</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/canada_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Canada</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+
+        <div class="w3-display-left" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-display-right" onclick="plusDivs(1)">&#10095;</div>
+
+        <div class="w3-center w3-container w3-section w3-large w3-text-white" style="width:100%">
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
         </div>
     </section>
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > Math.ceil(x.length / 3)) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = Math.ceil(x.length / 3)
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            for (i = (slideIndex - 1) * 3; i < slideIndex * 3 && i < x.length; i++) {
+                x[i].style.display = "block";
+            }
+            dots[slideIndex - 1].className += " w3-white";
+        }
+    </script>
     <section class="reizenhome">
         <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/lente_homepagina.png');">
             <div class="blokseizoenen">
