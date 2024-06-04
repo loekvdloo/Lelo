@@ -37,7 +37,6 @@ include('dbcalls/search.php');
         <div class="reiszoeken">
             <form class="formulierhome" method="GET" action="search.php">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input type="text" name="daterange"/>
                 <div class="drop">
                     <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers"
                            min="1" step="1">
@@ -45,6 +44,26 @@ include('dbcalls/search.php');
                 <select name="luchthaven" id="vakantieformuliervlucht">
                     <option value="schiphol">Schiphol</option>
                     <option value="lelystad">Lelystad</option>
+                    <option value="Hartsfield-Jackson Atlanta">Hartsfield-Jackson Atlanta </option>
+                    <option value="Beijing Capital ">Beijing Capital </option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Dubai">Dubai  </option>
+                    <option value="Tokyo Haneda">Tokyo Haneda </option>
+                    <option value="O'Hare ">O'Hare  </option>
+                    <option value="London Heathrow ">London Heathrow </option>
+                    <option value="Shanghai Pudong ">Shanghai Pudong </option>
+                    <option value="Paris Charles de Gaulle ">Paris Charles de Gaulle </option>
+                    <option value="Dallas/Fort Worth">Dallas/Fort Worth  </option>
+                    <option value="Guangzhou Baiyun ">Guangzhou Baiyun</option>
+                    <option value="Frankfurt">Frankfurt </option>
+                    <option value="Istanbul ">Istanbul </option>
+                    <option value="Singapore Changi ">Singapore Changi </option>
+                    <option value="Amsterdam Schiphol">Amsterdam Schiphol </option>
+                    <option value="Seoul Incheon ">Seoul Incheon  </option>
+                    <option value="Denver ">Denver  </option>
+                    <option value="Suvarnabhumi ">Suvarnabhumi </option>
+                    <option value="Hong Kong ">Hong Kong  </option>
+                    <option value="Madrid-Barajas">Madrid-Barajas </option>
                 </select>
 
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
@@ -52,8 +71,9 @@ include('dbcalls/search.php');
         </div>
     </section>
 
-
+    <h1 class="homepage_test">ons meest bekijken reizen</h1>
     <section class="reizenhome">
+
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/japan_homepagina.png');">
             <div class="blokachtertekst">
                 <h1>Japan</h1>
@@ -94,9 +114,57 @@ include('dbcalls/search.php');
                 <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
-        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/canada_homepagina.png');">
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/canada_hompagina.png');">
             <div class="blokachtertekst">
                 <h1>Canada</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/frankrijk_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Frankrijk</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/duitsland_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Duitsland</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/spanje_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Spanje</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/thailand_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Thailand</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/amerika_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>amerika</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/egytpe_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>egypte</h1>
             </div>
             <div class="voorgesteldereisbekijken">
                 <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
@@ -145,6 +213,7 @@ include('dbcalls/search.php');
 
         }
     </script>
+    <h1 class="homepage_test">ons meest bekijken reizen</h1>
     <section class="reizenhome" id="seizoen">
         <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/lente_homepagina.png');">
             <div class="blokseizoenen">

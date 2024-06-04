@@ -8,40 +8,40 @@ session_start();
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lelo</title>
-    <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            padding: 12px 16px;
-            border: 1px solid #ccc;
-        }
-
-        .dropdown-content p {
-            margin: 10px 0;
-        }
-
-        .dropdown-content .close {
-            color: #aaa;
-            float: right;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .dropdown-content .close:hover,
-        .dropdown-content .close:focus {
-            color: black;
-            text-decoration: none;
-        }
-    </style>
+<!--    <style>-->
+<!--        .dropdown {-->
+<!--            position: relative;-->
+<!--            display: inline-block;-->
+<!--        }-->
+<!---->
+<!--        .dropdown-content {-->
+<!--            display: none;-->
+<!--            position: absolute;-->
+<!--            background-color: #f9f9f9;-->
+<!--            min-width: 200px;-->
+<!--            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
+<!--            z-index: 1;-->
+<!--            padding: 12px 16px;-->
+<!--            border: 1px solid #ccc;-->
+<!--        }-->
+<!---->
+<!--        .dropdown-content p {-->
+<!--            margin: 10px 0;-->
+<!--        }-->
+<!---->
+<!--        .dropdown-content .close {-->
+<!--            color: #aaa;-->
+<!--            float: right;-->
+<!--            font-size: 20px;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+<!---->
+<!--        .dropdown-content .close:hover,-->
+<!--        .dropdown-content .close:focus {-->
+<!--            color: black;-->
+<!--            text-decoration: none;-->
+<!--        }-->
+<!--    </style>-->
 </head>
 <body>
 
