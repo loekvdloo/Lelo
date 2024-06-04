@@ -86,7 +86,6 @@ session_start();
     </div>
 
     <script>
-        // Function to toggle the profile dropdown
         function toggleDropdown() {
             var dropdown = document.getElementById("profileDropdown");
             if (dropdown.style.display === "block") {
@@ -96,13 +95,11 @@ session_start();
             }
         }
 
-        // Function to close the dropdown
         function closeDropdown(event) {
             event.stopPropagation();
             document.getElementById("profileDropdown").style.display = "none";
         }
 
-        // Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
             if (!event.target.matches('#profileknop a')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
