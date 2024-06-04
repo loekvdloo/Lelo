@@ -276,7 +276,8 @@ main {
     height: 1.5vw;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;}
+    border-radius: 5px;
+}
 
 .personenetoevoegen {
     display: none;
@@ -939,7 +940,7 @@ label {
     flex-direction: column;
     justify-content: end;
     padding-bottom: 12px;
-    width: 61%;
+    width: 50%;
 }
 
 .formulierfooter a {
@@ -975,6 +976,7 @@ label {
     gap: 25px;
     padding-bottom: 5px;
     align-items: end;
+
 }
 
 .voorwaardefooter a {
@@ -999,7 +1001,7 @@ label {
         position: absolute;
         background-color: #f9f9f9;
         min-width: 200px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         padding: 12px 16px;
         border: 1px solid #ccc;
@@ -1021,18 +1023,21 @@ label {
         color: black;
         text-decoration: none;
     }
+
     h1 {
         font-size: 50px;
         color: white;
     }
 
     /*    headerresp*/
-    .topheader{
+    .topheader {
         display: none;
     }
+
     .buttomheader {
         display: none;
     }
+
     .buttomheaderresponsive {
         display: flex;
         height: 108px;
@@ -1184,19 +1189,23 @@ label {
         align-items: center;
         padding: 0px;
     }
-    .w3-display-left, .w3-display-right{
+
+    .w3-display-left, .w3-display-right {
         position: absolute;
         top: 73%;
         transform: translateY(-50%);
         font-size: 24px;
         cursor: pointer;
     }
+
     #seizoenblok {
         width: 62vw;
     }
-.homepage_test{
-    text-align: center;
-}
+
+    .homepage_test {
+        text-align: center;
+    }
+
     /*    einde homepage*/
     /*voorgesteldereizen page*/
     .flight-item {
@@ -1378,7 +1387,7 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        width: 61%;
+        width: 50%;
         padding-top: 10px;
         padding-left: 10px;
     }
@@ -1390,10 +1399,24 @@ label {
     .voorwaardefooter {
         position: relative;
         left: 40vw;
+        top: 6vw;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0px;
+        height: 19vw;
     }
 
     .footersocialprivesy {
         display: flex;
+    }
+
+    .socials {
+        display: flex;
+        gap: 10px;
+        padding-left: 10px;
+        padding-top: 65px;
+        width: 18%;
     }
 
     /*    einde footer*/
