@@ -32,7 +32,6 @@ include('dbcalls/search.php');
 <main style="background-image: url('assets/img/background.png');">
 
 
-
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
         <h1>Plan je reis hier</h1>
         <div class="reiszoeken">
@@ -40,7 +39,8 @@ include('dbcalls/search.php');
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
                 <input type="text" name="daterange"/>
                 <div class="drop">
-                    <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers" min="1" step="1">
+                    <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers"
+                           min="1" step="1">
                 </div>
                 <select name="luchthaven" id="vakantieformuliervlucht">
                     <option value="schiphol">Schiphol</option>
@@ -51,8 +51,6 @@ include('dbcalls/search.php');
             </form>
         </div>
     </section>
-
-
 
 
     <section class="reizenhome">
@@ -130,7 +128,7 @@ include('dbcalls/search.php');
         function showDivs(n) {
             var i;
             var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
+
             if (n > Math.ceil(x.length / 3)) {
                 slideIndex = 1
             }
@@ -140,16 +138,14 @@ include('dbcalls/search.php');
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-white", "");
-            }
+
             for (i = (slideIndex - 1) * 3; i < slideIndex * 3 && i < x.length; i++) {
                 x[i].style.display = "block";
             }
-            dots[slideIndex - 1].className += " w3-white";
+
         }
     </script>
-    <section class="reizenhome">
+    <section class="reizenhome" id="seizoen">
         <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/lente_homepagina.png');">
             <div class="blokseizoenen">
                 <h1>lente</h1>

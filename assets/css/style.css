@@ -398,13 +398,13 @@ label {
 
 .w3-display-left {left: 0;
     padding-left: 69px;
-    padding-top: 65vw;
+    padding-top: 75vw;
 }
 
 .w3-display-right {
     right: 0;
     padding-right: 69px;
-    padding-top: 65vw;
+    padding-top: 75vw;
 }
 .reizenhome {
     gap: 7vw;
@@ -412,8 +412,12 @@ label {
     height: 400px;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 10vw;
 }
-
+#seizoen{
+    padding-left: 0px;
+    gap: 0px;
+}
 .imgreizenhome {
     width: 329px;
     background-repeat: no-repeat;
@@ -824,10 +828,6 @@ label {
         width: 0.1vw;
         height: 5vw;
         background: black;
-    }
-
-    .vakantieverwijderen {
-        padding-top: 7vw;
     }
 
     .vakantieverwijderen h1 {
@@ -1358,3 +1358,117 @@ label {
 
     /*test*/
 
+.bekijkreizenblok {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.namenresveren p {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+/* Stijlen voor .vakantieverwijderen */
+.vakantieverwijderen {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+}
+
+.vakantieverwijderen form {
+    margin: 20px 0;
+}
+
+.vakantieverwijderen label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.vakantieverwijderen input[type="text"],
+.vakantieverwijderen input[type="number"],
+.vakantieverwijderen input[type="email"],
+.vakantieverwijderen input[type="file"],
+.vakantieverwijderen select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.vakantieverwijderen input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.vakantieverwijderen input[type="submit"],
+.vakantieverwijderen button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vakantieverwijderen input[type="submit"]:hover,
+.vakantieverwijderen button:hover {
+    background-color: #45a049;
+}
+
+/* Stijlen voor tabellen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td form {
+    display: inline-block;
+    margin: 0;
+}
+
+td form input[type="text"],
+td form input[type="number"] {
+    width: auto;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+td form button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td form button:hover {
+    background-color: #45a049;
+}
+
+/* Extra stijlen voor specifieke secties */
+.vakantieverwijderen h3 {
+    margin-top: 20px;
+}
+
+.bekijkreizenadmin h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
