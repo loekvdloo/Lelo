@@ -276,9 +276,7 @@ main {
     height: 1.5vw;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer; /* Geeft aan dat het veld interactief is */
-}
+    border-radius: 5px;}
 
 .personenetoevoegen {
     display: none;
@@ -373,7 +371,6 @@ label {
 }
 
 #vakantieformulier {
-
     padding: 5px;
 }
 
@@ -1127,7 +1124,7 @@ label {
 
     .reiszoeken {
         width: 63vw;
-        height: 98vw;
+        height: 71vw;
         background-color: #E8E7E7;
         border-radius: 10px;
         display: flex;
@@ -1153,8 +1150,6 @@ label {
 
     #vakantieformuliervlucht {
         height: 10vw;
-        position: relative;
-        top: 31vw;
     }
 
     #vakantieformulierluchthaven {
@@ -1167,12 +1162,6 @@ label {
         display: flex;
         align-self: end;
         width: 54px;
-        position: relative;
-        top: 26vw;
-    }
-
-    .hoeveelpers {
-        display: none;
     }
 
     .personenetoevoegen {
@@ -1187,18 +1176,27 @@ label {
     }
 
     .reizenhome {
-        margin-top: 200px;
+        margin-top: 55px;
         height: 315vw;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
+        padding: 0px;
     }
-
+    .w3-display-left, .w3-display-right{
+        position: absolute;
+        top: 73%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+    }
     #seizoenblok {
         width: 62vw;
     }
-
+.homepage_test{
+    text-align: center;
+}
     /*    einde homepage*/
     /*voorgesteldereizen page*/
     .flight-item {

@@ -37,10 +37,8 @@ include('dbcalls/search.php');
         <div class="reiszoeken">
             <form class="formulierhome" method="GET" action="search.php">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <div class="drop">
                     <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers"
                            min="1" step="1">
-                </div>
                 <select name="luchthaven" id="vakantieformuliervlucht">
                     <option value="schiphol">Schiphol</option>
                     <option value="lelystad">Lelystad</option>
