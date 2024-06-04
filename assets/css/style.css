@@ -398,13 +398,13 @@ label {
 
 .w3-display-left {left: 0;
     padding-left: 69px;
-    padding-top: 75vw;
+    padding-top: 79vw;
 }
 
 .w3-display-right {
     right: 0;
     padding-right: 69px;
-    padding-top: 75vw;
+    padding-top: 79vw;
 }
 .reizenhome {
     gap: 7vw;
@@ -412,7 +412,13 @@ label {
     height: 400px;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 10vw;
+    padding-top: 5vw;
+}
+.homepage_test{
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding-top: 3vw;
 }
 #seizoen{
     padding-left: 0px;
@@ -987,9 +993,6 @@ label {
         }
 
         /*    headerresp*/
-        .buttomheader {
-            display: none;
-        }
 
         .buttomheaderresponsive {
             display: flex;
