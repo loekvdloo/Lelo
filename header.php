@@ -8,45 +8,15 @@ session_start();
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lelo</title>
-<!--    <style>-->
-<!--        .dropdown {-->
-<!--            position: relative;-->
-<!--            display: inline-block;-->
-<!--        }-->
-<!---->
-<!--        .dropdown-content {-->
-<!--            display: none;-->
-<!--            position: absolute;-->
-<!--            background-color: #f9f9f9;-->
-<!--            min-width: 200px;-->
-<!--            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
-<!--            z-index: 1;-->
-<!--            padding: 12px 16px;-->
-<!--            border: 1px solid #ccc;-->
-<!--        }-->
-<!---->
-<!--        .dropdown-content p {-->
-<!--            margin: 10px 0;-->
-<!--        }-->
-<!---->
-<!--        .dropdown-content .close {-->
-<!--            color: #aaa;-->
-<!--            float: right;-->
-<!--            font-size: 20px;-->
-<!--            cursor: pointer;-->
-<!--        }-->
-<!---->
-<!--        .dropdown-content .close:hover,-->
-<!--        .dropdown-content .close:focus {-->
-<!--            color: black;-->
-<!--            text-decoration: none;-->
-<!--        }-->
-<!--    </style>-->
+    <style>
+
+    </style>
 </head>
 <body>
 
 <header>
-<div class="buttomheaderresponsive" style="background-image: url('assets/img/header_img.png');">
+    <div class="buttomheaderresponsive" style="background-image: url('assets/img/header_img.png');">
+
         <div class="logoheader">
             <a href="index.php"><img src="assets/img/logo.png" alt="logo" id="logoheader"></a>
         </div>
@@ -57,7 +27,8 @@ session_start();
             <div class="overlay-content">
                 <a href="voorgesteldereizen.php">trip info</a>
                 <a href="contact.php">contact</a>
-                <a href="test.php">About us</a>
+                <a href="over_ons.php">About us</a>
+                    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a>
             </div>
         </div>
         <span
@@ -70,9 +41,9 @@ session_start();
         <script>
             function openNav() {
                 document.getElementById("myNav").style.width = "100%";
+            }
 
-
-function closeNav() {
+            function closeNav() {
                 document.getElementById("myNav").style.width = "0%";
             }
         </script>
@@ -87,7 +58,7 @@ function closeNav() {
                 <a href="voorgesteldereizen.php">trip info</a>
             </div>
             <div class="knopheader" id="tripinfoknop">
-                <a href="test.php">contact</a>
+                <a href="contact.php">contact</a>
             </div>
             <div class="knopheader" id="aboutusknop">
                 <a href="over_ons.php">About us</a>
@@ -100,9 +71,9 @@ function closeNav() {
                     <div class="knopheader" id="profileknop"><a onclick="toggleDropdown()">Profile</a></div>
                     <div class="dropdown-content" id="profileDropdown">
                         <span class="close" onclick="closeDropdown(event)">&times;</span>';
-                        echo '<p>User ID: ' . $_SESSION['user_id'] . '</p>';
-                        echo '<p>Name: ' . $_SESSION['firstname'] . '</p>';
-                        echo '<p>Email: ' . $_SESSION['email'] . '</p>';
+                echo '<p>User ID: ' . $_SESSION['user_id'] . '</p>';
+                echo '<p>Name: ' . $_SESSION['firstname'] . '</p>';
+                echo '<p>Email: ' . $_SESSION['email'] . '</p>';
                 echo '</div>
                 </div>';
             } else {
@@ -131,7 +102,7 @@ function closeNav() {
             document.getElementById("profileDropdown").style.display = "none";
         }
 
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (!event.target.matches('#profileknop a')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 for (var i = 0; i < dropdowns.length; i++) {
