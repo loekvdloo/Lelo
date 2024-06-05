@@ -25,7 +25,7 @@
         </section>
         <section class="voorwaardefooter">
             <a href="privacy.php">Privacy policy</a>
-            <a href="privacy.php">algemene voorwaarde</a>
+            <a href="algemene_voorwaarde.php">algemene voorwaarde</a>
         </section>
     </div>
     <div class="footerresponsive">
@@ -46,7 +46,7 @@
             </section>
             <section class="voorwaardefooter">
                 <a href="privacy.php">Privacy policy</a>
-                <a href="privacy.php">algemene voorwaarde</a>
+                <a href="algemene_voorwaarde.php">algemene voorwaarde</a>
             </section>
         </div>
     </div>
