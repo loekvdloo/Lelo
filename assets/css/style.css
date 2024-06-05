@@ -751,7 +751,9 @@ label {
     display: flex;
     padding-bottom: 5vw;
 }
-
+.reviewsgevondenreizen p{
+    max-width: 46vw;
+}
 .inputreview {
     padding: 5px;
     border-radius: 5px;
@@ -770,6 +772,7 @@ label {
 .reviewblok {
     display: flex;
     flex-direction: column;
+    width: 56%;
 }
 
 .review {
@@ -1181,6 +1184,7 @@ td form button:hover {
     .buttomheaderresponsive {
         display: flex;
         height: 108px;
+        box-shadow: 0px 4px 7px rgba(1, 10, 0, 0.3);
     }
 
     #logoheader {
@@ -1509,6 +1513,46 @@ td form button:hover {
     }
 
     /*einde over ons*/
+    /*voorgestelde reizen*/
+    .bevoegdhedenverblijf{
+        flex-direction: column-reverse;
+        height: 110vw;
+    }
+    .gevondenreisnameimg h2{
+        width: 92vw;
+    }
+    .gevondenreisnameimg img{
+        width: 92%;
+    }
+    .bevoegdheaden{
+
+        width: 70%;
+    }
+    .langestreepgevondenreis{
+    margin-top: 12vw;
+    }
+    .reviewgeven{
+
+        left: 0vw;
+    }
+    .reviewblok{
+        position: relative;
+
+        left: -5vw;
+    }
+    .reviewsgevondenreizen{
+        flex-direction: column-reverse;
+    }
+    .reseverenblok{
+        height: 14vw;
+        width: 100%;
+    }
+    .reizenreseveren\/winkelmandje{
+        display: flex;
+        gap: 4vw;
+        padding-right: 4vw;
+    }
+    /*einde voorgestelde reizen*/
     /* footerresp*/
     .footernormaal {
         display: none;
