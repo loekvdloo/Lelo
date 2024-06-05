@@ -246,8 +246,6 @@
                         </tr>
                     <?php endforeach; ?>
                 </table>
-
-                
             </main>
             <?php
             include('footer.php');

@@ -244,6 +244,11 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+    
+    .headerbottom{
+        display: none;
+    }
+
 }
 
 .signupknop {
