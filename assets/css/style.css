@@ -676,12 +676,19 @@ label {
 /*einde contactpagina*/
 /*einde homepagina*/
 /*gevondenreis*/
-
+.reizenreseveren\/winkelmandje{
+    display: flex;
+    gap: 1vw;
+}
 .bevoegdhedenverblijf {
     display: flex;
     height: 35vw;
 }
-
+#winkelwageimggevondenreis{
+    height: 34px;
+    display: flex;
+    align-self: center;
+}
 .logobevoegheden {
     padding-left: 15px;
     padding-right: 15px;
@@ -1250,7 +1257,7 @@ label {
     }
 
     /*einde voorgesteldereizen*/
-    /*    signup/sign in*/
+    /*    signup/sign/reseveren in*/
     .signupknop {
         width: 16vw;
         background-color: #B32E37;
@@ -1276,7 +1283,6 @@ label {
         border: 1px solid #888;
         width: 87%;
     }
-
     /*    einde signup/sign in*/
     /*contactpage*/
     .contactgrotefoto {
