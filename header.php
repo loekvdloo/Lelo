@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +54,7 @@ session_start();
                 <a href="voorgesteldereizen.php">trip info</a>
             </div>
             <div class="knopheader" id="tripinfoknop">
-                <a href="contact.php">contact</a>
+                <a href="test.php">contact</a>
             </div>
             <div class="knopheader" id="aboutusknop">
                 <a href="over_ons.php">About us</a>

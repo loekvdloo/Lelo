@@ -147,21 +147,68 @@ try {
             <div id="reviewResponse"></div>
         </div>
     </section>
-
-    <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['travel_cost']; ?></div>
-    <form action="book.php" method="post">
-        <button type="submit">Boek de reis</button>
-    </form>
     <div id="reviewResponse"></div>
     </div>
     </section>
     <div class="reseverenblok">
         <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['travel_cost']; ?></div>
-        <form action="book.phh" method="post" id="submitreseveren">
-            <button type="submit">Boek de reis</button>
+        <div class="reizenreseveren/winkelmandje">
+            <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
+        <form action="voorgesteldereizen.php">
+            <button type="submit">Submit Review</button>
+        </form>
+            <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis</button>
+        </div>
+    </div>
+    <div id="id04" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="assets/img/logo.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Voornaam</b></label>
+                <input type="text" placeholder="Voornaam" id="reseveren" name="uname" required>
+
+                <label for="psw"><b>Achternaam</b></label>
+                <input type="password" placeholder="Achternaam" name="psw" required>
+
+                <label for="psw"><b>E-Mail</b></label>
+                <input type="password" placeholder="E-Mail" name="psw" required>
+
+                <label for="psw"><b>Telefoonnummer</b></label>
+                <input type="password" placeholder="Telefoonnummer" name="psw" required>
+
+                <label for="psw"><b>vertrekdatum</b></label>
+                <input type="date" placeholder="Land" id="datumreseveren" required>
+
+                <label for="psw"><b>terugkomdatum</b></label>
+                <input type="date" placeholder="Plaats" class="datumreseveren" required>
+
+                <button type="submit">reseveren</button>
+
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+
+            </div>
         </form>
     </div>
 
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id04');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
     <section>
 
