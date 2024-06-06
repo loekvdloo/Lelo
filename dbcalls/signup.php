@@ -46,7 +46,7 @@
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
                     Cancel
                 </button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <span class="psw">Forgot <a href="wachtwoordvergeten.php">password?</a></span>
 
             </div>
 

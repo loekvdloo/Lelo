@@ -116,7 +116,15 @@ button:hover {
     position: relative;
     left: 80%;
 }
-
+.wachtwoordvegeten{
+    display: flex;
+    justify-content: center;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+}
+.formwachtwoord{
+    width: 16%;
+}
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
@@ -827,9 +835,6 @@ label {
 
 /*einde privacy pagina*/
 /*admin page*/
-.bekijkreizenadmin {
-    margin: 20px 0;
-}
 
 .bekijkreizenblok {
     background: rgba(255, 255, 255, 0.8);
@@ -855,7 +860,6 @@ label {
 /* Stijlen voor .vakantieverwijderen */
 .vakantieverwijderen {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
     width: 98%;
