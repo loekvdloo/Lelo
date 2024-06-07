@@ -330,7 +330,6 @@ label {
 
 .reizoekenhomepagina {
     display: flex;
-    justify-content: center;
     height: 36vw;
     background-repeat: no-repeat;
     align-items: center;
@@ -341,12 +340,16 @@ label {
     display: flex;
     align-self: center;
 }
-
-.reizoekenhomepagina h1 {
-    padding-bottom: 21px;
-    color: black;
+.tekstindexfoto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4vw;
+    padding-bottom: 9vw;
 }
-
+.tekstindexfoto h1{
+    color: #B32E37;
+}
 .reiszoeken {
     width: 51vw;
     height: 74px;
@@ -427,11 +430,13 @@ label {
     justify-content: space-evenly;
     padding-top: 5vw;
 }
-
+.tekstindexvoorgesteldereis{
+    text-align: center;
+}
 .homepage_test {
     display: flex;
     justify-content: center;
-    color: black;
+    color: #B32E37;
     padding-top: 3vw;
 }
 

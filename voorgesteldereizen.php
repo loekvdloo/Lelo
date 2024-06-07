@@ -13,10 +13,13 @@
 
 <body>
 <?php
+
+?>
+<?php
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');
-
+include('dbcalls/search.php');
 
 // Prepare and execute the query
 $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.summary, h.name
@@ -25,40 +28,51 @@ $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.
 $stmt->execute();
 
 $flights = $stmt->fetchAll();
+$review_count_stmt = $conn->prepare("SELECT COUNT(*) AS country FROM locations");
 
+$review_count_stmt->execute();
+$review_count_data = $review_count_stmt->fetch();
+$review_count = $review_count_data['country'];
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
-        <h1>Plan je reis hier</h1>
+        <div class="tekstindexfoto">
+            <h1>Plan je reis hier</h1>
+            <h3>we hebben reizen naar <?php echo htmlspecialchars($review_count); ?> verschillende landen waar wij reizen aanbieden</h3>
+        </div>
         <div class="reiszoeken">
-
-            <form class="formulierhome">
+            <form class="formulierhome" method="GET" action="search.php">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
+                <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers"
+                       min="1" step="1">
+                <select name="luchthaven" id="vakantieformuliervlucht">
+                    <option value="schiphol">Schiphol</option>
+                    <option value="lelystad">Lelystad</option>
+                    <option value="Hartsfield-Jackson Atlanta">Hartsfield-Jackson Atlanta</option>
+                    <option value="Beijing Capital ">Beijing Capital</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Tokyo Haneda">Tokyo Haneda</option>
+                    <option value="O'Hare ">O'Hare</option>
+                    <option value="London Heathrow ">London Heathrow</option>
+                    <option value="Shanghai Pudong ">Shanghai Pudong</option>
+                    <option value="Paris Charles de Gaulle ">Paris Charles de Gaulle</option>
+                    <option value="Dallas/Fort Worth">Dallas/Fort Worth</option>
+                    <option value="Guangzhou Baiyun ">Guangzhou Baiyun</option>
+                    <option value="Frankfurt">Frankfurt</option>
+                    <option value="Istanbul ">Istanbul</option>
+                    <option value="Singapore Changi ">Singapore Changi</option>
+                    <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
+                    <option value="Seoul Incheon ">Seoul Incheon</option>
+                    <option value="Denver ">Denver</option>
+                    <option value="Suvarnabhumi ">Suvarnabhumi</option>
+                    <option value="Hong Kong ">Hong Kong</option>
+                    <option value="Madrid-Barajas">Madrid-Barajas</option>
+                </select>
 
-                <div class="drop">
-                    <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
-                    <div class="personenetoevoegen">
-
-                        <div class="keuzepers">
-                            <label for="adults">Volwassenen:</label>
-                            <input type="number" id="volwassenen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="children">Kinderen:</label>
-                            <input type="number" id="kinderen" class="pers" min="0" value="0">
-                        </div>
-                        <div class="keuzepers">
-                            <label for="babies">Baby's:</label>
-                            <input type="number" id="baby" class="pers" min="0" value="0">
-                        </div>
-                    </div>
-                </div>
-
-                <input type="text" name="luchthaven" placeholder="luchthaven" id="vakantieformuliervlucht">
                 <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
             </form>
-
         </div>
     </section>
     <section class="voorgesteldereizen">
