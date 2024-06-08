@@ -89,7 +89,7 @@ $review_count = $review_count_data['country'];
                 <h1>Japan</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                 <a href="country.php?land=Japan">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
@@ -97,7 +97,7 @@ $review_count = $review_count_data['country'];
                 <h1>Zuid-Afrika</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=South Africa">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/brazilie_homepagina.png');">
@@ -105,7 +105,7 @@ $review_count = $review_count_data['country'];
                 <h1>Brazilië</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Brazil">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/australie_homepagina.png');">
@@ -113,7 +113,7 @@ $review_count = $review_count_data['country'];
                 <h1>Australië</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Australia">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/italie_homepagina.png');">
@@ -121,7 +121,7 @@ $review_count = $review_count_data['country'];
                 <h1>Italië</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Italy">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/canada_hompagina.png');">
@@ -129,7 +129,7 @@ $review_count = $review_count_data['country'];
                 <h1>Canada</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Canada">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/frankrijk_homepagina.png');">
@@ -137,7 +137,7 @@ $review_count = $review_count_data['country'];
                 <h1>Frankrijk</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=France">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/duitsland_homepagina.png');">
@@ -145,7 +145,7 @@ $review_count = $review_count_data['country'];
                 <h1>Duitsland</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Germany">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/spanje_homepagina.png');">
@@ -153,7 +153,7 @@ $review_count = $review_count_data['country'];
                 <h1>Spanje</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Spane">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/thailand_homepagina.png');">
@@ -161,7 +161,7 @@ $review_count = $review_count_data['country'];
                 <h1>Thailand</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Thailand">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/amerika_homepagina.png');">
@@ -169,7 +169,7 @@ $review_count = $review_count_data['country'];
                 <h1>amerika</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=USA">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
         <div class="imgreizenhome mySlides" style="background-image: url('assets/img/egytpe_homepagina.png');">
@@ -177,7 +177,7 @@ $review_count = $review_count_data['country'];
                 <h1>egypte</h1>
             </div>
             <div class="voorgesteldereisbekijken">
-                <a href="#">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            <a href="country.php?land=Egypt">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
 

@@ -246,6 +246,32 @@
                         </tr>
                     <?php endforeach; ?>
                 </table>
+
+                        <h3>Users</h3>
+                        <table border="1">
+                            <tr>
+                                <th>User name</th>
+                                <th>User lastname</th>
+                                <th>User email</th>
+                                <th>Password</th>
+                                <th>Is admin</th>
+                            </tr>
+                            <?php foreach($users as $user) : ?>
+                                <tr>
+                                    <td><?php echo $user ?></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                            <?php endforeach ?>
+                            
+
+
+                        </table>
+
+
             </main>
             <?php
             include('footer.php');
