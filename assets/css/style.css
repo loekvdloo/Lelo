@@ -14,7 +14,7 @@ h1 {
 
 h2 {
     font-size: 40px;
-    color: black;
+    color: #5f151a;
 }
 
 /*header*/
@@ -154,16 +154,16 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
 
@@ -347,6 +347,9 @@ label {
     padding-top: 4vw;
     padding-bottom: 9vw;
 }
+.tekstindexfoto h3{
+    color: #5f151a;
+}
 .tekstindexfoto h1{
     color: #B32E37;
 }
@@ -432,6 +435,9 @@ label {
 }
 .tekstindexvoorgesteldereis{
     text-align: center;
+}
+.tekstindexvoorgesteldereis h3{
+        color: #5f151a;
 }
 .homepage_test {
     display: flex;
@@ -603,7 +609,7 @@ label {
     height: 27vw;
     position: relative;
     left: 169px;
-    color: black;
+    color: #5f151a;
 }
 
 .tekstklachten {
@@ -621,7 +627,7 @@ label {
 .kleinlijntje {
     height: 1.5px;
     width: 370px;
-    background: black;
+    background: #5f151a;
 }
 
 #tekstcontact {
@@ -718,7 +724,7 @@ label {
 }
 
 .bevoegdhedenverblijf h2 {
-    color: black;
+    color: #5f151a;
 }
 
 .fasaliteiten {
@@ -755,7 +761,7 @@ label {
 .langestreepgevondenreis {
     height: 2px;
     width: 93vw;
-    background-color: black;
+    background-color: #5f151a;
     position: relative;
     left: 3vw;
 }
@@ -803,7 +809,7 @@ label {
 .kleinstreepjereview {
     height: 0.1vw;
     width: 48vw;
-    background-color: black;
+    background-color: #5f151a;
     margin-top: 2vw;
     position: relative;
     left: -2vw;
@@ -988,11 +994,11 @@ td form button:hover {
 .horizontalestreep {
     width: 0.1vw;
     height: 5vw;
-    background: black;
+    background: #5f151a;
 }
 
 .vakantieverwijderen h1 {
-    color: black;
+    color: #5f151a;
     display: flex;
     justify-content: center;
 }
@@ -1021,7 +1027,9 @@ td form button:hover {
 .wrmlelo {
     display: flex;
 }
-
+#overonsfavo{
+    padding-bottom: 7vw;
+}
 #logooverons {
     height: 10vw;
     position: relative;
@@ -1054,7 +1062,7 @@ td form button:hover {
 #titelfavo {
     display: flex;
     align-self: center;
-    color: black;
+    color: #5f151a;
     padding-bottom: 3vw;
 }
 
@@ -1118,7 +1126,7 @@ td form button:hover {
     height: 32px;
     width: 76px;
     border-radius: 5px;
-    background-color: black;
+    background-color: #5f151a;
     color: white;
     border: 0px;
 }
@@ -1172,7 +1180,7 @@ td form button:hover {
 
     .dropdown-content .close:hover,
     .dropdown-content .close:focus {
-        color: black;
+        color: #5f151a;
         text-decoration: none;
     }
 
@@ -1442,7 +1450,7 @@ td form button:hover {
         height: 136vw;
         position: relative;
         left: 50px;
-        color: black;
+        color: #5f151a;
     }
 
     .contacttekst {
@@ -1485,7 +1493,7 @@ td form button:hover {
     .kleinlijntje {
         height: 1.5px;
         width: 243px;
-        background: black;
+        background: #5f151a;
     }
 
     #send {

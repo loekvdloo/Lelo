@@ -43,7 +43,7 @@ include('dbcalls/signup.php');
                 in te vullen. wij zullen zo snel mogelijk reageren.</p>
         </div>
     </section>
-    <section class="favooverons">
+    <section class="favooverons" id="overonsfavo">
         <h1 id="titelfavo">onze favoriete</h1>
         <div class="reizenoverons">
 
