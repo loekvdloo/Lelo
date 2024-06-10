@@ -19,6 +19,7 @@
     include('dbcalls/tables.php');
     include('dbcalls/signup.php');
     include('dbcalls/connect.php');
+    include('dbcalls/users.php');
     ?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
 
@@ -247,29 +248,51 @@
                     <?php endforeach; ?>
                 </table>
 
-                        <h3>Users</h3>
-                        <table border="1">
-                            <tr>
-                                <th>User name</th>
-                                <th>User lastname</th>
-                                <th>User email</th>
-                                <th>Password</th>
-                                <th>Is admin</th>
-                            </tr>
-                            <?php foreach($users as $user) : ?>
-                                <tr>
-                                    <td><?php echo $user ?></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                <h3>Users</h3>
+<table border="1">
+    <tr>
+        <th>User ID</th>
+        <th>User Name</th>
+        <th>User Lastname</th>
+        <th>User Email</th>
+        <th>Password</th>
+        <th>Is Admin</th>
+        <th>Actions</th>
+    </tr>
+    <?php foreach($users as $user) : ?>
+    <tr>
+        <form action="dbcalls/users.php" method="post">
+            <td><?php echo $user['user_id']; ?>
+                <input type="hidden" name="user_id" value="<?php echo $user['user_id']; ?>">
+            </td>
+            <td><input type="text" name="user_name" value="<?php echo $user['user_name']; ?>"></td>
+            <td><input type="text" name="user_lastname" value="<?php echo $user['user_lastname']; ?>"></td>
+            <td><input type="email" name="user_email" value="<?php echo $user['user_email']; ?>"></td>
+            <td><input type="text" name="user_pass" value="<?php echo $user['user_pass']; ?>"></td>
+            <td>
+                <input type="checkbox" name="is_admin" <?php echo $user['is_admin'] ? 'checked' : ''; ?>>
+            </td>
+            <td>
+                <input type="submit" name="update_user" value="Update">
+                <input type="submit" name="delete_user" value="Delete">
+            </td>
+        </form>
+    </tr>
+    <?php endforeach; ?>
+</table>
 
-                                </tr>
-                            <?php endforeach ?>
-                            
+<h3>Create User</h3>
+<form action="users.php" method="post">
+    <input type="text" name="user_name" placeholder="First Name" required>
+    <input type="text" name="user_lastname" placeholder="Last Name" required>
+    <input type="email" name="user_email" placeholder="Email" required>
+    <input type="password" name="user_pass" placeholder="Password" required>
+    <label>
+        <input type="checkbox" name="is_admin"> Is Admin
+    </label>
+    <input type="submit" name="create_user" value="Create">
+</form>
 
-
-                        </table>
 
 
             </main>
