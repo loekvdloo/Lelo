@@ -54,7 +54,7 @@
                 <a href="voorgesteldereizen.php">trip info</a>
             </div>
             <div class="knopheader" id="tripinfoknop">
-                <a href="test.php">contact</a>
+                <a href="contact.php">contact</a>
             </div>
             <div class="knopheader" id="aboutusknop">
                 <a href="over_ons.php">About us</a>

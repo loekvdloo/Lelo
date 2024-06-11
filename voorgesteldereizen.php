@@ -21,13 +21,17 @@ include('dbcalls/connect.php');
 include('dbcalls/signup.php');
 include('dbcalls/search.php');
 
+
 // Prepare and execute the query
-$stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.summary, h.name
+$stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.summary, h.name, AVG(r.rating) as rating
                         FROM flights f
-                        JOIN house h ON f.house_id = h.house_id");
+                        JOIN house h ON f.house_id = h.house_id
+                        JOIN reviews r on h.house_id = r.review_id 
+                        GROUP by h.house_id");
 $stmt->execute();
 
 $flights = $stmt->fetchAll();
+
 $review_count_stmt = $conn->prepare("SELECT COUNT(*) AS country FROM locations");
 
 $review_count_stmt->execute();
@@ -85,12 +89,32 @@ $review_count = $review_count_data['country'];
 
                 <div class="tekstinfoblok">
                     <div class="naamkosteninfoblok">
-                        <div class="flight-departure" id="nameblokinfo"><?php echo $flight['name']; ?></div>
+                        <div class="flight-departure" id="nameblokinfo"><?php echo $flight['name']; ?>
+                            <?php
+                            switch ($flight['rating']) {
+                                case 1:
+                                    echo '<img src="assets/img/1_star.png" alt="1ster" class="hoi">';
+                                    break;
+                                case 2:
+                                    echo '<img src="assets/img/2_star.png" alt="2ster" class="hoi">';
+                                    break;
+                                case 3:
+                                    echo '<img src="assets/img/3_star.png" alt="3ster" class="hoi">';
+                                    break;
+                                case 4:
+                                    echo '<img src="assets/img/4_star.png" alt="4ster" class="hoi">';
+                                    break;
+                                case 5:
+                                    echo '<img src="assets/img/5_stars.png" alt="5ster" class="hoi">';
+                                    break;
+                            }
+                            ?></div>
                         <div class="flight-departure" id="prijsblokinfo">prijs
                             p.p: <?php echo $flight['travel_cost']; ?></div>
 
                     </div>
                     <div class="dingenbekijkeninfoblok">
+
                         <div class="flight-departure"
                              style="text-wrap: wrap; width: 115px;"> <?php echo $flight['summary']; ?></div>
                         <form action="gevondenreis.php" method="get">
