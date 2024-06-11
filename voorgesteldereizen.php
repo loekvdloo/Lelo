@@ -89,7 +89,7 @@ $review_count = $review_count_data['country'];
 
                 <div class="tekstinfoblok">
                     <div class="naamkosteninfoblok">
-                        <div class="flight-departure" id="nameblokinfo"><?php echo $flight['name']; ?>
+                        <div class="flight-departure" id="nameblokinfo"><h3><?php echo $flight['name']; ?></h3>
                             <?php
                             switch ($flight['rating']) {
                                 case 1:

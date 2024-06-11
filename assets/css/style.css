@@ -16,6 +16,10 @@ h2 {
     font-size: 40px;
     color: #5f151a;
 }
+h3 {
+    font-size: 1.4vw;
+    color: #5f151a;
+}
 
 /*header*/
 .buttomheaderresponsive {
@@ -518,7 +522,7 @@ label {
 .naamkosteninfoblok {
     display: flex;
     gap: 5vw;
-    padding-bottom: 3.5vw;
+    padding-bottom: 3vw;
     padding-left: 12px;
     padding-top: 0.5vw;
 }

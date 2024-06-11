@@ -65,6 +65,7 @@ try {
         </div>
 
     </section>
+    <h3><?php echo $data['summary']; ?></h3>
     <div class="langestreepgevondenreis"></div>
 
     <section class="reviewsgevondenreizen">
