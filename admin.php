@@ -15,6 +15,7 @@
 
 <body>
     <?php
+        session_start();
     include('header.php');
     include('dbcalls/tables.php');
     include('dbcalls/signup.php');
