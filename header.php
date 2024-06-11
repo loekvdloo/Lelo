@@ -31,9 +31,7 @@
 </head>
 <body>
 
-<?php
-session_start();
-?>
+
 <header>
     <div class="buttomheaderresponsive" style="background-image: url('assets/img/header_img.png');">
 
@@ -71,11 +69,9 @@ session_start();
                 <a href="voorgesteldereizen.php">Trip Info</a>
             </div>
             <div class="knopheader" id="tripinfoknop">
-<<<<<<< HEAD
+
                 <a href="contact.php">contact</a>
-=======
-                <a href="test.php">Contact</a>
->>>>>>> b448ad532e6645b141be119d08122b329429b277
+
             </div>
             <div class="knopheader" id="aboutusknop">
                 <a href="over_ons.php">About Us</a>

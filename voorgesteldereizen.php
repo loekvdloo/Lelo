@@ -83,7 +83,7 @@ $review_count = $review_count_data['country'];
         <?php foreach ($flights as $flight) : ?>
             <div class="flight-item">
                 <div class="flight-image">
-                    <img src="<?php echo $flight['image']; ?>" alt="House Image"  >
+                    <img src="<?php echo $flight['image']; ?>" alt="House Image" class="huisimg" >
                 </div>
 
 

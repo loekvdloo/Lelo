@@ -505,8 +505,11 @@ label {
     margin: 4vw;
     border-radius: 12px;
 }
-
-.flight-item img {
+.hoi{
+    height: 1.5vw;
+    padding: 0px;
+}
+.huisimg {
     height: 12vw;
     padding: 9px;
     border-radius: 15px;
@@ -515,7 +518,7 @@ label {
 .naamkosteninfoblok {
     display: flex;
     gap: 5vw;
-    padding-bottom: 4vw;
+    padding-bottom: 3.5vw;
     padding-left: 12px;
     padding-top: 0.5vw;
 }
@@ -804,10 +807,6 @@ label {
 .stars {
     margin-top: 7px;
     margin-bottom: 7px;
-}
-.hoi{
-    height: 1.5vw;
-    padding: 0px;
 }
 
 .kleinstreepjereview {
