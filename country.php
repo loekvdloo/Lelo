@@ -18,10 +18,24 @@ include('dbcalls/connect.php');
 include('dbcalls/signup.php');
 include('dbcalls/search.php');
 
-$stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.boarding_city, f.arrival_city, f.arrival_country, h.house_image AS image, h.summary, h.name
-                        FROM flights f
-                        JOIN house h ON f.house_id = h.house_id");
-$stmt->execute();
+$stmt = $conn->prepare("
+SELECT 
+    h.*, 
+    f.travel_cost, 
+    f.boarding_country, 
+    f.boarding_city, 
+    f.arrival_city, 
+    f.arrival_country, 
+    AVG(r.rating) AS rating
+FROM 
+    house h
+LEFT JOIN 
+    flights f ON f.house_id = h.house_id
+LEFT JOIN 
+    reviews r ON h.house_id = r.house_id
+GROUP BY 
+    h.house_id
+");
 $flights = $stmt->fetchAll();
 
 

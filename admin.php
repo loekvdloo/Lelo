@@ -24,31 +24,9 @@
     ?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
 
-        <section class="bekijkreizenadmin">
-            <div class="bekijkreizenblok">
-                <div class="namenresveren">
-                    <p>reseveringsnaam</p>
-                    <div class="horizontalestreep"></div>
-                    <p>datum</p>
-                    <div class="horizontalestreep"></div>
-                    <p>personen</p>
-                    <div class="horizontalestreep"></div>
-                    <p>plaats</p>
-                    <div class="horizontalestreep"></div>
-                    <p>kosten</p>
-                </div>
-            </div>
-        </section>
-        <section class="vakantieverwijderen">
-            <main class="mainadmin" style="background-image: url('assets/img/background.png');">
-                <h1>Admin Page</h1>
-                <form method="get">
-                    <label for="table">Select Table:</label>
-                    <select name="table" id="table" onchange="this.form.submit()">
-                        <option value="house" <?php if ($table == 'house') echo 'selected'; ?>>House</option>
-                        <option value="locations" <?php if ($table == 'locations') echo 'selected'; ?>>Locations</option>
-                    </select>
-                </form>
+        
+
+            <a href="admin_vluchten.php">VLUCHTEN</a>
 
                 <h2><?php echo ucfirst($table); ?> Table</h2>
 

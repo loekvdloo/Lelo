@@ -233,7 +233,7 @@
                     <h1>lente</h1>
                 </div>
                 <div class="voorgesteldeseizoen">
-                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                    <a href="seizoen.php?seizoen=lente">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
                 </div>
             </div>
             <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/zomer_homepagina.png');">
@@ -241,7 +241,7 @@
                     <h1>zomer</h1>
                 </div>
                 <div class="voorgesteldeseizoen">
-                    <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                    <a href="seizoen.php?seizoen=zomer">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
                 </div>
             </div>
             <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/herfst_homepagina.png');">
@@ -249,7 +249,7 @@
                     <h1>herfst</h1>
                 </div>
                 <div class="voorgesteldeseizoen">
-                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                    <a href="seizoen.php?seizoen=herfst">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
                 </div>
             </div>
             <div class="imgreizenhome" id="seizoenblok" style="background-image: url('assets/img/winter_homepagina.png');">
@@ -257,7 +257,7 @@
                     <h1>winter</h1>
                 </div>
                 <div class="voorgesteldeseizoen">
-                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+                    <a href="seizoen.php?seizoen=winter">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
                 </div>
             </div>
         </section>

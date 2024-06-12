@@ -38,12 +38,20 @@ try {
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
+
+
+    <p>Land en Stad boven ergens?</p>
+    <p><?php echo($data['country'])?></p>
+    <p><?php echo($data['city'])?></p>
+
+
+
     <section class="bevoegdhedenverblijf">
         <div class="bevoegdheaden">
             <h2>bevoegdheden</h2>
             <div class="fasaliteiten">
                 <p id="rooms"><?php echo($data['rooms']) ?><img src="assets/img/kamers.png" class="logobevoegheden"
-                                                                alt="kamers">Rooms</>
+                                                                alt="kamers">Rooms</p>
                 <p><?php echo ($data['pool']) ? '<img src="assets/img/vink.png" alt="vink" width=20 height=20 >' : '<img src="assets/img/cross.png" alt="kruis" width=20 height=20 >' ?>
                     <img src="assets/img/zwembad.png" class="logobevoegheden" alt="zwembad">Pool
                 </p>
@@ -152,7 +160,7 @@ try {
     </div>
     </section>
     <div class="reseverenblok">
-        <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['travel_cost']; ?></div>
+        <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['price']; ?></div>
         <div class="reizenreseveren/winkelmandje">
             <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
             <form action="voorgesteldereizen.php">
@@ -164,72 +172,68 @@ try {
     </div>
     <div id="id04" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="assets/img/logo.png" alt="Avatar" class="avatar">
-            </div>
+    <form class="modal-content animate" action="dbcalls/book_flight.php" method="post">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="assets/img/logo.png" alt="Avatar" class="avatar">
+    </div>
 
-            <div class="container">
-                <label for="uname"><b>Voornaam</b></label>
-                <input type="text" placeholder="Voornaam" id="reseveren" name="uname" required>
+    <div class="container">
+        <label for="fname"><b>Voornaam</b></label>
+        <input type="text" placeholder="Voornaam" id="reseveren" name="fname" required>
 
-                <label for="psw"><b>Achternaam</b></label>
-                <input type="password" placeholder="Achternaam" name="psw" required>
+        <label for="lname"><b>Achternaam</b></label>
+        <input type="text" placeholder="Achternaam" name="lname" required>
 
-                <label for="psw"><b>E-Mail</b></label>
-                <input type="password" placeholder="E-Mail" name="psw" required>
+        <label for="email"><b>E-Mail</b></label>
+        <input type="email" placeholder="E-Mail" name="email" required>
 
-                <label for="psw"><b>Telefoonnummer</b></label>
-                <input type="password" placeholder="Telefoonnummer" name="psw" required>
+        <label for="phone"><b>Telefoonnummer</b></label>
+        <input type="tel" placeholder="Telefoonnummer" name="phone" required>
 
-                <label for="psw"><b>vertrekdatum</b></label>
-                <input type="date" placeholder="Land" id="datumreseveren" required>
+        <label for="persons"><b>Aantal Personen</b></label>
+        <input type="number" placeholder="persons" name="persons" required>
 
-                <label for="psw"><b>terugkomdatum</b></label>
-                <input type="date" placeholder="Plaats" class="datumreseveren" required>
-                <div id="extraoptieauto">
-                    <input type="checkbox" name="auto">
-                    <label for="psw"><a>auto</a></label>
 
-                </div>
-                <div class="vliegtuigvinkje">
-                <input type="checkbox" id="myCheck" onclick="myFunction()">
-                <label for="myCheck">vliegtuig</label>
-                </div>
-                <div id="dateFields" style="display:none;">
-                    <div class="inputvertrekdatumreseveren">
-                        <label for="vertrekdatum">aankomstdatum:</label>
-                        <input type="date" id="vertrekdatum" name="vertrekdatum">
-                    </div>
-                    <div class="inputvertrekdatumreseveren">
-                        <label for="vertrekdatum">Vertrekdatum:</label>
-                        <input type="date" id="vertrekdatum" name="vertrekdatum">
-                    </div>
-                </div>
+        <label for="departure_date"><b>Vertrekdatum</b></label>
+        <input type="date" id="datumreseveren" name="departure_date" required>
 
-                <script>
-                    function myFunction() {
-                        var checkBox = document.getElementById("myCheck");
-                        var dateFields = document.getElementById("dateFields");
-                        if (checkBox.checked == true) {
-                            dateFields.style.display = "block";
-                        } else {
-                            dateFields.style.display = "none";
-                        }
-                    }
-                </script>
-                <button type="submit">reseveren</button>
+        <label for="return_date"><b>Terugkomdatum</b></label>
+        <input type="date" class="datumreseveren" name="return_date" required>
 
-            </div>
+        <div id="extraoptieauto">
+            <input type="checkbox" name="auto">
+            <label for="auto">Auto</label>
+        </div>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">
-                    Cancel
-                </button>
+        <div class="vliegtuigvinkje">
+            <input type="checkbox" id="myCheck" name="plane" onclick="myFunction()">
+            <label for="myCheck">Vliegtuig</label>
+        </div>
 
-            </div>
-        </form>
+        <script>
+            function myFunction() {
+                var checkBox = document.getElementById("myCheck");
+                var dateFields = document.getElementById("dateFields");
+                if (checkBox.checked == true) {
+                    dateFields.style.display = "block";
+                } else {
+                    dateFields.style.display = "none";
+                }
+            }
+        </script>
+        
+        <!-- Hidden input field for house_id -->
+        <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($house_id); ?>">
+
+        <button type="submit">Reseveren</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+</form>
+
     </div>
 
     <script>
