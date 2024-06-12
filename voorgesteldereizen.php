@@ -11,9 +11,7 @@
 </head>
 
 <body>
-    <?php
 
-    ?>
     <?php
     include('header.php');
     include('dbcalls/connect.php');
