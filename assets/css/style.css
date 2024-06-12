@@ -530,6 +530,10 @@ label {
     display: flex;
     gap: 1vw;
 }
+.vliegtuigvinkje{
+    display: flex;
+    gap: 1vw;
+}
 #nameblokinfo {
     width: 10vw;
 }

@@ -193,6 +193,32 @@ try {
                     <label for="psw"><a>auto</a></label>
 
                 </div>
+                <div class="vliegtuigvinkje">
+                <input type="checkbox" id="myCheck" onclick="myFunction()">
+                <label for="myCheck">vliegtuig</label>
+                </div>
+                <div id="dateFields" style="display:none;">
+                    <div class="inputvertrekdatumreseveren">
+                        <label for="vertrekdatum">aankomstdatum:</label>
+                        <input type="date" id="vertrekdatum" name="vertrekdatum">
+                    </div>
+                    <div class="inputvertrekdatumreseveren">
+                        <label for="vertrekdatum">Vertrekdatum:</label>
+                        <input type="date" id="vertrekdatum" name="vertrekdatum">
+                    </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        var checkBox = document.getElementById("myCheck");
+                        var dateFields = document.getElementById("dateFields");
+                        if (checkBox.checked == true) {
+                            dateFields.style.display = "block";
+                        } else {
+                            dateFields.style.display = "none";
+                        }
+                    }
+                </script>
                 <button type="submit">reseveren</button>
 
             </div>
