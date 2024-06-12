@@ -155,10 +155,11 @@ try {
         <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['travel_cost']; ?></div>
         <div class="reizenreseveren/winkelmandje">
             <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
-        <form action="voorgesteldereizen.php">
-            <button type="submit">Submit Review</button>
-        </form>
-            <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis</button>
+            <form action="voorgesteldereizen.php">
+                <button type="submit">Submit Review</button>
+            </form>
+            <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis
+            </button>
         </div>
     </div>
     <div id="id04" class="modal">
@@ -187,13 +188,19 @@ try {
 
                 <label for="psw"><b>terugkomdatum</b></label>
                 <input type="date" placeholder="Plaats" class="datumreseveren" required>
+                <div id="extraoptieauto">
+                    <input type="checkbox" name="auto">
+                    <label for="psw"><a>auto</a></label>
 
+                </div>
                 <button type="submit">reseveren</button>
 
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">
+                    Cancel
+                </button>
 
             </div>
         </form>
@@ -204,7 +211,7 @@ try {
         var modal = document.getElementById('id04');
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }

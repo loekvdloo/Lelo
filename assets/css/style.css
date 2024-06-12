@@ -526,7 +526,10 @@ label {
     padding-left: 12px;
     padding-top: 0.5vw;
 }
-
+#extraoptieauto{
+    display: flex;
+    gap: 1vw;
+}
 #nameblokinfo {
     width: 10vw;
 }
