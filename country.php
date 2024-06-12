@@ -26,6 +26,8 @@ $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.
                         JOIN house h ON f.house_id = h.house_id");
 $stmt->execute();
 $flights = $stmt->fetchAll();
+
+
 $review_count_stmt = $conn->prepare("SELECT COUNT(*) AS country FROM locations");
 $review_count_stmt->execute();
 $review_count_data = $review_count_stmt->fetch();
@@ -39,10 +41,10 @@ $stmt->bindParam(':country', $land);
 $stmt->execute();
 $countryData = $stmt->fetch();
 $locationId = $countryData['country'];
-        $stmtHouses = $conn->prepare('SELECT * FROM house WHERE country = :country');
-        $stmtHouses->bindParam(':country', $land);
-        $stmtHouses->execute();
-        $houses = $stmtHouses->fetchAll();
+$stmtHouses = $conn->prepare('SELECT * FROM house WHERE country = :country');
+$stmtHouses->bindParam(':country', $land);
+$stmtHouses->execute();
+$houses = $stmtHouses->fetchAll();
 
 ?>
 
