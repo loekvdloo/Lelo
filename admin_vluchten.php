@@ -21,46 +21,48 @@
     include('dbcalls/connect.php');
     ?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
-        <table border="1">
+
+    <table border="1">
+        <tr>
+            <th>Flight ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Departure Date</th>
+            <th>Return Date</th>
+            <th>Auto</th>
+            <th>Plane</th>
+            <th>Persons</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <?php foreach ($records as $record) : ?>
             <tr>
-                <th>Flight ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Departure Date</th>
-                <th>Return Date</th>
-                <th>Auto</th>
-                <th>Plane</th>
-                <th>Persons</th>
-                <th>Price</th>
-                <th>Actions</th>
+                <form method="post" action="booked_travels" style="display:contents;">
+                    <td><?php echo $record['flight_id']; ?>
+                        <input type="hidden" name="flight_id" value="<?php echo $record['flight_id']; ?>">
+                        <input type="hidden" name="house_id" value="<?php echo $record['house_id']; ?>">
+                    </td>
+                    <td><input type="text" name="fname" value="<?php echo $record['fname']; ?>"></td>
+                    <td><input type="text" name="lname" value="<?php echo $record['lname']; ?>"></td>
+                    <td><input type="text" name="email" value="<?php echo $record['email']; ?>"></td>
+                    <td><input type="text" name="phone" value="<?php echo $record['phone']; ?>"></td>
+                    <td><input type="text" name="departure_date" value="<?php echo $record['departure_date']; ?>"></td>
+                    <td><input type="text" name="return_date" value="<?php echo $record['return_date']; ?>"></td>
+                    <td><input type="checkbox" name="auto" value="1" <?php if ($record['auto']) echo 'checked'; ?>></td>
+                    <td><input type="checkbox" name="plane" value="1" <?php if ($record['plane']) echo 'checked'; ?>></td>
+                    <td><input type="text" name="persons" value="<?php echo $record['persons']; ?>"></td>
+                    <td><?php echo $record['price']; ?></td>
+                    <td>
+                        <input type="submit" name="update" value="Update">
+                        <input type="submit" name="delete" value="Delete">
+                    </td>
+                </form>
             </tr>
-            <?php foreach ($records as $record) : ?>
-                <tr>
-                    <form method="post" action="admin_vluchten.php" style="display:contents;">
-                        <td><?php echo $record['flight_id']; ?>
-                            <input type="hidden" name="flight_id" value="<?php echo $record['flight_id']; ?>">
-                            <input type="hidden" name="house_id" value="<?php echo $record['house_id']; ?>">
-                        </td>
-                        <td><input type="text" name="fname" value="<?php echo $record['fname']; ?>"></td>
-                        <td><input type="text" name="lname" value="<?php echo $record['lname']; ?>"></td>
-                        <td><input type="text" name="email" value="<?php echo $record['email']; ?>"></td>
-                        <td><input type="text" name="phone" value="<?php echo $record['phone']; ?>"></td>
-                        <td><input type="text" name="departure_date" value="<?php echo $record['departure_date']; ?>"></td>
-                        <td><input type="text" name="return_date" value="<?php echo $record['return_date']; ?>"></td>
-                        <td><input type="checkbox" name="auto" value="1" <?php if ($record['auto']) echo 'checked'; ?>></td>
-                        <td><input type="checkbox" name="plane" value="1" <?php if ($record['plane']) echo 'checked'; ?>></td>
-                        <td><input type="text" name="persons" value="<?php echo $record['persons']; ?>"></td>
-                        <td><?php echo $record['price']; ?></td> <!-- Displaying the price -->
-                        <td>
-                            <input type="submit" name="update" value="Update">
-                            <input type="submit" name="delete" value="Delete">
-                        </td>
-                    </form>
-                </tr>
-            <?php endforeach; ?>
-        </table>
+        <?php endforeach; ?>
+    </table>
+
     </main>
     <?php
     include('footer.php');

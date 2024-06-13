@@ -36,10 +36,11 @@ LEFT JOIN
 GROUP BY 
     h.house_id
 ");
-$flights = $stmt->fetchAll();
-
+$stmt->execute();
+$houses = $stmt->fetchAll();
 
 $review_count_stmt = $conn->prepare("SELECT COUNT(*) AS country FROM locations");
+
 $review_count_stmt->execute();
 $review_count_data = $review_count_stmt->fetch();
 $review_count = $review_count_data['country'];
@@ -52,10 +53,12 @@ $stmt->bindParam(':country', $land);
 $stmt->execute();
 $countryData = $stmt->fetch();
 $locationId = $countryData['country'];
-$stmtHouses = $conn->prepare('SELECT * FROM house WHERE country = :country');
+$stmtHouses = $conn->prepare('SELECT h.* ,AVG(r.rating) as rating FROM house h left JOIN reviews r ON h.house_id = r.house_id WHERE h.country = :country  group by h.house_id; ');
 $stmtHouses->bindParam(':country', $land);
 $stmtHouses->execute();
+
 $houses = $stmtHouses->fetchAll();
+
 
 ?>
 
@@ -115,25 +118,25 @@ $houses = $stmtHouses->fetchAll();
 
                         </div>
                         <div class="flight-departure" id="prijsblokinfo">
-                            <?php
-                            switch ($house['rating']) {
-                                case 1:
-                                    echo '<img src="assets/img/1_star.png" alt="1ster" class="hoi">';
-                                    break;
-                                case 2:
-                                    echo '<img src="assets/img/2_star.png" alt="2ster" class="hoi">';
-                                    break;
-                                case 3:
-                                    echo '<img src="assets/img/3_star.png" alt="3ster" class="hoi">';
-                                    break;
-                                case 4:
-                                    echo '<img src="assets/img/4_star.png" alt="4ster" class="hoi">';
-                                    break;
-                                case 5:
-                                    echo '<img src="assets/img/5_stars.png" alt="5ster" class="hoi">';
-                                    break;
-                            }
-                            ?>
+                        <?php
+                                switch ($house['rating']) {
+                                    case 1:
+                                        echo '<img src="assets/img/1_star.png" alt="1ster" class="hoi">';
+                                        break;
+                                    case 2:
+                                        echo '<img src="assets/img/2_star.png" alt="2ster" class="hoi">';
+                                        break;
+                                    case 3:
+                                        echo '<img src="assets/img/3_star.png" alt="3ster" class="hoi">';
+                                        break;
+                                    case 4:
+                                        echo '<img src="assets/img/4_star.png" alt="4ster" class="hoi">';
+                                        break;
+                                    case 5:
+                                        echo '<img src="assets/img/5_stars.png" alt="5ster" class="hoi">';
+                                        break;
+                                }
+                                ?>
                             <p class="prijsvoorgesteldreizen">prijs p.p: <?php echo $house['price']; ?></p>
                         </div>
                     </div>
