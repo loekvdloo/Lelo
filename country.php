@@ -13,6 +13,7 @@
 
 <body>
 <?php
+    session_start();
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');
@@ -20,17 +21,10 @@ include('dbcalls/search.php');
 
 $stmt = $conn->prepare("
 SELECT 
-    h.*, 
-    f.travel_cost, 
-    f.boarding_country, 
-    f.boarding_city, 
-    f.arrival_city, 
-    f.arrival_country, 
+    h.*,
     AVG(r.rating) AS rating
 FROM 
     house h
-LEFT JOIN 
-    flights f ON f.house_id = h.house_id
 LEFT JOIN 
     reviews r ON h.house_id = r.house_id
 GROUP BY 
@@ -63,41 +57,17 @@ $houses = $stmtHouses->fetchAll();
 ?>
 
 <main style="background-image: url('assets/img/background.png');">
-    <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
+<section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
         <div class="tekstindexfoto">
             <h1>Plan je reis hier</h1>
-            <h3>we hebben reizen naar <?php echo htmlspecialchars($review_count); ?> verschillende landen waar wij reizen aanbieden</h3>
+            <h3>We hebben reizen naar verschillende landen waar wij reizen aanbieden.</h3>
         </div>
         <div class="reiszoeken">
+            <!-- Form for searching by date -->
             <form class="formulierhome" method="GET" action="search.php">
-                <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers" min="1" step="1">
-                <select name="luchthaven" id="vakantieformuliervlucht">
-                    <option value="schiphol">Schiphol</option>
-                    <option value="lelystad">Lelystad</option>
-                    <option value="Hartsfield-Jackson Atlanta">Hartsfield-Jackson Atlanta</option>
-                    <option value="Beijing Capital ">Beijing Capital</option>
-                    <option value="Los Angeles">Los Angeles</option>
-                    <option value="Dubai">Dubai</option>
-                    <option value="Tokyo Haneda">Tokyo Haneda</option>
-                    <option value="O'Hare ">O'Hare</option>
-                    <option value="London Heathrow ">London Heathrow</option>
-                    <option value="Shanghai Pudong ">Shanghai Pudong</option>
-                    <option value="Paris Charles de Gaulle ">Paris Charles de Gaulle</option>
-                    <option value="Dallas/Fort Worth">Dallas/Fort Worth</option>
-                    <option value="Guangzhou Baiyun ">Guangzhou Baiyun</option>
-                    <option value="Frankfurt">Frankfurt</option>
-                    <option value="Istanbul ">Istanbul</option>
-                    <option value="Singapore Changi ">Singapore Changi</option>
-                    <option value="Amsterdam Schiphol">Amsterdam Schiphol</option>
-                    <option value="Seoul Incheon ">Seoul Incheon</option>
-                    <option value="Denver ">Denver</option>
-                    <option value="Suvarnabhumi ">Suvarnabhumi</option>
-                    <option value="Hong Kong ">Hong Kong</option>
-                    <option value="Madrid-Barajas">Madrid-Barajas</option>
-                </select>
-
-                <input type="image" src="assets/img/zoeken.png" alt="Submit" value="zoeken" id="zoekenhome">
+                <input type="date" name="search_query" placeholder="Zoek op maand (YYYY-MM-DD)" id="vakantieformulier">
+                <input type="text" name="search_query" placeholder="Zoek op land" id="vakantieformulier">
+                <input type="submit" value="Zoeken" id="zoekenhome">
             </form>
         </div>
     </section>

@@ -16,6 +16,7 @@
 
 <body>
 <?php
+    session_start();
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');
@@ -24,11 +25,15 @@ $house_id = $_GET['house_id'];
 
 try {
     $stmt = $conn->prepare("
-        SELECT house.*, flights.travel_cost 
-        FROM house 
-        LEFT JOIN flights ON house.house_id = flights.house_id 
-        WHERE house.house_id = :house_id
-    ");
+    SELECT 
+        h.*, 
+        AVG(r.rating) AS rating
+    FROM 
+        house h
+    LEFT JOIN 
+        reviews r ON h.house_id = r.house_id
+            WHERE h.house_id = :house_id
+");
     $stmt->bindParam(':house_id', $house_id);
     $stmt->execute();
     $data = $stmt->fetch();
@@ -36,7 +41,6 @@ try {
     echo "Fout met Pagina laden: " . $e->getMessage();
 }
 ?>
-
 <main style="background-image: url('assets/img/background.png');">
 
     <section class="bevoegdhedenverblijf">

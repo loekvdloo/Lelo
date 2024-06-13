@@ -8,24 +8,41 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 </head>
 
 <body>
     <?php
-        session_start();
-    include('header.php');
-    include('dbcalls/tables.php');
-    include('dbcalls/signup.php');
-    include('dbcalls/connect.php');
-    include('dbcalls/users.php');
-    ?>
+
+session_start();
+
+include('dbcalls/connect.php');
+include('header.php');
+include('dbcalls/tables.php');
+include('dbcalls/signup.php');
+include('dbcalls/users.php');
+
+//check of user is ingelogd
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}
+
+//als user is ingelogd checkt ie is admin
+$stmt = $conn->prepare("SELECT is_admin FROM users WHERE user_id = :user_id");
+$stmt->bindParam(':user_id', $_SESSION['user_id']);
+$stmt->execute();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$result || $result['is_admin'] != 1) {
+    header('Location: index.php');
+    exit();
+}
+
+?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
-
-        
-
             <a href="admin_vluchten.php">VLUCHTEN</a>
 
                 <h2><?php echo ucfirst($table); ?> Table</h2>

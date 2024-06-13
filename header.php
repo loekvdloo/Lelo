@@ -78,25 +78,27 @@
             </div>
 
             <?php
-            if (isset($_SESSION['user_id'])) {
-                echo '
-                <div class="dropdown">
-                    <div class="knopheader" id="profileknop"><a href="javascript:void(0)" onclick="toggleDropdown()">Profile</a></div>
-                    <div class="dropdown-content" id="profileDropdown">
-                        <span class="close" onclick="closeDropdown(event)">&times;</span>
-                        <p>User ID: ' . $_SESSION['user_id'] . '</p>
-                        <p>Name: ' . $_SESSION['firstname'] . '</p>
-                        <p>Email: ' . $_SESSION['email'] . '</p>
-                    </div>
-                </div>';
-            } else {
-                echo '<div class="knopheader" id="tripinfoknop"><a href="javascript:void(0)" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">Login</a></div>';
-            }
+  
+if (isset($_SESSION['user_id'])) {
+    echo '
+    <div class="dropdown">
+        <div class="knopheader" id="profileknop"><a href="javascript:void(0)" onclick="toggleDropdown()">Profile</a></div>
+        <div class="dropdown-content" id="profileDropdown">
+            <span class="close" onclick="closeDropdown(event)">&times;</span>
+            <p>User ID: ' . $_SESSION['user_id'] . '</p>
+            <p>Name: ' . $_SESSION['firstname'] . '</p>
+            <p>Email: ' . $_SESSION['email'] . '</p>
+            <a href="my_booked_flights.php" class="button">My Booked Flights</a> <!-- Button to view booked flights -->
+        </div>
+    </div>';
+} else {
+    echo '<div class="knopheader" id="tripinfoknop"><a href="javascript:void(0)" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">Login</a></div>';
+}
 
-            if (isset($_SESSION['user_id'])) {
-                echo '<div class="knopheader" id="tripinfoknop"><a href="dbcalls/logout.php">Logout</a></div>';
-            }
-            ?>
+if (isset($_SESSION['user_id'])) {
+    echo '<div class="knopheader" id="tripinfoknop"><a href="dbcalls/logout.php">Logout</a></div>';
+}
+?>
         </nav>
     </div>
 

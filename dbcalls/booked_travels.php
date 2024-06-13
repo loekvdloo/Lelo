@@ -1,5 +1,5 @@
 <?php
-include('dbcalls/connect.php');
+include('connect.php');
 
 $table = 'booked_flights';
 

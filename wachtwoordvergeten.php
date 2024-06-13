@@ -23,6 +23,7 @@
 <body>
 
 <?php
+    session_start();
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');

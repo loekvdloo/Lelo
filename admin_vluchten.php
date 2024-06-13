@@ -39,7 +39,7 @@
         </tr>
         <?php foreach ($records as $record) : ?>
             <tr>
-                <form method="post" action="booked_travels" style="display:contents;">
+                <form method="post" action="dbcalls/booked_travels.php" style="display:contents;">
                     <td><?php echo $record['flight_id']; ?>
                         <input type="hidden" name="flight_id" value="<?php echo $record['flight_id']; ?>">
                         <input type="hidden" name="house_id" value="<?php echo $record['house_id']; ?>">
@@ -53,7 +53,6 @@
                     <td><input type="checkbox" name="auto" value="1" <?php if ($record['auto']) echo 'checked'; ?>></td>
                     <td><input type="checkbox" name="plane" value="1" <?php if ($record['plane']) echo 'checked'; ?>></td>
                     <td><input type="text" name="persons" value="<?php echo $record['persons']; ?>"></td>
-                    <td><?php echo $record['price']; ?></td>
                     <td>
                         <input type="submit" name="update" value="Update">
                         <input type="submit" name="delete" value="Delete">
