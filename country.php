@@ -68,8 +68,7 @@ $houses = $stmtHouses->fetchAll();
         <div class="reiszoeken">
             <form class="formulierhome" method="GET" action="search.php">
                 <input type="text" name="bestemming" placeholder="bestemming" id="vakantieformulier">
-                <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers"
-                       min="1" step="1">
+                <input class="hoeveelpers" type="number" name="persons" placeholder="personen" id="vakantiepers" min="1" step="1">
                 <select name="luchthaven" id="vakantieformuliervlucht">
                     <option value="schiphol">Schiphol</option>
                     <option value="lelystad">Lelystad</option>
@@ -101,33 +100,53 @@ $houses = $stmtHouses->fetchAll();
     </section>
     <section class="voorgesteldereizen">
         <?php foreach ($houses as $house) : ?>
-                    <div class="flight-item">
+            <div class="flight-item">
                 <div class="flight-image">
-                    <img src="<?php echo $house['house_image']; ?>" alt="House Image"  >
+                    <img src="<?php echo $house['house_image']; ?>" alt="House Image" class="huisimg">
                 </div>
-
 
                 <div class="tekstinfoblok">
                     <div class="naamkosteninfoblok">
-                        <div class="flight-departure" id="nameblokinfo"><?php echo $house['name']; ?></div>
-                        <div class="flight-departure" id="prijsblokinfo">prijs</div>
+                        <div class="flight-departure" id="nameblokinfo">
+                            <h3><?php echo $house['country']; ?>, <?php echo $house['city']; ?></h3>
+
+
+                            <h3><?php echo $house['name']; ?></h3>
+
+                        </div>
+                        <div class="flight-departure" id="prijsblokinfo">
+                            <?php
+                            switch ($house['rating']) {
+                                case 1:
+                                    echo '<img src="assets/img/1_star.png" alt="1ster" class="hoi">';
+                                    break;
+                                case 2:
+                                    echo '<img src="assets/img/2_star.png" alt="2ster" class="hoi">';
+                                    break;
+                                case 3:
+                                    echo '<img src="assets/img/3_star.png" alt="3ster" class="hoi">';
+                                    break;
+                                case 4:
+                                    echo '<img src="assets/img/4_star.png" alt="4ster" class="hoi">';
+                                    break;
+                                case 5:
+                                    echo '<img src="assets/img/5_stars.png" alt="5ster" class="hoi">';
+                                    break;
+                            }
+                            ?>
+                            <p class="prijsvoorgesteldreizen">prijs p.p: <?php echo $house['price']; ?></p>
+                        </div>
                     </div>
-
-                    <div class="flight-departure"><?php  echo $house['country'] ?></div>
-                    <div class="flight-departure"><?php  echo $house['city'] ?></div>
-
                     <div class="dingenbekijkeninfoblok">
-                        <div class="flight-departure"
-                             style="text-wrap: wrap; width: 115px;">
-                                Kamers: <?php  echo $house['rooms'] ?>
-                              <?php echo $house['summary']; ?></div>
+                        <div class="flight-departure" style="text-wrap: wrap; width: 115px;">
+                            <?php echo $house['summary']; ?>
+                        </div>
                         <form action="gevondenreis.php" method="get">
                             <input type="hidden" name="house_id" value="<?php echo $house['house_id'] ?>">
                             <input type="submit" value="Bekijk reis" id="bekijkvoorgesteld">
                         </form>
                     </div>
                 </div>
-
             </div>
         <?php endforeach; ?>
     </section>

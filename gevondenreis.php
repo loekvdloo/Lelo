@@ -39,13 +39,6 @@ try {
 
 <main style="background-image: url('assets/img/background.png');">
 
-
-    <p>Land en Stad boven ergens?</p>
-    <p><?php echo($data['country'])?></p>
-    <p><?php echo($data['city'])?></p>
-
-
-
     <section class="bevoegdhedenverblijf">
         <div class="bevoegdheaden">
             <h2>bevoegdheden</h2>
@@ -68,6 +61,7 @@ try {
             </div>
         </div>
         <div class="gevondenreisnameimg">
+            <h2><?php echo $data['country']; ?>, <?php echo $data['city']; ?></h2>
             <h2><?php echo($data['name']) ?></h2>
             <img src="<?php echo($data['house_image']) ?>" alt="House Image">
         </div>
@@ -164,7 +158,7 @@ try {
         <div class="reizenreseveren/winkelmandje">
             <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
             <form action="voorgesteldereizen.php">
-                <button type="submit">Submit Review</button>
+                <button type="submit">toevoegen en verder kijken</button>
             </form>
             <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis
             </button>

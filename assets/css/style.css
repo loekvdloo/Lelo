@@ -521,10 +521,14 @@ label {
 
 .naamkosteninfoblok {
     display: flex;
-    gap: 5vw;
-    padding-bottom: 3vw;
+    gap: 0.5vw;
+    padding-bottom: 1vw;
     padding-left: 12px;
     padding-top: 0.5vw;
+}
+.prijsvoorgesteldreizen{
+    position: relative;
+    left: 4vw;
 }
 #extraoptieauto{
     display: flex;

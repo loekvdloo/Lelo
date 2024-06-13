@@ -97,9 +97,13 @@ $houses = $stmt->fetchAll();
                     <div class="tekstinfoblok">
                         <div class="naamkosteninfoblok">
                             <div class="flight-departure" id="nameblokinfo">
-                            <h3><?php echo $house['country']; ?></h3>
-                            <h3><?php echo $house['city']; ?></h3>
+                            <h3><?php echo $house['country']; ?>, <?php echo $house['city']; ?></h3>
+
+
                                 <h3><?php echo $house['name']; ?></h3>
+
+                            </div>
+                            <div class="flight-departure" id="prijsblokinfo">
                                 <?php
                                 switch ($house['rating']) {
                                     case 1:
@@ -119,9 +123,7 @@ $houses = $stmt->fetchAll();
                                         break;
                                 }
                                 ?>
-                            </div>
-                            <div class="flight-departure" id="prijsblokinfo">
-                                prijs p.p: <?php echo $house['price']; ?>
+                                <p class="prijsvoorgesteldreizen">prijs p.p: <?php echo $house['price']; ?></p>
                             </div>
                         </div>
                         <div class="dingenbekijkeninfoblok">
