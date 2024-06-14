@@ -161,8 +161,10 @@ try {
         <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['price']; ?></div>
         <div class="reizenreseveren/winkelmandje">
             <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
-            <form action="voorgesteldereizen.php">
+
+            <form action="add_to_cart.php" method="POST" >
                 <button type="submit">toevoegen en verder kijken</button>
+                <input type="hidden" name="house_id" value="<?php echo($house_id); ?>">
             </form>
             <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis
             </button>
