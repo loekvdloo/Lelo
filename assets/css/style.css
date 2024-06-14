@@ -16,6 +16,7 @@ h2 {
     font-size: 40px;
     color: #5f151a;
 }
+
 h3 {
     font-size: 1.4vw;
     color: #5f151a;
@@ -26,9 +27,6 @@ h3 {
     display: none;
 }
 
-#bar {
-    display: none;
-}
 
 .topheader {
     height: 47px;
@@ -120,15 +118,18 @@ button:hover {
     position: relative;
     left: 80%;
 }
-.wachtwoordvegeten{
+
+.wachtwoordvegeten {
     display: flex;
     justify-content: center;
     padding-top: 10vw;
     padding-bottom: 10vw;
 }
-.formwachtwoord{
+
+.formwachtwoord {
     width: 16%;
 }
+
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
@@ -247,22 +248,12 @@ span.psw {
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-
-    .cancelbtn {
-        width: 100%;
-    }
-    
-    .headerbottom{
-        display: none;
-    }
-
+#overonspijltjes{
+    top: 115%;
 }
-
+#overons{
+    padding-bottom: 10vw;
+}
 .signupknop {
     width: 5vw;
     background-color: #B32E37;
@@ -344,21 +335,26 @@ label {
     display: flex;
     align-self: center;
 }
-.tekstindexfoto{
+
+.tekstindexfoto {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-top: 4vw;
     padding-bottom: 9vw;
 }
-.tekstindexfoto h3{
+
+.tekstindexfoto h3 {
+    font-size: 2.5vw;
     color: #5f151a;
 }
-.tekstindexfoto h1{
+
+.tekstindexfoto h1 {
     color: #B32E37;
 }
+
 .reiszoeken {
-    width: 51vw;
+    width: 34vw;
     height: 74px;
     background-color: #E8E7E7;
     border-radius: 10px;
@@ -381,6 +377,8 @@ label {
 }
 
 #zoekenhome {
+    border-radius: 5px;
+    border: none;
     width: 97px;
     height: 44px;
 }
@@ -437,12 +435,15 @@ label {
     justify-content: space-evenly;
     padding-top: 5vw;
 }
-.tekstindexvoorgesteldereis{
+
+.tekstindexvoorgesteldereis {
     text-align: center;
 }
-.tekstindexvoorgesteldereis h3{
-        color: #5f151a;
+
+.tekstindexvoorgesteldereis h3 {
+    color: #5f151a;
 }
+
 .homepage_test {
     display: flex;
     justify-content: center;
@@ -509,10 +510,12 @@ label {
     margin: 4vw;
     border-radius: 12px;
 }
-.hoi{
+
+.hoi {
     height: 1.5vw;
     padding: 0px;
 }
+
 .huisimg {
     height: 12vw;
     padding: 9px;
@@ -526,18 +529,22 @@ label {
     padding-left: 12px;
     padding-top: 0.5vw;
 }
-.prijsvoorgesteldreizen{
+
+.prijsvoorgesteldreizen {
     position: relative;
     left: 4vw;
 }
-#extraoptieauto{
+
+#extraoptieauto {
     display: flex;
     gap: 1vw;
 }
-.vliegtuigvinkje{
+
+.vliegtuigvinkje {
     display: flex;
     gap: 1vw;
 }
+
 #nameblokinfo {
     width: 10vw;
 }
@@ -716,21 +723,25 @@ label {
 }
 
 /*einde contactpagina*/
+
 /*einde homepagina*/
 /*gevondenreis*/
-.reizenreseveren\/winkelmandje{
+.reizenreseveren\/winkelmandje {
     display: flex;
     gap: 1vw;
 }
+
 .bevoegdhedenverblijf {
     display: flex;
     height: 35vw;
 }
-#winkelwageimggevondenreis{
+
+#winkelwageimggevondenreis {
     height: 34px;
     display: flex;
     align-self: center;
 }
+
 .logobevoegheden {
     padding-left: 15px;
     padding-right: 15px;
@@ -771,7 +782,9 @@ label {
     top: 1vw;
     border-radius: 1vw;
 }
-
+.tekstgevondenreis{
+    width: 10vw;
+}
 .gevondenreisnameimg h2 {
     width: 40vw;
 }
@@ -788,9 +801,11 @@ label {
     display: flex;
     padding-bottom: 5vw;
 }
-.reviewsgevondenreizen p{
+
+.reviewsgevondenreizen p {
     max-width: 46vw;
 }
+
 .inputreview {
     padding: 5px;
     border-radius: 5px;
@@ -989,6 +1004,7 @@ td form button:hover {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
 .bekijkreizenadmin {
     display: flex;
     justify-content: center;
@@ -1045,9 +1061,11 @@ td form button:hover {
 .wrmlelo {
     display: flex;
 }
-#overonsfavo{
+
+#overonsfavo {
     padding-bottom: 7vw;
 }
+
 #logooverons {
     height: 10vw;
     position: relative;
@@ -1240,7 +1258,7 @@ td form button:hover {
         align-self: center;
         padding-right: 10px;
         position: relative;
-        left: 22vw;
+        left: 21vw;
     }
 
     .overlay a {
@@ -1295,6 +1313,7 @@ td form button:hover {
         font-size: 60px;
     }
 
+
     /* einde headerresp*/
     /*    homepage*/
     .reizoekenhomepagina {
@@ -1307,8 +1326,8 @@ td form button:hover {
     }
 
     .reiszoeken {
-        width: 63vw;
-        height: 71vw;
+        width: 53vw;
+        height: 54vw;
         background-color: #E8E7E7;
         border-radius: 10px;
         display: flex;
@@ -1371,7 +1390,7 @@ td form button:hover {
 
     .w3-display-left, .w3-display-right {
         position: absolute;
-        top: 73%;
+        top: 67%;
         transform: translateY(-50%);
         font-size: 24px;
         cursor: pointer;
@@ -1405,11 +1424,13 @@ td form button:hover {
 
     .naamkosteninfoblok {
         display: flex;
-        gap: 5vw;
         padding-bottom: 4vw;
         padding-left: 12px;
         padding-top: 0.5vw;
-        flex-direction: column;
+
+    }
+    .naamkosteninfoblok h3{
+        font-size: 4.4vw;
     }
 
     #nameblokinfo {
@@ -1417,7 +1438,7 @@ td form button:hover {
     }
 
     #prijsblokinfo {
-        width: 18vw;
+        width: 45vw;
     }
 
     .dingenbekijkeninfoblok {
@@ -1427,7 +1448,16 @@ td form button:hover {
         align-items: end;
         margin-bottom: 5vw;
     }
-
+    .prijsvoorgesteldreizen{
+        position: relative;
+        left: 10vw;
+    }
+    .tekstgevondenreis{
+        font-size: 4vw;
+        position: relative;
+        top: 7vw;
+        left: 5vw;
+    }
     /*einde voorgesteldereizen*/
     /*    signup/sign/reseveren in*/
     .signupknop {
@@ -1455,6 +1485,7 @@ td form button:hover {
         border: 1px solid #888;
         width: 87%;
     }
+
     /*    einde signup/sign in*/
     /*contactpage*/
     .contactgrotefoto {
@@ -1546,47 +1577,79 @@ td form button:hover {
         position: relative;
         right: 231vw;
     }
-
+    .wrmlelo{
+        flex-direction: column;
+    }
+    #logooverons{
+        width: 71vw;
+        height: 21vw;
+        position: relative;
+        top: 6vw;
+        left: 14vw;
+    }
+    #contactoverons{
+        left: 0vw;
+    }
+    #autooverons{
+        width: 89vw;
+        height: 38vw;
+        position: relative;
+        top: 3vw;
+        left: 6vw;
+    }
+    #overonspijltjes{
+        top: 129%;
+    }
     /*einde over ons*/
     /*voorgestelde reizen*/
-    .bevoegdhedenverblijf{
+    .bevoegdhedenverblijf {
         flex-direction: column-reverse;
-        height: 110vw;
+        height: 122vw;
     }
-    .gevondenreisnameimg h2{
+
+    .gevondenreisnameimg h2 {
         width: 92vw;
     }
-    .gevondenreisnameimg img{
+
+    .gevondenreisnameimg img {
         width: 92%;
     }
-    .bevoegdheaden{
+
+    .bevoegdheaden {
 
         width: 70%;
     }
-    .langestreepgevondenreis{
-    margin-top: 12vw;
+
+    .langestreepgevondenreis {
+        margin-top: 12vw;
     }
-    .reviewgeven{
+
+    .reviewgeven {
 
         left: 0vw;
     }
-    .reviewblok{
+
+    .reviewblok {
         position: relative;
 
         left: -5vw;
     }
-    .reviewsgevondenreizen{
+
+    .reviewsgevondenreizen {
         flex-direction: column-reverse;
     }
-    .reseverenblok{
+
+    .reseverenblok {
         height: 14vw;
         width: 100%;
     }
-    .reizenreseveren\/winkelmandje{
+
+    .reizenreseveren\/winkelmandje {
         display: flex;
         gap: 4vw;
         padding-right: 4vw;
     }
+
     /*einde voorgestelde reizen*/
     /* footerresp*/
     .footernormaal {

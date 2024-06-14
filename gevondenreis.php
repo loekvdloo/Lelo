@@ -71,7 +71,7 @@ try {
         </div>
 
     </section>
-    <h3><?php echo $data['summary']; ?></h3>
+    <h3 class="tekstgevondenreis"><?php echo $data['summary']; ?></h3>
     <div class="langestreepgevondenreis"></div>
 
     <section class="reviewsgevondenreizen">

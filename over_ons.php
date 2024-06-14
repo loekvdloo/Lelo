@@ -44,36 +44,151 @@ include('dbcalls/signup.php');
                 in te vullen. wij zullen zo snel mogelijk reageren.</p>
         </div>
     </section>
-    <section class="favooverons" id="overonsfavo">
-        <h1 id="titelfavo">onze favoriete</h1>
-        <div class="reizenoverons">
+    <div class="tekstindexvoorgesteldereis">
+        <h1 class="homepage_test">best bekeken</h1>
+        <h3>zie hier onze best/meest bekeken reizen</h3>
+    </div>
+    <section class="reizenhome" id="overons">
 
-            <div class="imgreizenhome" style="background-image: url('assets/img/japan_homepagina.png');">
-                <div class="blokachtertekst">
-                    <h1>Japan</h1>
-                </div>
-                <div class="voorgesteldereisbekijken">
-                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-                </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/japan_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Japan</h1>
             </div>
-            <div class="imgreizenhome" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
-                <div class="blokachtertekst">
-                    <h1>zuid-afrika</h1>
-                </div>
-                <div class="voorgesteldereisbekijken">
-                    <a href="#">beijken<img src="assets/img/arrow_voorgesteldereizen.png"></a>
-                </div>
-            </div>
-            <div class="imgreizenhome" style="background-image: url('assets/img/brazilie_homepagina.png');">
-                <div class="blokachtertekst">
-                    <h1>Brazilie</h1>
-                </div>
-                <div class="voorgesteldereisbekijken">
-                    <a href="#">beijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
-                </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Japan">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
             </div>
         </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/zuid-afrika_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Zuid-Afrika</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=South Africa">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/brazilie_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Brazilië</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Brazil">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/australie_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Australië</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Australia">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/italie_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Italië</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Italy">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/canada_hompagina.png');">
+            <div class="blokachtertekst">
+                <h1>Canada</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Canada">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/frankrijk_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Frankrijk</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=France">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/duitsland_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Duitsland</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Germany">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/spanje_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Spanje</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Spane">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/thailand_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>Thailand</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Thailand">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/amerika_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>amerika</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=USA">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+        <div class="imgreizenhome mySlides" style="background-image: url('assets/img/egytpe_homepagina.png');">
+            <div class="blokachtertekst">
+                <h1>egypte</h1>
+            </div>
+            <div class="voorgesteldereisbekijken">
+                <a href="country.php?land=Egypt">bekijken <img src="assets/img/arrow_voorgesteldereizen.png"></a>
+            </div>
+        </div>
+
+        <div class="w3-display-left" id="overonspijltjes" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-display-right" id="overonspijltjes" onclick="plusDivs(1)">&#10095;</div>
+
+        <div class="w3-center w3-container w3-section w3-large w3-text-white" style="width:100%">
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        </div>
     </section>
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+
+            if (n > Math.ceil(x.length / 3)) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = Math.ceil(x.length / 3)
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+            for (i = (slideIndex - 1) * 3; i < slideIndex * 3 && i < x.length; i++) {
+                x[i].style.display = "block";
+            }
+
+        }
+    </script>
 </main>
 <?php
 include('footer.php');

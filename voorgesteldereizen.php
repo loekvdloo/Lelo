@@ -53,7 +53,7 @@ $houses = $stmt->fetchAll();
             <form class="formulierhome" method="GET" action="search.php">
                 <input type="date" name="search_query" placeholder="Zoek op maand (YYYY-MM-DD)" id="vakantieformulier">
                 <input type="text" name="search_query" placeholder="Zoek op land" id="vakantieformulier">
-                <input type="submit" value="Zoeken" id="zoekenhome">
+                <input type="image" alt="Submit" src="assets/img/zoeken.png" value="Zoeken" id="zoekenhome">
             </form>
         </div>
     </section>
