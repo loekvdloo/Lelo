@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
 <?php
 include('header.php');
 include('dbcalls/connect.php');
@@ -26,11 +27,37 @@ $stmt = $conn->prepare("SELECT f.house_id, f.travel_cost, f.boarding_country, f.
                         FROM flights f
                         JOIN house h ON f.house_id = h.house_id");
 $stmt->execute();
+=======
+
+    <?php
+    session_start();
+    include('header.php');
+    include('dbcalls/connect.php');
+    include('dbcalls/signup.php');
+    include('dbcalls/search.php');
+
+
+    // Prepare and execute the query
+    $stmt = $conn->prepare("
+    SELECT 
+        h.*, 
+        AVG(r.rating) AS rating
+    FROM 
+        house h
+    LEFT JOIN 
+        reviews r ON h.house_id = r.house_id
+    GROUP BY 
+        h.house_id
+");
+    $stmt->execute();
+    $houses = $stmt->fetchAll();
+>>>>>>> Stashed changes
 
 $flights = $stmt->fetchAll();
 
 ?>
 
+<<<<<<< Updated upstream
 <main style="background-image: url('assets/img/background.png');">
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
         <h1>Plan je reis hier</h1>
@@ -42,6 +69,37 @@ $flights = $stmt->fetchAll();
                 <div class="drop">
                     <input class="hoeveelpers" readonly="" placeholder="personen" id="vakantiepers">
                     <div class="personenetoevoegen">
+=======
+    <main style="background-image: url('assets/img/background.png');">
+        <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
+            <div class="tekstindexfoto">
+                <h1>Plan je reis hier</h1>
+                <h3>We hebben reizen naar verschillende landen waar wij reizen aanbieden.</h3>
+            </div>
+            <div class="reiszoeken">
+                <!-- Form for searching by date -->
+                <form class="formulierhome" method="GET" action="search.php">
+                    <input type="date" name="search_query" placeholder="Zoek op maand (YYYY-MM-DD)" id="vakantieformulier">
+                    <input type="text" name="search_query" placeholder="Zoek op land" id="vakantieformulier">
+                    <input type="submit" value="Zoeken" id="zoekenhome">
+                </form>
+            </div>
+        </section>
+        </form>
+        </div>
+        </section>
+        <section class="voorgesteldereizen">
+            <?php foreach ($houses as $house) : ?>
+                <div class="flight-item">
+                    <div class="flight-image">
+                        <img src="<?php echo $house['house_image']; ?>" alt="House Image" class="huisimg">
+                    </div>
+
+                    <div class="tekstinfoblok">
+                        <div class="naamkosteninfoblok">
+                            <div class="flight-departure" id="nameblokinfo">
+                                <h3><?php echo $house['country']; ?>, <?php echo $house['city']; ?></h3>
+>>>>>>> Stashed changes
 
                         <div class="keuzepers">
                             <label for="adults">Volwassenen:</label>

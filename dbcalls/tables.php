@@ -64,4 +64,7 @@ if ($table == 'house') {
 }
 $stmt->execute();
 $records = $stmt->fetchAll();
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes

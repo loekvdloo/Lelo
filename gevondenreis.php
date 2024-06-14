@@ -15,6 +15,10 @@
 
 <body>
     <?php
+<<<<<<< Updated upstream
+=======
+    session_start();
+>>>>>>> Stashed changes
     include('header.php');
     include('dbcalls/connect.php');
     include('dbcalls/signup.php');
@@ -23,11 +27,23 @@
 
     try {
         $stmt = $conn->prepare("
+<<<<<<< Updated upstream
         SELECT house.*, flights.travel_cost 
         FROM house 
         LEFT JOIN flights ON house.house_id = flights.house_id 
         WHERE house.house_id = :house_id
     ");
+=======
+    SELECT 
+        h.*, 
+        AVG(r.rating) AS rating
+    FROM 
+        house h
+    LEFT JOIN 
+        reviews r ON h.house_id = r.house_id
+            WHERE h.house_id = :house_id
+");
+>>>>>>> Stashed changes
         $stmt->bindParam(':house_id', $house_id);
         $stmt->execute();
         $data = $stmt->fetch();
@@ -35,13 +51,22 @@
         echo "Fout met Pagina laden: " . $e->getMessage();
     }
     ?>
+<<<<<<< Updated upstream
 
     <main style="background-image: url('assets/img/background.png');">
+=======
+    <main style="background-image: url('assets/img/background.png');">
+
+>>>>>>> Stashed changes
         <section class="bevoegdhedenverblijf">
             <div class="bevoegdheaden">
                 <h2>bevoegdheden</h2>
                 <div class="fasaliteiten">
+<<<<<<< Updated upstream
                     <p id="rooms"><?php echo ($data['rooms']) ?><img src="assets/img/kamers.png" class="logobevoegheden" alt="kamers">Rooms</>
+=======
+                    <p id="rooms"><?php echo ($data['rooms']) ?><img src="assets/img/kamers.png" class="logobevoegheden" alt="kamers">Rooms</p>
+>>>>>>> Stashed changes
                     <p><?php echo ($data['pool']) ? '<img src="assets/img/vink.png" alt="vink" width=20 height=20 >' : '<img src="assets/img/cross.png" alt="kruis" width=20 height=20 >' ?>
                         <img src="assets/img/zwembad.png" class="logobevoegheden" alt="zwembad">Pool
                     </p>
@@ -58,11 +83,19 @@
                 </div>
             </div>
             <div class="gevondenreisnameimg">
+<<<<<<< Updated upstream
+=======
+                <h2><?php echo $data['country']; ?>, <?php echo $data['city']; ?></h2>
+>>>>>>> Stashed changes
                 <h2><?php echo ($data['name']) ?></h2>
                 <img src="<?php echo ($data['house_image']) ?>" alt="House Image">
             </div>
 
         </section>
+<<<<<<< Updated upstream
+=======
+        <h3><?php echo $data['summary']; ?></h3>
+>>>>>>> Stashed changes
         <div class="langestreepgevondenreis"></div>
 
         <section class="reviewsgevondenreizen">
@@ -144,12 +177,106 @@
                 <div id="reviewResponse"></div>
             </div>
         </section>
+<<<<<<< Updated upstream
 
         <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['travel_cost']; ?></div>
         <form action="book.phh" method="post">
             <button type="submit">Boek de reis</button>
         </form>
 
+=======
+        <div id="reviewResponse"></div>
+        </div>
+        </section>
+        <div class="reseverenblok">
+            <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['price']; ?></div>
+            <div class="reizenreseveren/winkelmandje">
+                <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
+                <form action="voorgesteldereizen.php">
+                    <button type="submit">toevoegen en verder kijken</button>
+                </form>
+                <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis
+                </button>
+            </div>
+        </div>
+        <div id="id04" class="modal">
+
+            <form class="modal-content animate" action="dbcalls/book_flight.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="assets/img/logo.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="fname"><b>Voornaam</b></label>
+                    <input type="text" placeholder="Voornaam" id="reseveren" name="fname" required>
+
+                    <label for="lname"><b>Achternaam</b></label>
+                    <input type="text" placeholder="Achternaam" name="lname" required>
+
+                    <label for="email"><b>E-Mail</b></label>
+                    <input type="email" placeholder="E-Mail" name="email" required>
+
+                    <label for="phone"><b>Telefoonnummer</b></label>
+                    <input type="tel" placeholder="Telefoonnummer" name="phone" required>
+
+                    <label for="persons"><b>Aantal Personen</b></label>
+                    <input type="number" placeholder="persons" name="persons" required>
+
+
+                    <label for="departure_date"><b>Vertrekdatum</b></label>
+                    <input type="date" id="datumreseveren" name="departure_date" required>
+
+                    <label for="return_date"><b>Terugkomdatum</b></label>
+                    <input type="date" class="datumreseveren" name="return_date" required>
+
+                    <div id="extraoptieauto">
+                        <input type="checkbox" name="auto">
+                        <label for="auto">Auto</label>
+                    </div>
+
+                    <div class="vliegtuigvinkje">
+                        <input type="checkbox" id="myCheck" name="plane" onclick="myFunction()">
+                        <label for="myCheck">Vliegtuig</label>
+                    </div>
+
+                    <script>
+                        function myFunction() {
+                            var checkBox = document.getElementById("myCheck");
+                            var dateFields = document.getElementById("dateFields");
+                            if (checkBox.checked == true) {
+                                dateFields.style.display = "block";
+                            } else {
+                                dateFields.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <!-- Hidden input field for house_id -->
+                    <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($house_id); ?>">
+
+                    <button type="submit">Reseveren</button>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id04');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+>>>>>>> Stashed changes
 
         <section>
 

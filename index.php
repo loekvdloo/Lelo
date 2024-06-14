@@ -31,6 +31,7 @@ include('dbcalls/signup.php');
 <main style="background-image: url('assets/img/background.png');">
 
 
+<<<<<<< Updated upstream
 
     <section class="reizoekenhomepagina" style="background-image: url('assets/img/foto_homepagina.png');">
         <h1>Plan je reis hier</h1>
@@ -64,6 +65,22 @@ include('dbcalls/signup.php');
 
         </div>
     </section>
+=======
+        <section class="reizoekenhomepagina" style="background-image: url('assets/img/vliegtuigfoto.png');">
+            <div class="tekstindexfoto">
+                <h1>Plan je reis hier</h1>
+                <h3>We hebben reizen naar verschillende landen waar wij reizen aanbieden.</h3>
+            </div>
+            <div class="reiszoeken">
+                <!-- Form for searching by date -->
+                <form class="formulierhome" method="GET" action="search.php">
+                    <input type="date" name="search_query" placeholder="Zoek op maand (YYYY-MM-DD)" id="vakantieformulier">
+                    <input type="text" name="search_query" placeholder="Zoek op land" id="vakantieformulier">
+                    <input type="submit" value="Zoeken" id="zoekenhome">
+                </form>
+            </div>
+        </section>
+>>>>>>> Stashed changes
 
 
 

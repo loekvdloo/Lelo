@@ -18,7 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         $data = $stmt->fetch();
 
         if ($data) {
+<<<<<<< Updated upstream
             $_SESSION['logged_in'] = true;
+=======
+            $_SESSION['user_id'] = $data['user_id'];
+>>>>>>> Stashed changes
             $_SESSION['firstname'] = $data['user_name'];
             $_SESSION['email'] = $data['user_email'];
 
