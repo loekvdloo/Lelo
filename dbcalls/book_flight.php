@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conn->commit();
 
         // Redirect to a success page
-        header('Location: ../booked_travels.php');
+        header('Location: my_booked_flights.php');
         exit();
     } catch (PDOException $e) {
         // Rollback transaction on error
