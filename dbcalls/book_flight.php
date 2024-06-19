@@ -5,7 +5,7 @@ include('../dbcalls/connect.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ensure user is logged in
     if (!isset($_SESSION['user_id'])) {
-        echo "User not logged in.";
+        echo json_encode(['status' => 'error', 'message' => 'User not logged in.']);
         exit;
     }
     
@@ -22,16 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $persons = $_POST['persons'];
 
     try {
-        // Begin transaction
+
         $conn->beginTransaction();
 
-        // Insert booking data into booked_flights
+
         $stmt = $conn->prepare("
             INSERT INTO booked_flights (user_id, house_id, fname, lname, email, phone, departure_date, return_date, auto, plane, persons)
             VALUES (:user_id, :house_id, :fname, :lname, :email, :phone, :departure_date, :return_date, :auto, :plane, :persons)
         ");
         $stmt->bindParam(':user_id', $user_id);
-        $stmt->bindParam(':house_id', $house_id); // Bind house_id
+        $stmt->bindParam(':house_id', $house_id);
         $stmt->bindParam(':fname', $fname);
         $stmt->bindParam(':lname', $lname);
         $stmt->bindParam(':email', $email);
@@ -54,26 +54,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':user_id', $user_id);
             $stmt->bindParam(':house_id', $house_id);
             if ($stmt->execute()) {
-                echo "Successfully removed from cart.";
+                $conn->commit();
+                echo json_encode(['status' => 'success', 'message' => 'Successfully booked and removed from cart.']);
             } else {
-                echo "Failed to remove from cart.";
+                $conn->rollBack();
+                echo json_encode(['status' => 'error', 'message' => 'Failed to remove from cart.']);
             }
         } else {
-            echo "House not found in cart.";
+            $conn->rollBack();
+            echo json_encode(['status' => 'error', 'message' => 'House not found in cart.']);
         }
-
-        // Commit transaction
-        $conn->commit();
-
-        // Redirect to a success page
-        header('Location: my_booked_flights.php');
-        exit();
     } catch (PDOException $e) {
         // Rollback transaction on error
         $conn->rollBack();
-        echo "Error booking the house: " . $e->getMessage();
+        echo json_encode(['status' => 'error', 'message' => 'Error booking the house: ' . $e->getMessage()]);
     }
 } else {
-    echo "Invalid request method.";
+    echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);
 }
-

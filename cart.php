@@ -26,7 +26,6 @@ try {
 } catch (PDOException $e) {
     echo "Error fetching cart data: " . $e->getMessage();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +83,7 @@ try {
                         </form>
                     </div>
                     <div class="action-buttons">
-                        <button onclick="document.getElementById('id04-<?php echo $house['house_id']; ?>').style.display='block'">boek de reis</button>
+                        <button onclick="document.getElementById('id04-<?php echo $house['house_id']; ?>').style.display='block'">Boek de reis</button>
                         <form action="remove.php" method="post">
                             <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($house['house_id']); ?>">
                             <button type="submit" class="delete-button">Verwijder uit winkelwagen</button>
@@ -92,14 +91,14 @@ try {
                     </div>
 
                     <div id="id04-<?php echo $house['house_id']; ?>" class="modal">
-                        <form class="modal-content animate" action="dbcalls/book_flight.php" method="post">
+                        <form class="modal-content animate" onsubmit="bookFlight(event, <?php echo $house['house_id']; ?>)">
                             <div class="imgcontainer">
                                 <span onclick="document.getElementById('id04-<?php echo $house['house_id']; ?>').style.display='none'" class="close" title="Close Modal">&times;</span>
                                 <img src="assets/img/logo.png" alt="Avatar" class="avatar">
                             </div>
                             <div class="container">
                                 <label for="fname"><b>Voornaam</b></label>
-                                <input type="text" placeholder="Voornaam" id="reseveren" name="fname" required>
+                                <input type="text" placeholder="Voornaam" id="reseveren-<?php echo $house['house_id']; ?>" name="fname" required>
 
                                 <label for="lname"><b>Achternaam</b></label>
                                 <input type="text" placeholder="Achternaam" name="lname" required>
@@ -114,10 +113,10 @@ try {
                                 <input type="number" placeholder="persons" name="persons" required>
 
                                 <label for="departure_date"><b>Vertrekdatum</b></label>
-                                <input type="date" id="datumreseveren" name="departure_date" required>
+                                <input type="date" id="datumreseveren-<?php echo $house['house_id']; ?>" name="departure_date" required>
 
                                 <label for="return_date"><b>Terugkomdatum</b></label>
-                                <input type="date" class="datumreseveren" name="return_date" required>
+                                <input type="date" class="datumreseveren-<?php echo $house['house_id']; ?>" name="return_date" required>
 
                                 <div id="extraoptieauto">
                                     <input type="checkbox" name="auto">
@@ -154,19 +153,64 @@ try {
                 </div>
             </div>
         <?php endforeach; ?>
+        <button id="book-all-button">Boek Alles</button>
     </section>
 </main>
 
 <script>
-    // Get the modal
     var modals = document.querySelectorAll('.modal');
+    var currentModalIndex = 0;
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        modals.forEach(function(modal) {
+    document.getElementById('book-all-button').addEventListener('click', function() {
+        if (modals.length > 0) {
+            openNextModal();
+        }
+    });
+
+    function openNextModal() {
+        if (currentModalIndex < modals.length) {
+            modals[currentModalIndex].style.display = 'block';
+        }
+    }
+
+    window.onclick = function(event) {
+        modals.forEach(function(modal, index) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                if (index === currentModalIndex) {
+                    currentModalIndex++;
+                    openNextModal();
+                }
             }
+        });
+    }
+
+    function bookFlight(event, houseId) {
+        event.preventDefault();
+        var form = event.target;
+        var formData = new FormData(form);
+
+        fetch('dbcalls/book_flight.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                currentModalIndex++;
+                if (currentModalIndex < modals.length) {
+                    modals[currentModalIndex - 1].style.display = 'none';
+                    openNextModal();
+                } else {
+                    window.location.href = 'my_booked_flights.php';
+                }
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while booking the house.');
         });
     }
 </script>
