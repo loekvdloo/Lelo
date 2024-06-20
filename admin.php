@@ -24,22 +24,24 @@ include('dbcalls/tables.php');
 include('dbcalls/signup.php');
 include('dbcalls/users.php');
 
+
 //check of user is ingelogd
 if (!isset($_SESSION['user_id'])) {
+    //als user is ingelogd checkt ie is admin
+    $stmt = $conn->prepare("SELECT is_admin FROM users WHERE user_id = :user_id");
+    $stmt->bindParam(':user_id', $_SESSION['user_id']);
+    $stmt->execute();
+    $result = $stmt->fetch();
+    if ( $result['is_admin'] != 1) {
+        header('Location: index.php');
+        exit();
+    }
     header('Location: index.php');
     exit();
+} else {
+    echo 'error';
 }
 
-//als user is ingelogd checkt ie is admin
-$stmt = $conn->prepare("SELECT is_admin FROM users WHERE user_id = :user_id");
-$stmt->bindParam(':user_id', $_SESSION['user_id']);
-$stmt->execute();
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if (!$result || $result['is_admin'] != 1) {
-    header('Location: index.php');
-    exit();
-}
 
 ?>
     <main class="mainadmin" style="background-image: url('assets/img/background.png');">
