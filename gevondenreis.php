@@ -297,9 +297,11 @@ try {
         loadReviews(); // Initial load of reviews
     });
 </script>
+<div id="footergevondenreis">
 <?php
 include('footer.php')
 ?>
+</div>
 </body>
 
 </html>

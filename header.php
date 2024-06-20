@@ -68,8 +68,7 @@
                 <div class="dropdown">
                     <div class="knopheader" id="profileknop"><a href="javascript:void(0)" onclick="toggleDropdown()">Profile</a></div>
                     <div class="dropdown-content" id="profileDropdown" style="display: none">
-                        <span class="close" onclick="closeDropdown(event)">&times;</span>
-                        <p>User ID: ' . $_SESSION['user_id'] . '</p>
+                        <span class="close" id="kruisje" onclick="closeDropdown(event)">&times;</span>
                         <p>Name: ' . $_SESSION['firstname'] . '</p>
                         <p>Email: ' . $_SESSION['email'] . '</p>
                         <a href="my_booked_flights.php" class="button">My Booked Flights</a>
@@ -89,7 +88,7 @@
     <script>
         function toggleDropdown() {
             var dropdown = document.getElementById("profileDropdown");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
         }
 
         function closeDropdown(event) {

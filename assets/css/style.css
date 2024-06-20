@@ -189,7 +189,13 @@ span.psw {
     font-size: 35px;
     font-weight: bold;
 }
-
+#kruisje{
+    position: absolute;
+    right: 164px;
+    top: 4.5vw;
+    color: #000;
+    font-size: 35px;
+}
 .close:hover,
 .close:focus {
     color: red;
@@ -223,7 +229,6 @@ span.psw {
     cursor: pointer;
 }
 
-/* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -266,7 +271,25 @@ span.psw {
     position: relative;
     left: 25.8vw;
 }
-
+.dropdown-content{
+    display: none;
+    background: #9F9F9F;
+    width: 12vw;
+    border-radius: 5px;
+    display: flex;
+    height: 6vw;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.dropdown{
+    height: 2.7vw;
+}
+/*.knopheader{*/
+/*    display: flex;*/
+/*    height: 6vw;*/
+/*    justify-content: space-evenly;*/
+/*    flex-direction: column;*/
+/*}*/
 /*einde dropdownmenu*/
 /*einde header*/
 main {
@@ -631,6 +654,7 @@ label {
 #naamgrotefoto {
     display: flex;
     align-items: end;
+    width: 20vw;
     height: 27vw;
     position: relative;
     left: 169px;
@@ -784,6 +808,9 @@ label {
 }
 .tekstgevondenreis{
     width: 10vw;
+    position: relative;
+    left: 5vw;
+    bottom: 9vw;
 }
 .gevondenreisnameimg h2 {
     width: 40vw;
@@ -1111,7 +1138,10 @@ td form button:hover {
 /*einde over ons*/
 
 /*footer*/
+#footergevondenreis{
+    margin-bottom: 75px;
 
+}
 .footerresponsive {
     display: none;
 }
@@ -1190,6 +1220,7 @@ td form button:hover {
     .dropdown {
         position: relative;
         display: inline-block;
+
     }
 
     .dropdown-content {
