@@ -65,6 +65,7 @@
             if (isset($_SESSION['user_id'])) {
                 echo '
                 <a href="cart.php" class="button"><img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis"></a>
+                
                 <div class="dropdown">
                     <div class="knopheader" id="profileknop"><a href="javascript:void(0)" onclick="toggleDropdown()">Profile</a></div>
                     <div class="dropdown-content" id="profileDropdown" style="display: none">
@@ -74,6 +75,9 @@
                         <a href="my_booked_flights.php" class="button">My Booked Flights</a>
                     </div>
                 </div>';
+                if (isset($_SESSION['is_admin']) ==1) {
+                    echo '<div class="knopheader" id="tripinfoknop"><a href="admin.php">admin</a></div>';
+                }
             } else {
                 echo '<div class="knopheader" id="tripinfoknop"><a href="javascript:void(0)" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">Login</a></div>';
             }
