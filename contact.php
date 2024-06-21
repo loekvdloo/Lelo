@@ -33,7 +33,7 @@
             <div class="klachtenformulier">
                 <h2 id="klechtentekst">klachten</h2>
                 <div class="kleinlijntje"></div>
-                <form id="complaintForm" class="klachtenform" method="post" action="">
+                <form id="complaintForm" class="klachtenform" method="post" action="dbcalls/submit_complaint.php">
                     <label class="formklachtentekst">onderwerp:</label>
                     <input type="text" class="formklachten" name="subject" placeholder="onderwerp">
                     <label class="formklachtentekst">reis van klacht:</label>
@@ -42,9 +42,9 @@
                     <input type="text" class="formklachten" name="complaint" placeholder="klacht">
                     <label class="formklachtentekst">overig:</label>
                     <input type="text" class="formklachten" name="other" placeholder="overig">
-                    <button type="submit" id="send">versturen</button>
+                    <input type="submit" id="send" name="versturen">
                 </form>
-                <div id="message"></div>
+                <div id="complaintMessage"></div>
             </div>
         </section>
         <section class="contactomrulier">

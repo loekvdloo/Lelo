@@ -5,13 +5,13 @@ include('connect.php'); // Include your database connection script
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     session_start();
     // Retrieve user ID from session
-    if (isset($_SESSION['user_id'])) {
-        $user_id = $_SESSION['user_id'];
-    } else {
-        // Handle the case where user ID is not set in session
-        // Redirect to login page or display an error message
-        exit("User not logged in"); // Example error handling, modify as needed
-    }
+//    if (isset($_SESSION['user_id'])) {
+//        $user_id = $_SESSION['user_id'];
+//    } else {
+//        // Handle the case where user ID is not set in session
+//        // Redirect to login page or display an error message
+//        exit("User not logged in"); // Example error handling, modify as needed
+//    }
 
     // Retrieve form data
     $subject = $_POST['subject'];

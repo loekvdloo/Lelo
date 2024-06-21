@@ -16,7 +16,7 @@
 
 <body>
 <?php
-    session_start();
+session_start();
 include('header.php');
 include('dbcalls/connect.php');
 include('dbcalls/signup.php');
@@ -162,77 +162,81 @@ try {
         <div class="reizenreseveren/winkelmandje">
             <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
 
-            <form action="add_to_cart.php" method="POST" >
-                <button type="submit">toevoegen en verder kijken</button>
+            <form action="add_to_cart.php" method="POST">
+                <button type="submit"> toevoegen en verder kijken</button>
+
                 <input type="hidden" name="house_id" value="<?php echo($house_id); ?>">
             </form>
+
             <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis
             </button>
         </div>
     </div>
     <div id="id04" class="modal">
 
-    <form class="modal-content animate" action="dbcalls/book_flight.php" method="post">
-    <div class="imgcontainer">
-        <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="assets/img/logo.png" alt="Avatar" class="avatar">
-    </div>
+        <form class="modal-content animate" action="dbcalls/book_flight.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="assets/img/logo.png" alt="Avatar" class="avatar">
+            </div>
 
-    <div class="container">
-        <label for="fname"><b>Voornaam</b></label>
-        <input type="text" placeholder="Voornaam" id="reseveren" name="fname" required>
+            <div class="container">
+                <label for="fname"><b>Voornaam</b></label>
+                <input type="text" placeholder="Voornaam" id="reseveren" name="fname" required>
 
-        <label for="lname"><b>Achternaam</b></label>
-        <input type="text" placeholder="Achternaam" name="lname" required>
+                <label for="lname"><b>Achternaam</b></label>
+                <input type="text" placeholder="Achternaam" name="lname" required>
 
-        <label for="email"><b>E-Mail</b></label>
-        <input type="email" placeholder="E-Mail" name="email" required>
+                <label for="email"><b>E-Mail</b></label>
+                <input type="email" placeholder="E-Mail" name="email" required>
 
-        <label for="phone"><b>Telefoonnummer</b></label>
-        <input type="tel" placeholder="Telefoonnummer" name="phone" required>
+                <label for="phone"><b>Telefoonnummer</b></label>
+                <input type="tel" placeholder="Telefoonnummer" name="phone" required>
 
-        <label for="persons"><b>Aantal Personen</b></label>
-        <input type="number" placeholder="persons" name="persons" required>
+                <label for="persons"><b>Aantal Personen</b></label>
+                <input type="number" placeholder="persons" name="persons" required>
 
 
-        <label for="departure_date"><b>Vertrekdatum</b></label>
-        <input type="date" id="datumreseveren" name="departure_date" required>
+                <label for="departure_date"><b>Vertrekdatum</b></label>
+                <input type="date" id="datumreseveren" name="departure_date" required>
 
-        <label for="return_date"><b>Terugkomdatum</b></label>
-        <input type="date" class="datumreseveren" name="return_date" required>
+                <label for="return_date"><b>Terugkomdatum</b></label>
+                <input type="date" class="datumreseveren" name="return_date" required>
 
-        <div id="extraoptieauto">
-            <input type="checkbox" name="auto">
-            <label for="auto">Auto</label>
-        </div>
+                <div id="extraoptieauto">
+                    <input type="checkbox" name="auto">
+                    <label for="auto">Auto</label>
+                </div>
 
-        <div class="vliegtuigvinkje">
-            <input type="checkbox" id="myCheck" name="plane" onclick="myFunction()">
-            <label for="myCheck">Vliegtuig</label>
-        </div>
+                <div class="vliegtuigvinkje">
+                    <input type="checkbox" id="myCheck" name="plane" onclick="myFunction()">
+                    <label for="myCheck">Vliegtuig</label>
+                </div>
 
-        <script>
-            function myFunction() {
-                var checkBox = document.getElementById("myCheck");
-                var dateFields = document.getElementById("dateFields");
-                if (checkBox.checked == true) {
-                    dateFields.style.display = "block";
-                } else {
-                    dateFields.style.display = "none";
-                }
-            }
-        </script>
-        
-        <!-- Hidden input field for house_id -->
-        <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($house_id); ?>">
+                <script>
+                    function myFunction() {
+                        var checkBox = document.getElementById("myCheck");
+                        var dateFields = document.getElementById("dateFields");
+                        if (checkBox.checked == true) {
+                            dateFields.style.display = "block";
+                        } else {
+                            dateFields.style.display = "none";
+                        }
+                    }
+                </script>
 
-        <button type="submit">Reseveren</button>
-    </div>
+                <!-- Hidden input field for house_id -->
+                <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($house_id); ?>">
 
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
-    </div>
-</form>
+                <button type="submit">Reseveren</button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">
+                    Cancel
+                </button>
+            </div>
+        </form>
 
     </div>
 
@@ -246,6 +250,16 @@ try {
                 modal.style.display = "none";
             }
         }
+
+        var modal = document.getElementById('id06');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (isset($_SESSION['user_id'])) {
+                alert('log eerst in voordat je riezen kunt boeken');
+            }
+        }
+
     </script>
 
     <section>
@@ -298,9 +312,9 @@ try {
     });
 </script>
 <div id="footergevondenreis">
-<?php
-include('footer.php')
-?>
+    <?php
+    include('footer.php')
+    ?>
 </div>
 </body>
 
