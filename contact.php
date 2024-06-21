@@ -8,9 +8,17 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
 <?php
 include('header.php');
 include('dbcalls/signup.php');
+=======
+    <?php
+    session_start();
+    include('dbcalls/connect.php');
+    include('header.php');
+    include('dbcalls/signup.php');
+>>>>>>> Stashed changes
 
 ?>
 
@@ -86,7 +94,7 @@ include('footer.php')
             <div class="klachtenformulier">
                 <h2 id="klechtentekst">klachten</h2>
                 <div class="kleinlijntje"></div>
-                <form id="complaintForm" class="klachtenform" method="post" action="">
+                <form id="complaintForm" class="klachtenform" method="post" action="dbcalls/submit_complaint.php">
                     <label class="formklachtentekst">onderwerp:</label>
                     <input type="text" class="formklachten" name="subject" placeholder="onderwerp">
                     <label class="formklachtentekst">reis van klacht:</label>

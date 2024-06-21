@@ -1,151 +1,178 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
 }
 
 h1 {
-    font-size: 60px;
-    color: white;
+  font-size: 60px;
+  color: white;
 }
 
 h2 {
+<<<<<<< Updated upstream
     font-size: 40px;
     color: black;
+=======
+  font-size: 40px;
+  color: #5f151a;
+}
+
+h3 {
+  font-size: 1.4vw;
+  color: #5f151a;
+>>>>>>> Stashed changes
 }
 
 /*header*/
 .buttomheaderresponsive {
-    display: none;
+  display: none;
 }
 
+<<<<<<< Updated upstream
 #bar {
     display: none;
 }
 
+=======
+>>>>>>> Stashed changes
 .topheader {
-    height: 47px;
-    width: 100vw;
-    background-color: #B32E37;
+  height: 47px;
+  width: 100vw;
+  background-color: #b32e37;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    height: 108px;
-    justify-content: end;
-    gap: 30px;
-    padding-right: 30px;
+  display: flex;
+  align-items: center;
+  height: 108px;
+  justify-content: end;
+  gap: 30px;
+  padding-right: 30px;
 }
 
 .buttomheader {
-    display: flex;
-    align-items: center;
-    height: 108px;
-    box-shadow: 0px 4px 7px rgba(1, 10, 0, 0.3);
-    position: relative;
-    z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 108px;
+  box-shadow: 0px 4px 7px rgba(1, 10, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .logoheader {
-    position: relative;
-    left: 43px;
-    width: 66vw;
-    display: flex;
-    align-self: center;
+  position: relative;
+  left: 43px;
+  width: 66vw;
+  display: flex;
+  align-self: center;
 }
 
 .knopheader {
-    background-color: #3E4550;
-    border-radius: 5px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+  background-color: #3e4550;
+  border-radius: 5px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .knopheader a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 #tripinfoknop {
-    width: 96px;
+  width: 96px;
 }
 
 #aboutusknop {
-    width: 112px;
+  width: 112px;
 }
-
 
 /*login/signup*/
 
-
 /* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 7px;
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 7px;
 }
 
 /* Set a style for all buttons */
 button {
-    background-color: #3E4550;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 6px;
+  background-color: #3e4550;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
 }
 
 button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 #inloggenknop {
-    width: 20%;
-    position: relative;
-    left: 80%;
+  width: 20%;
+  position: relative;
+  left: 80%;
 }
 
+<<<<<<< Updated upstream
+=======
+.wachtwoordvegeten {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+.formwachtwoord {
+  width: 16%;
+}
+
+>>>>>>> Stashed changes
 /* Extra styles for the cancel button */
 .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
 }
 
 /* Center the image and position the close button */
 .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
 }
 
 img.avatar {
-    padding-top: 3vw;
+  padding-top: 3vw;
 }
 
 .container {
-    padding: 16px;
+  padding: 16px;
 }
 
 span.psw {
-    float: right;
-    padding-top: 16px;
+  float: right;
+  padding-top: 16px;
 }
 
 /* The Modal (background) */
 .modal {
+<<<<<<< Updated upstream
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -157,84 +184,108 @@ span.psw {
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     padding-top: 60px;
+=======
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+>>>>>>> Stashed changes
 }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 33%; /* Could be more or less, depending on screen size */
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 33%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
 .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
 }
+<<<<<<< Updated upstream
 
+=======
+#kruisje {
+  position: absolute;
+  right: 164px;
+  top: 4.5vw;
+  color: #000;
+  font-size: 35px;
+}
+>>>>>>> Stashed changes
 .close:hover,
 .close:focus {
-    color: red;
-    cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 .close1 {
-    position: absolute;
-    right: 34.5vw;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-    top: 9vw;
+  position: absolute;
+  right: 34.5vw;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  top: 9vw;
 }
 
 .clearfix {
-    display: flex;
+  display: flex;
 }
 
 #verwijderen {
-    width: 50%;
+  width: 50%;
 }
 
 #toevoegen {
-    width: 50%;
+  width: 50%;
 }
 
 .close1:hover,
 .close1:focus {
-    color: red;
-    cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 /* Add Zoom Animation */
 .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
-    from {
-        -webkit-transform: scale(0)
-    }
-    to {
-        -webkit-transform: scale(1)
-    }
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes animatezoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Change styles for span and cancel button on extra small screens */
+<<<<<<< Updated upstream
 @media screen and (max-width: 300px) {
     span.psw {
         display: block;
@@ -244,92 +295,132 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+=======
+#overonspijltjes {
+  top: 115%;
+}
+#overons {
+  padding-bottom: 10vw;
+>>>>>>> Stashed changes
 }
 
 .signupknop {
-    width: 5vw;
-    background-color: #B32E37;
-    border-radius: 5px;
-    height: 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    left: 25.8vw;
+  width: 5vw;
+  background-color: #b32e37;
+  border-radius: 5px;
+  height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  left: 25.8vw;
 }
+<<<<<<< Updated upstream
 
+=======
+.dropdown-content {
+  display: none;
+  background: #9f9f9f;
+  width: 12vw;
+  border-radius: 5px;
+  display: flex;
+  height: 6vw;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.dropdown {
+  height: 2.7vw;
+}
+/*.knopheader{*/
+/*    display: flex;*/
+/*    height: 6vw;*/
+/*    justify-content: space-evenly;*/
+/*    flex-direction: column;*/
+/*}*/
+>>>>>>> Stashed changes
 /*einde dropdownmenu*/
 /*einde header*/
 main {
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-
+  background-attachment: fixed;
+  background-repeat: repeat-y;
 }
 
 /*homepagina*/
 
 /*vakantei zoeken*/
 
-
 .hoeveelpers {
+<<<<<<< Updated upstream
     height: 1.5vw;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer; /* Geeft aan dat het veld interactief is */
+=======
+  height: 1.5vw;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+>>>>>>> Stashed changes
 }
 
 .personenetoevoegen {
-    display: none;
-    position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    border: 1px solid #ccc;
-
-
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 .drop:hover .personenetoevoegen {
-    display: block;
+  display: block;
 }
 
 .keuzepers {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .keuzepers:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .pers {
-    width: calc(100% - 20px); /* Maak ruimte voor de pijl van de nummerinput */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: calc(100% - 20px); /* Maak ruimte voor de pijl van de nummerinput */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-
 .reizoekenhomepagina {
+<<<<<<< Updated upstream
     display: flex;
     justify-content: center;
     height: 36vw;
     background-repeat: no-repeat;
     align-items: center;
     flex-direction: column;
+=======
+  display: flex;
+  height: 36vw;
+  background-repeat: no-repeat;
+  align-items: center;
+  flex-direction: column;
+>>>>>>> Stashed changes
 }
 
 .vertrekdatum {
-    display: flex;
-    align-self: center;
+  display: flex;
+  align-self: center;
 }
 
+<<<<<<< Updated upstream
 .reizoekenhomepagina h1 {
     padding-bottom: 21px;
     color: black;
@@ -350,91 +441,198 @@ label {
     height: 44px;
     position: relative;
     top: 0.5vw;
+=======
+.tekstindexfoto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 4vw;
+  padding-bottom: 9vw;
+}
+
+.tekstindexfoto h3 {
+  font-size: 2.5vw;
+  color: #5f151a;
+}
+
+.tekstindexfoto h1 {
+  color: #b32e37;
+}
+
+.reiszoeken {
+  width: 34vw;
+  height: 74px;
+  background-color: #e8e7e7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reseverenblok {
+  width: 99%;
+  height: 4vw;
+  background-color: #e8e7e7;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#zoekenhome {
+  border-radius: 5px;
+  border: none;
+  width: 97px;
+  height: 44px;
+}
+
+#submitreseveren {
+  width: 8vw;
+>>>>>>> Stashed changes
 }
 
 .formulierhome {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 #vakantieformulier {
+<<<<<<< Updated upstream
 
     padding: 5px;
+=======
+  padding: 5px;
+>>>>>>> Stashed changes
 }
 
 .pers {
-    width: 50px;
+  width: 50px;
 }
 
 .keuzepers {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*einde vakantie zoeken*/
 /*voorgestelde vakanties*/
+<<<<<<< Updated upstream
 .reizenhome {
     margin-top: 200px;
     height: 400px;
     display: flex;
     justify-content: space-evenly;
+=======
+.w3-display-left,
+.w3-display-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.w3-display-left {
+  left: 0;
+  padding-left: 69px;
+  padding-top: 79vw;
+}
+
+.w3-display-right {
+  right: 0;
+  padding-right: 69px;
+  padding-top: 79vw;
+}
+
+.reizenhome {
+  gap: 7vw;
+  padding-left: 11vw;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5vw;
+}
+
+.tekstindexvoorgesteldereis {
+  text-align: center;
+}
+
+.tekstindexvoorgesteldereis h3 {
+  color: #5f151a;
+}
+
+.homepage_test {
+  display: flex;
+  justify-content: center;
+  color: #b32e37;
+  padding-top: 3vw;
+}
+
+#seizoen {
+  padding-left: 0px;
+  gap: 0px;
+>>>>>>> Stashed changes
 }
 
 .imgreizenhome {
-    width: 329px;
-    background-repeat: no-repeat;
+  width: 329px;
+  background-repeat: no-repeat;
 }
 
 .blokachtertekst {
-    width: 329px;
-    height: 69px;
-    background-color: #383838;
-    opacity: 0.6;
-    position: relative;
-    top: 61px;
+  width: 329px;
+  height: 69px;
+  background-color: #383838;
+  opacity: 0.6;
+  position: relative;
+  top: 61px;
 }
 
 .blokachtertekst h1 {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    position: relative;
-    top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  top: -8px;
 }
 
 .voorgesteldereisbekijken {
-    width: 121px;
-    height: 39px;
-    background-color: #B32E37;
-    border-radius: 10px;
-    position: relative;
-    left: 199px;
-    top: 286px;
+  width: 121px;
+  height: 39px;
+  background-color: #b32e37;
+  border-radius: 10px;
+  position: relative;
+  left: 199px;
+  top: 286px;
 }
 
 .voorgesteldereisbekijken a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 .voorgesteldereisbekijken img {
-    position: relative;
-    left: 4px;
-    top: 1px;
+  position: relative;
+  left: 4px;
+  top: 1px;
 }
 
 .flight-item {
-    width: 46%;
-    background-color: #E8E7E7;
-    display: flex;
-    margin: 4vw;
-    border-radius: 12px;
+  width: 46%;
+  background-color: #e8e7e7;
+  display: flex;
+  margin: 4vw;
+  border-radius: 12px;
 }
 
+<<<<<<< Updated upstream
 .flight-item img {
     height: 12vw;
     padding: 9px;
@@ -449,184 +647,237 @@ label {
     padding-top: 0.5vw;
 }
 
+=======
+.hoi {
+  height: 1.5vw;
+  padding: 0px;
+}
+
+.huisimg {
+  height: 12vw;
+  padding: 9px;
+  border-radius: 15px;
+}
+
+.naamkosteninfoblok {
+  display: flex;
+  gap: 0.5vw;
+  padding-bottom: 1vw;
+  padding-left: 12px;
+  padding-top: 0.5vw;
+}
+
+.prijsvoorgesteldreizen {
+  position: relative;
+  left: 4vw;
+}
+
+#extraoptieauto {
+  display: flex;
+  gap: 1vw;
+}
+
+.vliegtuigvinkje {
+  display: flex;
+  gap: 1vw;
+}
+
+>>>>>>> Stashed changes
 #nameblokinfo {
-    width: 10vw;
+  width: 10vw;
 }
 
 #prijsblokinfo {
-    width: 5vw;
+  width: 5vw;
 }
 
 .dingenbekijkeninfoblok {
-    display: flex;
-    gap: 7vw;
-    padding-left: 12px;
-    align-items: end;
+  display: flex;
+  gap: 7vw;
+  padding-left: 12px;
+  align-items: end;
 }
 
 .voorgesteldereizen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*einde voorgesteldereis*/
 /*seizoenen*/
 .blokseizoenen {
-    width: 264px;
-    height: 69px;
-    background-color: #383838;
-    opacity: 0.6;
-    position: relative;
-    top: 33px;
+  width: 264px;
+  height: 69px;
+  background-color: #383838;
+  opacity: 0.6;
+  position: relative;
+  top: 33px;
 }
 
 .blokseizoenen h1 {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    position: relative;
-    top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  top: -8px;
 }
 
 .voorgesteldeseizoen {
-    width: 101px;
-    height: 39px;
-    background-color: #B32E37;
-    border-radius: 10px;
-    position: relative;
-    left: 152px;
-    top: 83px;
+  width: 101px;
+  height: 39px;
+  background-color: #b32e37;
+  border-radius: 10px;
+  position: relative;
+  left: 152px;
+  top: 83px;
 }
 
 .voorgesteldeseizoen a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 .voorgesteldeseizoen img {
-    position: relative;
-    left: 4px;
-    top: 1px;
+  position: relative;
+  left: 4px;
+  top: 1px;
 }
 
 #bekijkvoorgesteld {
-    background-color: #B32E37;
-    border-radius: 5px;
-    border: none;
-    width: 76px;
-    height: 24px;
-    color: white;
+  background-color: #b32e37;
+  border-radius: 5px;
+  border: none;
+  width: 76px;
+  height: 24px;
+  color: white;
 }
 
 /*einde seizoenen*/
 /*contactpagina*/
 .contactgrotefoto {
-    height: 30vw;
-    background-repeat: no-repeat;
+  height: 30vw;
+  background-repeat: no-repeat;
 }
 
 #naamgrotefoto {
+<<<<<<< Updated upstream
     display: flex;
     align-items: end;
     height: 27vw;
     position: relative;
     left: 169px;
     color: black;
+=======
+  display: flex;
+  align-items: end;
+  width: 20vw;
+  height: 27vw;
+  position: relative;
+  left: 169px;
+  color: #5f151a;
+>>>>>>> Stashed changes
 }
 
 .tekstklachten {
-    display: flex;
-    padding-top: 50px;
+  display: flex;
+  padding-top: 50px;
 }
 
 .contacttekst {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
 
 .kleinlijntje {
+<<<<<<< Updated upstream
     height: 1.5px;
     width: 370px;
     background: black;
+=======
+  height: 1.5px;
+  width: 370px;
+  background: #5f151a;
+>>>>>>> Stashed changes
 }
 
 #tekstcontact {
-    position: relative;
-    top: 5px;
-    width: 14vw;
+  position: relative;
+  top: 5px;
+  width: 14vw;
 }
 
 #verticaalcontact {
-    width: 24vw;
-    position: relative;
-    top: 20px;
+  width: 24vw;
+  position: relative;
+  top: 20px;
 }
 
 #verticaalcontact2 {
-    position: relative;
-    left: 24vw;
+  position: relative;
+  left: 24vw;
 }
 
 .klachtenformulier {
-    width: 30vw;
-    height: 39vw;
-    background: #E8E7E7;
-    border-radius: 10px;
-    position: relative;
-    left: 19vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 30vw;
+  height: 39vw;
+  background: #e8e7e7;
+  border-radius: 10px;
+  position: relative;
+  left: 19vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #klechtentekst {
-    padding-top: 12px;
+  padding-top: 12px;
 }
 
 .klachtenform {
-    width: 75%;
-    padding-top: 23px;
+  width: 75%;
+  padding-top: 23px;
 }
 
 .formklachtentekst {
-    display: flex;
-    padding-top: 19px;
+  display: flex;
+  padding-top: 19px;
 }
 
 #send {
-    width: 5vw;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 17.5vw;
-    background-color: #9F252D;
+  width: 5vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 17.5vw;
+  background-color: #9f252d;
 }
 
 .contactomrulier {
-    display: flex;;
-    padding-top: 100px;
+  display: flex;
+  padding-top: 100px;
 }
 
 .formkvraag {
-    height: 10vw;
+  height: 10vw;
 }
 
 #contactpagina {
-    position: relative;
-    left: 7vw;
-    height: 50vw;
+  position: relative;
+  left: 7vw;
+  height: 50vw;
 }
 
 /*einde contactpagina*/
 /*einde homepagina*/
 /*gevondenreis*/
+<<<<<<< Updated upstream
 .bevoegdhedenverblijf{
     display: flex;
     height: 35vw;
@@ -726,43 +977,316 @@ label {
     width: 156px;
     height: 5vw;
     max-height: 48vw;
+=======
+.reizenreseveren\/winkelmandje {
+  display: flex;
+  gap: 1vw;
+}
+
+.bevoegdhedenverblijf {
+  display: flex;
+  height: 35vw;
+}
+
+#winkelwageimggevondenreis {
+  height: 34px;
+  display: flex;
+  align-self: center;
+}
+
+.logobevoegheden {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#rooms {
+  position: relative;
+  left: 1vw;
+}
+
+.bevoegdhedenverblijf h2 {
+  color: #5f151a;
+}
+
+.fasaliteiten {
+  font-size: 28px;
+}
+
+.bevoegdheaden {
+  width: 31%;
+  position: relative;
+  left: 5vw;
+  top: 4vw;
+}
+
+.gevondenreisnameimg {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  right: 5vw;
+  top: 5vw;
+}
+
+.gevondenreisnameimg img {
+  width: 50%;
+  position: relative;
+  top: 1vw;
+  border-radius: 1vw;
+}
+.tekstgevondenreis {
+  width: 10vw;
+  position: relative;
+  left: 5vw;
+  bottom: 9vw;
+}
+.gevondenreisnameimg h2 {
+  width: 40vw;
+}
+
+.langestreepgevondenreis {
+  height: 2px;
+  width: 93vw;
+  background-color: #5f151a;
+  position: relative;
+  left: 3vw;
+}
+
+.reviewsgevondenreizen {
+  display: flex;
+  padding-bottom: 5vw;
+}
+
+.reviewsgevondenreizen p {
+  max-width: 46vw;
+}
+
+.inputreview {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+#reviewtitle {
+  display: flex;
+  gap: 0.5vw;
+  position: relative;
+  left: 8vw;
+  top: 3vw;
+  padding-bottom: 4vw;
+}
+
+.reviewblok {
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+}
+
+.review {
+  position: relative;
+  left: 8vw;
+  top: 1vw;
+  padding-top: 1vw;
+}
+
+.stars {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.kleinstreepjereview {
+  height: 0.1vw;
+  width: 48vw;
+  background-color: #5f151a;
+  margin-top: 2vw;
+  position: relative;
+  left: -2vw;
+}
+
+.reviewgeven {
+  position: relative;
+  left: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 3vw;
+}
+
+#message {
+  max-width: 11vw;
+  width: 156px;
+  height: 5vw;
+  max-height: 48vw;
+>>>>>>> Stashed changes
 }
 /*einde gevondenreis*/
 /*privacy pagina*/
 .privacypage {
-    width: 80%;
+  width: 80%;
 }
 
 .privacypage h2 {
-    color: #B32E37;
-    padding-bottom: 1.5vw;
-    padding-top: 2vw;
+  color: #b32e37;
+  padding-bottom: 1.5vw;
+  padding-top: 2vw;
 }
 
 /*einde privacy pagina*/
 /*admin page*/
 
-.bekijkreizenadmin {
-    display: flex;
-    justify-content: center;
-    padding-top: 5vw;
-}
-
+<<<<<<< Updated upstream
+=======
 .bekijkreizenblok {
-    height: 259px;
-    width: 1000px;
-    background-color: #D9D9D9;
-    border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+  width: 98%;
 }
 
-.namenresveren {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 9px;
+.namenresveren p {
+  display: inline-block;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
 .horizontalestreep {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background-color: #000;
+  margin: 0 10px;
+}
+
+/* Stijlen voor .vakantieverwijderen */
+.vakantieverwijderen {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 20px 0;
+  width: 98%;
+}
+
+.vakantieverwijderen form {
+  margin: 20px 0;
+}
+
+.vakantieverwijderen label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.vakantieverwijderen input[type="text"],
+.vakantieverwijderen input[type="number"],
+.vakantieverwijderen input[type="email"],
+.vakantieverwijderen input[type="file"],
+.vakantieverwijderen select {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.vakantieverwijderen input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.vakantieverwijderen input[type="submit"],
+.vakantieverwijderen button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vakantieverwijderen input[type="submit"]:hover,
+.vakantieverwijderen button:hover {
+  background-color: #45a049;
+}
+
+/* Stijlen voor tabellen */
+table {
+  width: 98%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td form {
+  display: inline-block;
+  margin: 0;
+}
+
+td form input[type="text"],
+td form input[type="number"] {
+  width: 98%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+td form button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td form button:hover {
+  background-color: #45a049;
+}
+
+/* Extra stijlen voor specifieke secties */
+.vakantieverwijderen h3 {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.bekijkreizenadmin h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+>>>>>>> Stashed changes
+.bekijkreizenadmin {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vw;
+}
+
+.bekijkreizenblok {
+  height: 259px;
+  width: 1000px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
+.namenresveren {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 9px;
+}
+
+.horizontalestreep {
+<<<<<<< Updated upstream
     width: 0.1vw;
     height: 5vw;
     background: black;
@@ -776,124 +1300,164 @@ label {
     color: black;
     display: flex;
     justify-content: center;
+=======
+  width: 0.1vw;
+  height: 5vw;
+  background: #5f151a;
+}
+
+.vakantieverwijderen h1 {
+  color: #5f151a;
+  display: flex;
+  justify-content: center;
+>>>>>>> Stashed changes
 }
 
 .formvakantievw {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .vakantievwknop {
-    width: 5vw;
-    margin-left: 10px;
+  width: 5vw;
+  margin-left: 10px;
 }
 
 #inputvakantievw {
-    width: 26%;
+  width: 26%;
 }
 
 /*einde admin page*/
 /*over ons page*/
 .over_ons_grotefoto {
-    height: 33vw;
+  height: 33vw;
 }
 
 .wrmlelo {
-    display: flex;
+  display: flex;
 }
 
+<<<<<<< Updated upstream
+=======
+#overonsfavo {
+  padding-bottom: 7vw;
+}
+
+>>>>>>> Stashed changes
 #logooverons {
-    height: 10vw;
-    position: relative;
-    top: 3vw;
-    left: 14vw;
+  height: 10vw;
+  position: relative;
+  top: 3vw;
+  left: 14vw;
 }
 
 #autooverons {
-    height: 13vw;
-    position: relative;
-    top: 3vw;
-    left: 10vw;
+  height: 13vw;
+  position: relative;
+  top: 3vw;
+  left: 10vw;
 }
 
 #contactoverons {
-    position: relative;
-    left: 16vw;
+  position: relative;
+  left: 16vw;
 }
 
 #contactlelo {
-    padding-top: 6vw;
+  padding-top: 6vw;
 }
 
 .favooverons {
-    display: flex;
-    flex-direction: column;
-    padding-top: 12vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12vw;
 }
 
 #titelfavo {
+<<<<<<< Updated upstream
     display: flex;
     align-self: center;
     color: black;
     padding-bottom: 3vw;
+=======
+  display: flex;
+  align-self: center;
+  color: #5f151a;
+  padding-bottom: 3vw;
+>>>>>>> Stashed changes
 }
 
 .reizenoverons {
-    height: 400px;
-    display: flex;
-    justify-content: space-evenly;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*einde over ons*/
 
 /*footer*/
+<<<<<<< Updated upstream
+=======
+#footergevondenreis {
+  margin-bottom: 75px;
+}
+>>>>>>> Stashed changes
 .footerresponsive {
-    display: none;
+  display: none;
 }
 
 .footernormaal {
-    display: flex;
-    height: 104px;
-    width: 100vw;
-    background-color: #9F252D;
+  display: flex;
+  height: 104px;
+  width: 100vw;
+  background-color: #9f252d;
 }
 
 .socials {
-    display: flex;
-    gap: 10px;
-    padding-left: 10px;
-    padding-top: 65px;
-    width: 30%;
+  display: flex;
+  gap: 10px;
+  padding-left: 10px;
+  padding-top: 65px;
+  width: 30%;
 }
 
 .formulierfooter {
+<<<<<<< Updated upstream
     display: flex;
     flex-direction: column;
     justify-content: end;
     padding-bottom: 12px;
     width: 61%;
+=======
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 12px;
+  width: 50%;
+>>>>>>> Stashed changes
 }
 
 .formulierfooter a {
-    width: 33%;
-    color: white;
+  width: 33%;
+  color: white;
 }
 
 #emailfooter {
-    border-radius: 5px;
-    padding: 5px;
-    width: 160px;
-    height: 32px;
-    border: 0px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 160px;
+  height: 32px;
+  border: 0px;
 }
 
 .invulfooter {
-    display: flex;
-    gap: 10px;
-    padding-top: 7px;
+  display: flex;
+  gap: 10px;
+  padding-top: 7px;
 }
 
 #versturenfooter {
+<<<<<<< Updated upstream
     height: 32px;
     width: 76px;
     border-radius: 5px;
@@ -907,20 +1471,34 @@ label {
     gap: 25px;
     padding-bottom: 5px;
     align-items: end;
+=======
+  height: 32px;
+  width: 76px;
+  border-radius: 5px;
+  background-color: #5f151a;
+  color: white;
+  border: 0px;
+}
+
+.voorwaardefooter {
+  display: flex;
+  gap: 25px;
+  padding-bottom: 5px;
+  align-items: end;
+>>>>>>> Stashed changes
 }
 
 .voorwaardefooter a {
-    color: white;
+  color: white;
 }
 
-
 /*einde footer*/
-
 
 /*responive*/
 
 /*responive*/
 @media screen and (max-width: 450px) {
+<<<<<<< Updated upstream
     h1 {
         font-size: 50px;
         color: white;
@@ -1293,3 +1871,518 @@ label {
 
     /*    einde footer*/
 }
+=======
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+  }
+
+  .dropdown-content p {
+    margin: 10px 0;
+  }
+
+  .dropdown-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .dropdown-content .close:hover,
+  .dropdown-content .close:focus {
+    color: #5f151a;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 50px;
+    color: white;
+  }
+
+  /*    headerresp*/
+  .topheader {
+    display: none;
+  }
+
+  .buttomheader {
+    display: none;
+  }
+
+  .buttomheaderresponsive {
+    display: flex;
+    height: 108px;
+    box-shadow: 0px 4px 7px rgba(1, 10, 0, 0.3);
+  }
+
+  #logoheader {
+    position: relative;
+    left: -10px;
+    width: 40vw;
+    display: flex;
+    align-self: center;
+  }
+
+  .overlay {
+    display: flex;
+  }
+
+  #bar {
+    display: flex;
+    align-self: center;
+    padding-right: 10px;
+    position: relative;
+    left: 21vw;
+  }
+
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  /* einde headerresp*/
+  /*    homepage*/
+  .reizoekenhomepagina {
+    display: flex;
+    justify-content: center;
+    height: 131vw;
+    background-repeat: no-repeat;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reiszoeken {
+    width: 53vw;
+    height: 54vw;
+    background-color: #e8e7e7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 8vw;
+  }
+
+  .formulierhome {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .hoeveelpers {
+    height: 5.5vw;
+    width: 41vw;
+  }
+
+  #vakantieformulier {
+    height: 10vw;
+  }
+
+  #vakantieformuliervlucht {
+    height: 10vw;
+  }
+
+  #vakantieformulierluchthaven {
+    height: 10vw;
+    position: relative;
+    top: 30vw;
+  }
+
+  #zoekenhome {
+    display: flex;
+    align-self: end;
+    width: 54px;
+  }
+
+  .personenetoevoegen {
+    display: block;
+    width: 46%;
+  }
+
+  .imgreizenhome {
+    width: 329px;
+    background-repeat: no-repeat;
+    height: 97vw;
+  }
+
+  .reizenhome {
+    margin-top: 55px;
+    height: 315vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .w3-display-left,
+  .w3-display-right {
+    position: absolute;
+    top: 67%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #seizoenblok {
+    width: 62vw;
+  }
+
+  .homepage_test {
+    text-align: center;
+  }
+
+  /*    einde homepage*/
+  /*voorgesteldereizen page*/
+  .flight-item {
+    flex-direction: column;
+    width: 71%;
+    background-color: #e8e7e7;
+    display: flex;
+    margin: 4vw;
+    border-radius: 12px;
+  }
+
+  .flight-item img {
+    max-width: 96%;
+    height: auto;
+    padding: 6px;
+    border-radius: 15px;
+  }
+
+  .naamkosteninfoblok {
+    display: flex;
+    padding-bottom: 4vw;
+    padding-left: 12px;
+    padding-top: 0.5vw;
+  }
+  .naamkosteninfoblok h3 {
+    font-size: 4.4vw;
+  }
+
+  #nameblokinfo {
+    width: 68vw;
+  }
+
+  #prijsblokinfo {
+    width: 45vw;
+  }
+
+  .dingenbekijkeninfoblok {
+    display: flex;
+    gap: 19vw;
+    padding-left: 12px;
+    align-items: end;
+    margin-bottom: 5vw;
+  }
+  .prijsvoorgesteldreizen {
+    position: relative;
+    left: 10vw;
+  }
+  .tekstgevondenreis {
+    font-size: 4vw;
+    position: relative;
+    top: 7vw;
+    left: 5vw;
+  }
+  /*einde voorgesteldereizen*/
+  /*    signup/sign/reseveren in*/
+  .signupknop {
+    width: 16vw;
+    background-color: #b32e37;
+    border-radius: 5px;
+    height: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    left: 62.8vw;
+  }
+
+  #inloggenknop {
+    width: 23%;
+    position: relative;
+    left: 77%;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 87%;
+  }
+
+  /*    einde signup/sign in*/
+  /*contactpage*/
+  .contactgrotefoto {
+    height: 147vw;
+    background-repeat: no-repeat;
+  }
+
+  #naamgrotefoto {
+    display: flex;
+    align-items: end;
+    height: 136vw;
+    position: relative;
+    left: 50px;
+    color: #5f151a;
+  }
+
+  .contacttekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .tekstklachten {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #tekstcontact {
+    position: relative;
+    top: 5px;
+    width: 59vw;
+  }
+
+  #verticaalcontact {
+    width: 63vw;
+    position: relative;
+    top: 20px;
+  }
+
+  .klachtenformulier {
+    width: 64vw;
+    height: 117vw;
+    background: #e8e7e7;
+    border-radius: 10px;
+    position: relative;
+    left: 18vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 16vw;
+  }
+
+  .kleinlijntje {
+    height: 1.5px;
+    width: 243px;
+    background: #5f151a;
+  }
+
+  #send {
+    width: 17vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 30.5vw;
+    background-color: #9f252d;
+  }
+
+  .contactomrulier {
+    flex-direction: column;
+    padding-bottom: 30vw;
+  }
+
+  #contactpagina {
+    position: relative;
+    left: 19vw;
+    height: 133vw;
+  }
+
+  #imgvak {
+    display: none;
+  }
+
+  /*einde contactpage*/
+  /*overons*/
+  .over_ons_grotefoto {
+    height: 116vw;
+    width: 332vw;
+    position: relative;
+    right: 231vw;
+  }
+  .wrmlelo {
+    flex-direction: column;
+  }
+  #logooverons {
+    width: 71vw;
+    height: 21vw;
+    position: relative;
+    top: 6vw;
+    left: 14vw;
+  }
+  #contactoverons {
+    left: 0vw;
+  }
+  #autooverons {
+    width: 89vw;
+    height: 38vw;
+    position: relative;
+    top: 3vw;
+    left: 6vw;
+  }
+  #overonspijltjes {
+    top: 129%;
+  }
+  /*einde over ons*/
+  /*voorgestelde reizen*/
+  .bevoegdhedenverblijf {
+    flex-direction: column-reverse;
+    height: 122vw;
+  }
+
+  .gevondenreisnameimg h2 {
+    width: 92vw;
+  }
+
+  .gevondenreisnameimg img {
+    width: 92%;
+  }
+
+  .bevoegdheaden {
+    width: 70%;
+  }
+
+  .langestreepgevondenreis {
+    margin-top: 12vw;
+  }
+
+  .reviewgeven {
+    left: 0vw;
+  }
+
+  .reviewblok {
+    position: relative;
+
+    left: -5vw;
+  }
+
+  .reviewsgevondenreizen {
+    flex-direction: column-reverse;
+  }
+
+  .reseverenblok {
+    height: 14vw;
+    width: 100%;
+  }
+
+  .reizenreseveren\/winkelmandje {
+    display: flex;
+    gap: 4vw;
+    padding-right: 4vw;
+  }
+
+  /*einde voorgestelde reizen*/
+  /* footerresp*/
+  .footernormaal {
+    display: none;
+  }
+
+  .footerresponsive {
+    display: flex;
+    height: 228px;
+    width: 100vw;
+    background-color: #9f252d;
+    flex-direction: column;
+  }
+
+  .formulierfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 50%;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .formulierfooter a {
+    width: 76%;
+  }
+
+  .voorwaardefooter {
+    position: relative;
+    left: 40vw;
+    top: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0px;
+    height: 19vw;
+  }
+
+  .footersocialprivesy {
+    display: flex;
+  }
+
+  .socials {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+    padding-top: 65px;
+    width: 18%;
+  }
+
+  /*    einde footer*/
+}
+
+/*test*/
+>>>>>>> Stashed changes

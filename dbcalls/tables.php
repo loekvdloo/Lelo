@@ -1,5 +1,5 @@
 <?php
-include('dbcalls/connect.php');
+include('connect.php');
 
 $table = isset($_GET['table']) ? $_GET['table'] : 'house';
 

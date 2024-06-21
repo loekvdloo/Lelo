@@ -146,6 +146,7 @@
                     <a href="over_ons.php">About Us</a>
                 </div>
 
+<<<<<<< Updated upstream
                 <?php
 
                 if (isset($_SESSION['user_id'])) {
@@ -181,6 +182,31 @@
                 event.stopPropagation();
                 document.getElementById("profileDropdown").style.display = "none";
             }
+=======
+            <?php
+                if (isset($_SESSION['user_id'])) {
+                    echo '
+                    <a href="cart.php" class="button"><img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis"></a>
+                    <div class="dropdown">
+                        <div class="knopheader" id="profileknop"><a href="javascript:void(0)" onclick="toggleDropdown()">Profile</a></div>
+                        <div class="dropdown-content" id="profileDropdown" style="display: none">
+                            <span class="close" id="kruisje" onclick="closeDropdown(event)">&times;</span>
+                            <p>Name: ' . $_SESSION['firstname'] . '</p>
+                            <p>Email: ' . $_SESSION['email'] . '</p>
+                            <a href="my_booked_flights.php" class="button">My Booked Flights</a>
+                        </div>
+                    </div>';
+                } else {
+                    echo '<div class="knopheader" id="tripinfoknop"><a href="javascript:void(0)" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">Login</a></div>';
+                }
+
+                if (isset($_SESSION['user_id'])) {
+                    echo '<div class="knopheader" id="tripinfoknop"><a href="dbcalls/logout.php">Logout</a></div>';
+                }
+            ?>
+        </nav>
+    </div>
+>>>>>>> Stashed changes
 
             window.onclick = function(event) {
                 if (!event.target.matches('#profileknop a')) {

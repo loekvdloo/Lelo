@@ -6,7 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $is_admin = isset($_POST['is_admin']) ? 1 : 0;
         $user_name = $_POST['user_name'];
         $user_lastname = $_POST['user_lastname'];
+<<<<<<< Updated upstream
         $user_pass = ($_POST['user_pass']);
+=======
+        $user_pass =($_POST['user_pass']);
+>>>>>>> Stashed changes
         $user_email = $_POST['user_email'];
 
         $stmt = $conn->prepare("INSERT INTO users (is_admin, user_name, user_lastname, user_pass, user_email)
