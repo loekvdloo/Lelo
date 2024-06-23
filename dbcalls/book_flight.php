@@ -3,14 +3,13 @@ session_start();
 include('../dbcalls/connect.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Ensure user is logged in
     if (!isset($_SESSION['user_id'])) {
         echo json_encode(['status' => 'error', 'message' => 'User not logged in.']);
         exit;
     }
     
     $user_id = $_SESSION['user_id'];
-    $house_id = $_POST['house_id']; // Retrieve house_id from POST data
+    $house_id = $_POST['house_id']; // retrieve house_id from post
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
@@ -43,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':persons', $persons);
         $stmt->execute();
 
-        // Check if the house is in the cart and delete it if it is
+
         $stmt = $conn->prepare("SELECT * FROM cart WHERE user_id = :user_id AND house_id = :house_id");
         $stmt->bindParam(':user_id', $user_id);
         $stmt->bindParam(':house_id', $house_id);

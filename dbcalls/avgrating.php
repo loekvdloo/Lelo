@@ -5,4 +5,3 @@ $stmt = $conn->prepare("SELECT h.house_id, AVG(r.rating) FROM house h join revie
         $stmt->execute();
         $data = $stmt->fetchAll();
 
-?>
