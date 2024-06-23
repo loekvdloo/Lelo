@@ -3,8 +3,8 @@ session_start();
 include('dbcalls/connect.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: index.php');
-    exit();
+    header("Location: index.php"); // Redirect to index.php
+    exit; // Ensure that no further code is executed after redirection
 }
 
 $user_id = $_SESSION['user_id'];

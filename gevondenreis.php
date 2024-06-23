@@ -132,46 +132,51 @@ try {
 
             ?>
         </div>
-        <div class="reviewgeven">
-            <h2>Submit a Review</h2>
-            <form id="reviewForm">
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="inputreview" name="email" required placeholder="E-Mail">
-                </div>
-                <div>
-                    <label for="score">Score:</label>
-                    <input type="number" id="score" class="inputreview" name="score" min="1" max="5" step="1" required
-                           placeholder="score">
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" class="inputreview" name="message" required placeholder="message"></textarea>
-                </div>
-                <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($_GET['house_id']); ?>">
-                <button type="submit">Submit Review</button>
-            </form>
-            <div id="reviewResponse"></div>
-        </div>
+        <?php if (isset($_SESSION['user_id'])) : ?>
+            <div class="reviewgeven">
+                <h2>Submit a Review</h2>
+                <form id="reviewForm" action="dbcalls/submit_review.php">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="inputreview" name="email" required placeholder="E-Mail">
+                    </div>
+                    <div>
+                        <label for="score">Score:</label>
+                        <input type="number" id="score" class="inputreview" name="score" min="1" max="5" step="1" required
+                               placeholder="score">
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" class="inputreview" name="message" required placeholder="message"></textarea>
+                    </div>
+                    <input type="hidden" name="house_id" value="<?php echo htmlspecialchars($_GET['house_id']); ?>">
+                    <button type="submit">Submit Review</button>
+                </form>
+                <div id="reviewResponse"></div>
+            </div>
+        <?php endif; ?>
     </section>
-    <div id="reviewResponse"></div>
-    </div>
-    </section>
-    <div class="reseverenblok">
-        <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['price']; ?></div>
-        <div class="reizenreseveren/winkelmandje">
-            <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
 
-            <form action="add_to_cart.php" method="POST">
-                <button type="submit"> toevoegen en verder kijken</button>
+    <?php if (isset($_SESSION['user_id'])) : ?>
+        <div class="reseverenblok">
+            <div class="flight-departure" id="prijsblokinfo">prijs p.p: <?php echo $data['price']; ?></div>
+            <div class="reizenreseveren/winkelmandje">
+                <img src="assets/img/winkelwagen.png" alt="winkelmandje" id="winkelwageimggevondenreis">
 
-                <input type="hidden" name="house_id" value="<?php echo($house_id); ?>">
-            </form>
+                <form action="add_to_cart.php" method="POST">
+                    <button type="submit"> toevoegen</button>
 
-            <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">boek de reis
-            </button>
+                    <input type="hidden" name="house_id" value="<?php echo($house_id); ?>">
+                </form>
+
+            </div>
         </div>
-    </div>
+    <?php else : ?>
+        <div class="reseverenblok">
+            <p>Log in om te boeken.</p>
+        </div>
+    <?php endif; ?>
+
     <div id="id04" class="modal">
 
         <form class="modal-content animate" action="dbcalls/book_flight.php" method="post">

@@ -3,6 +3,10 @@ session_start();
 include('header.php');
 include('dbcalls/connect.php');
 
+if (!isset($_SESSION['user_id'])) {
+    header("Location: index.php"); // Redirect to index.php
+    exit; // Ensure that no further code is executed after redirection
+}
 // Fetch houses that the user has added to their cart
 try {
     $stmt = $conn->prepare("

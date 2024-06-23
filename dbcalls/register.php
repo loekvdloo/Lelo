@@ -31,8 +31,7 @@ if (isset($_POST['register'])) {
             $stmt->bindParam(':password', $password);
 
             $test = $stmt->execute();
-            echo "Registratie succesvol!";
-            var_dump($test);
+            header("Location: ../index.php");
             if ($test) {
             }
         }
